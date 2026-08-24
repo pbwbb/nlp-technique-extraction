@@ -1,0 +1,61 @@
+GhostApproval Symlink Flaws Could Let Malicious Repos Run Code in AI Coding Agents
+
+Researchers at Wiz found that a flaw in six popular AI coding assistants lets a booby-trapped code project quietly take control of a developer's computer. The assistant asks permission to edit one harmless-looking file, but the write lands on a sensitive one instead.
+
+The affected tools are Amazon Q Developer, Anthropic's Claude Code, Augment, Cursor, Google Antigravity, and Windsurf. Wiz calls the pattern GhostApproval and published it on July 8.
+
+Three of the six have shipped fixes, two have not, and Anthropic disputes that it is a bug. The most exposed are the tools that change files before you can weigh in.
+
+How the attack works
+
+The attack abuses an old Unix feature called a symbolic link, or symlink, that the assistants fail to check. A symlink quietly points to another file elsewhere on disk, so writing to it actually writes to the target.
+
+Wiz built a malicious repository with a symlink named project_settings.json that really points to the victim's SSH login file, ~/.ssh/authorized_keys. The repo's README tells the assistant to add "a line" to project_settings.json, and that line is the attacker's own SSH key dressed up as a harmless setting.
+
+Ask the agent to "set up the workspace" or "follow the README," and it writes the key straight through the symlink into the login file. From there, if the machine runs an SSH service the attacker can reach, they can log in with no password.
+
+A second version of the trick writes to your shell startup file, ~/.zshrc, which the shell executes the next time you open a terminal, so no SSH is needed. There is no sign that any of this has been used in real attacks; Wiz presents it as research.
+
+The approval box shows the wrong thing
+
+Symlink tricks are decades old. The symlink is only the delivery; the real failure is the approval box. In GhostApproval, that box lies.
+
+Testing Claude Code, Wiz found the agent had already spotted the real target in its own reasoning, noting that project_settings.json was, in its words, "actually a zsh configuration file." Yet the box shown to the developer named only the harmless file.
+
+You click Accept, believing you are editing a local config file, and the write hits your shell startup file or your SSH keys. Wiz calls this an informed-consent bypass: the human is still in the loop, but the loop is showing them the wrong thing.
+
+Some tools are worse: they skip the gate entirely, so there is never a moment to intervene. Windsurf writes the file to disk before the Accept and Reject buttons appear, so the prompt is only an undo button, and the key is already in place.
+
+Augment shows no dialog at all, and Wiz demonstrated it silently, reading an AWS credential file that sat outside the project. The tools that still show a prompt are no safer, though; the prompt just names the wrong file.
+
+Which tools are affected
+
+Wiz reported the issue to all six vendors. Here is where each stands as of publication:
+
+Anthropic pushed back on the classification, telling Wiz the scenario sits "outside our threat model": the developer chose to trust the folder when starting the session and then approved the edit, so the decision was theirs.
+
+It also said Claude Code's symlink warning shipped in early February, before Wiz's private report, as routine hardening rather than a fix, and that an earlier "no comment" was an automated reply.
+
+Of the six vendors, Anthropic is the only one to say this is not a bug; three shipped fixes, and two are working on them. The question its stance raises is real, though, and not only Anthropic's to answer: how far should a coding agent go to protect a developer who has already trusted a malicious repo?
+
+Beyond patching, a few habits cut the risk, whatever tool you use. Run the agent with limited file access, or inside a sandbox or container. Look through a repo's README and hidden config files before you let an agent "set it up."
+
+And after working in an unfamiliar repo, check the files the attack targets, which sit outside the project and so will not show up in git status: your shell startup file, your SSH keys, and your AI tool's own config. Checking their timestamps, for example, with ls -la ~/.zshrc ~/.ssh/authorized_keys, shows whether anything changed while the agent was running.
+
+Wiz's advice to tool makers is short: resolve the symlink and show the real destination before asking, flag any write that lands outside the project folder, and never touch the disk until the user has actually approved.
+
+A shared flaw, not one vendor's slip
+
+In May, Adversa AI published SymJack, the same symlink-and-approval pattern against six coding agents, including Claude Code, Cursor, GitHub Copilot, and Grok Build.
+
+Two independent teams finding it points to a shared design weakness, not one vendor's slip: these agents follow a symlink using ordinary file operations, then ask for approval based on the path they were handed, not the path the write lands on.
+
+The overlap even reaches the CVE. Cursor's own advisory for its symlink bug credits both Wiz and Cato AI Labs, whose earlier work The Hacker News covered as DuneSlide.
+
+The files an AI assistant trusts are no longer just code. For these agents, they double as instructions the agent follows and paths it acts on, and they shape what the approval box shows. AWS's bulletin also covers a separate Amazon Q flaw, CVE-2026-12957, where a poisoned repo could auto-load a config file and run commands to steal a developer's AWS keys once the workspace was trusted.
+
+The exact GhostApproval technique is still under research, but the broader pattern is already showing up in the wild: repositories carrying files that steer AI agents into unsafe behavior.
+
+As THN reported in June, the Miasma worm planted AI-agent config files in a Microsoft Azure repository so its payload ran the moment a developer opened the project in Claude Code, Cursor, or Gemini. GitHub disabled the 73 affected Microsoft repositories in response.
+
+"Human in the loop" only protects you if the loop tells the truth. As these assistants get more freedom to read and write files on their own, an approval box that names the wrong destination is not a safeguard but a liability, and treating a deceptive repo as purely the user's problem puts the weight on the person least able to see the swap.

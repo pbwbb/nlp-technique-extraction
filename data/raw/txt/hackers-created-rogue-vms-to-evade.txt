@@ -1,0 +1,25 @@
+Hackers Created Rogue VMs to Evade Detection in Recent MITRE Cyber Attack
+
+The MITRE Corporation has revealed that the cyber attack targeting the not-for-profit company towards late December 2023 by exploiting zero-day flaws in Ivanti Connect Secure (ICS) involved the threat actor creating rogue virtual machines (VMs) within its VMware environment.
+
+"The adversary created their own rogue VMs within the VMware environment, leveraging compromised vCenter Server access," MITRE researchers Lex Crumpton and Charles Clancy said.
+
+"They wrote and deployed a JSP web shell (BEEFLUSH) under the vCenter Server's Tomcat server to execute a Python-based tunneling tool, facilitating SSH connections between adversary-created VMs and the ESXi hypervisor infrastructure."
+
+The motive behind such a move is to sidestep detection by obscuring their malicious activities from centralized management interfaces like vCenter and maintain persistent access while reducing the risk of being discovered.
+
+Details of the attack emerged last month when MITRE revealed that the China-nexus threat actor -- tracked by Google-owned Mandiant under the name UNC5221 -- breached its Networked Experimentation, Research, and Virtualization Environment (NERVE) by exploiting two ICS flaws CVE-2023-46805 and CVE-2024-21887.
+
+Upon bypassing multi-factor authentication and gaining an initial foothold, the adversary moved laterally across the network and leveraged a compromised administrator account to take control of the VMware infrastructure and deploy various backdoors and web shells to retain access and harvest credentials.
+
+This consisted of a Golang-based backdoor codenamed BRICKSTORM that was embedded within the rogue VMs and two web shells referred to as BEEFLUSH and BUSHWALK, allowing UNC5221 to execute arbitrary commands and communicate with command-and-control servers.
+
+"The adversary also used a default VMware account, VPXUSER, to make seven API calls that enumerated a list of mounted and unmounted drives," MITRE said.
+
+"Rogue VMs operate outside the standard management processes and do not adhere to established security policies, making them difficult to detect and manage through the GUI alone. Instead, one needs special tools or techniques to identify and mitigate the risks associated with rogue VMs effectively."
+
+One effective countermeasure against threat actors' stealthy efforts to bypass detection and maintain access is to enable secure boot, which prevents unauthorized modifications by verifying the integrity of the boot process.
+
+The company said it's also making available two PowerShell scripts named Invoke-HiddenVMQuery and VirtualGHOST to help identify and mitigate potential threats within the VMware environment.
+
+"As adversaries continue to evolve their tactics and techniques, it is imperative for organizations to remain vigilant and adaptive in defending against cyber threats," MITRE said.

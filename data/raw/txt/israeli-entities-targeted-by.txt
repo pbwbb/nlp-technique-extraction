@@ -1,0 +1,19 @@
+Israeli Entities Targeted by Cyberattack Using Donut and Sliver Frameworks
+
+Cybersecurity researchers have discovered an attack campaign that targets various Israeli entities with publicly-available frameworks like Donut and Sliver.
+
+The campaign, believed to be highly targeted in nature, "leverage target-specific infrastructure and custom WordPress websites as a payload delivery mechanism, but affect a variety of entities across unrelated verticals, and rely on well-known open-source malware," HarfangLab said in a report last week.
+
+The French company is tracking the activity under the name Supposed Grasshopper. It's a reference to an attacker-controlled server ("auth.economy-gov-il[.]com/SUPPOSED_GRASSHOPPER.bin"), to which a first-stage downloader connects to.
+
+This downloader, written in Nim, is rudimentary and is tasked with downloading the second-stage malware from the staging server. It's delivered by means of a virtual hard disk (VHD) file that's suspected to be propagated via custom WordPress sites as part of a drive-by download scheme.
+
+The second-stage payload retrieved from the server is Donut, a shellcode generation framework, which serves as a conduit for deploying an open-source Cobalt Strike alternative called Sliver.
+
+"The operators also put some notable efforts in acquiring dedicated infrastructure and deploying a realistic WordPress website to deliver payloads," the researchers said. "Overall, this campaign feels like it could realistically be the work of a small team."
+
+The end goal of the campaign is currently unknown, although HarfangLab theorized that it could also be associated with a legitimate penetration testing operation, a possibility that raises its own set of questions surrounding transparency and the need for impersonating Israeli government agencies.
+
+The disclosure comes as the SonicWall Capture Labs threat research team detailed an infection chain that employs booby-trapped Excel spreadsheets as a starting point to drop a trojan known as Orcinius.
+
+"This is a multi-stage trojan that is using Dropbox and Google Docs to download second-stage payloads and stay updated," the company said. "It contains an obfuscated VBA macro that hooks into Windows to monitor running windows and keystrokes and creates persistence using registry keys."

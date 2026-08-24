@@ -1,0 +1,41 @@
+Iranian-Backed Pay2Key Ransomware Resurfaces with 80% Profit Share for Cybercriminals
+
+An Iranian-backed ransomware-as-a-service (RaaS) named Pay2Key has resurfaced in the wake of the Israel-Iran-U.S. conflict last month, offering bigger payouts to cybercriminals who launch attacks against Israel and the U.S.
+
+The financially motivated scheme, now operating under the moniker Pay2Key.I2P, is assessed to be linked to a hacking group tracked as Fox Kitten (aka Lemon Sandstorm).
+
+"Linked to the notorious Fox Kitten APT group and closely tied to the well-known Mimic ransomware, [...] Pay2Key.I2P appears to partner with or incorporate Mimic's capabilities," Morphisec security researcher Ilia Kulmin said.
+
+"Officially, the group offers an 80% profit share (up from 70%) to affiliates supporting Iran or participating in attacks against the enemies of Iran, signaling their ideological commitment."
+
+Last year, the U.S. government revealed the advanced persistent threat's (APT) modus operandi of carrying out ransomware attacks by covertly partnering with NoEscape, RansomHouse, and BlackCat (aka ALPHV) crews.
+
+The use of Pay2Key by Iranian threat actors goes back to October 2020, with the attacks targeting Israeli companies by exploiting known security vulnerabilities.
+
+Pay2Key.I2P, per Morphisec, emerged on the scene in February 2025, claiming over 51 successful ransom payouts in four months, netting it more than $4 million in ransom payments and $100,000 in profits for individual operators.
+
+While their financial motives are apparent and doubtless effective, there is also an underlying ideological agenda behind them: the campaign appears to be a case of cyber warfare waged against targets in Israel and the U.S.
+
+A notable aspect of the latest variant of Pay2Key.I2P is that it's the first known RaaS platform to be hosted on the Invisible Internet Project (I2P).
+
+"While some malware families have used I2P for [command-and-control] communication, this is a step further – a Ransomware-as-a-Service operation running its infrastructure directly on I2P," Swiss cybersecurity company PRODAFT said in a post shared on X in March 2025. The post was subsequently reposted by Pay2Key.I2P's own X account.
+
+What's more, Pay2Key.I2P has observed posting on a Russian darknet forum that allowed anyone to deploy the ransomware binary for a $20,000 payout per successful attack, marking a shift in RaaS operations. The post was made by a user named "Isreactive" on February 20, 2025.
+
+"Unlike traditional Ransomware-as-a-Service (RaaS) models, where developers take a cut only from selling the ransomware, this model allows them to capture the full ransom from successful attacks, only sharing a portion with the attackers who deploy it," Kulmin noted at the time.
+
+"This shift moves away from a simple tool-sale model, creating a more decentralized ecosystem, where ransomware developers earn from attack success rather than just from selling the tool."
+
+As of June 2025, the ransomware builder includes an option to target Linux systems, indicating that the threat actors are actively refining and improving the locker's functionality. The Windows counterpart, on the other hand, is delivered as a Windows executable within a self-extracting (SFX) archive.
+
+It also incorporates various evasion techniques that allow it to run unimpeded by disabling Microsoft Defender Antivirus and deleting malicious artifacts deployed as part of the attack to minimize forensic trail.
+
+Alternate infection sequences have leveraged portable executables that purport to be Microsoft Word documents as a starting point, per SonicWall Capture Labs, before proceeding to launch cmd files to run the encryption process and drop the ransom note.
+
+"Pay2Key.I2P represents a dangerous convergence of Iranian state-sponsored cyber warfare and global cybercrime," Morphisec said. "With ties to Fox Kitten and Mimic, an 80% profit incentive for Iran's supporters, and over $4 million in ransoms, this RaaS operation threatens Western organizations with advanced, evasive ransomware."
+
+The findings come as the U.S. cybersecurity and intelligence agencies have warned of retaliatory attacks by Iran after American airstrikes on three nuclear facilities in the country.
+
+Operational technology (OT) security company Nozomi Networks said it has observed Iranian hacking groups like MuddyWater, APT33, OilRig, Cyber Av3ngers, Fox Kitten, and Homeland Justice targeting transportation and manufacturing organizations in the U.S.
+
+"Industrial and critical infrastructure organizations in the U.S. and abroad are urged to be vigilant and review their security posture," the company said, adding it detected 28 cyber attacks related to Iranian threat actors between May and June 2025.

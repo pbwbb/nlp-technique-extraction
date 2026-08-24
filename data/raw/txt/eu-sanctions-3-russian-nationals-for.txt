@@ -1,0 +1,23 @@
+E.U. Sanctions 3 Russian Nationals for Cyber Attacks Targeting Estonia’s Key Ministries
+
+The Council of the European Union has sanctioned three individuals for allegedly carrying out "malicious cyber activities" against Estonia.
+
+The three Russian nationals – Nikolay Alexandrovich Korchagin, Vitaly Shevchenko, and Yuriy Fedorovich Denisov – are officers of the General Staff of the Armed Forces of the Russian Federation (GRU) Unit 29155, it said.
+
+Per the council decision, all the individuals are said to be responsible for cyber attacks against computer systems with the aim of collecting data from the data systems of multiple institutions with an aim to gain insights into the cyber security policy of Estonia.
+
+"The cyber-attacks granted attackers unauthorized access to classified information and sensitive data stored within several government ministries — including Economic Affairs and Communications, Social Affairs, and Foreign Affairs — leading to the theft of thousands of confidential documents," per the Council.
+
+This included business secrets, health records, and other critical information that compromised the security of the affected institutions.
+
+Unit 29155 was previously implicated by the U.S. government and its allies in a string of cyber attacks aimed at government services, financial services, transportation systems, energy, and healthcare sectors of North Atlantic Treaty Organization (NATO) members, the European Union, Central American, and Asian countries.
+
+Since at least early 2022, the adversarial collective is assessed to have targeted and disrupted efforts to provide aid to Ukraine. The threat activity cluster is also tracked by the cybersecurity community under the names Cadet Blizzard, Ember Bear, FROZENVISTA, Nodaria, Ruinous Ursa, UAC-0056, and UNC2589.
+
+It's worth noting that both Korchagin and Denisov were charged by the U.S. Department of Justice (DoJ) for their alleged involvement in a conspiracy to commit computer intrusion and wire fraud conspiracy against targets in Ukraine, the U.S. and 25 other NATO countries.
+
+With the latest enforcement action, a total of 17 individuals and four entities are subject to asset freezes and travel bans, in addition to prohibiting E.U. persons and entities from transacting with those listed.
+
+Last month, the Council also levied sanctions against 16 individuals and three entities, including GRU Unit 29155 and its commander Andrey Vladimirovich Averyanov, that it said were responsible for "Russia's destabilizing actions abroad."
+
+"Through coups, assassinations, bombings, and cyber attacks against other countries around the world in connection with the war in Ukraine, it has sought to create chaos and destabilise European Union countries," the Council said. "By carrying out such actions, it seeks to help and benefit Russia."

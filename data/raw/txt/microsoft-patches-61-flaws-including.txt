@@ -1,0 +1,147 @@
+Microsoft Patches 61 Flaws, Including Two Actively Exploited Zero-Days
+
+Microsoft has addressed a total of 61 new security flaws in its software as part of its Patch Tuesday updates for May 2024, including two zero-days which have been actively exploited in the wild.
+
+Of the 61 flaws, one is rated Critical, 59 are rated Important, and one is rated Moderate in severity. This is in addition to 30 vulnerabilities resolved in the Chromium-based Edge browser over the past month, including two recently disclosed zero-days (CVE-2024-4671 and CVE-2024-4761) that have been tagged as exploited in attacks.
+
+The two security shortcomings that have been weaponized in the wild are below -
+
+CVE-2024-30040 (CVSS score: 8.8) - Windows MSHTML Platform Security Feature Bypass Vulnerability
+
+CVE-2024-30051 (CVSS score: 7.8) - Windows Desktop Window Manager (DWM) Core Library Elevation of Privilege Vulnerability
+
+"An unauthenticated attacker who successfully exploited this vulnerability could gain code execution through convincing a user to open a malicious document at which point the attacker could execute arbitrary code in the context of the user," the tech giant said in an advisory for CVE-2024-30040.
+
+However, successful exploitation requires an attacker to convince the user to load a specially crafted file onto a vulnerable system, distributed either via email or an instant message, and trick them into manipulating it. Interestingly, the victim doesn't have to click or open the malicious file to activate the infection.
+
+On the other hand, CVE-2024-30051 could allow a threat actor to gain SYSTEM privileges. Three groups of researchers from Kaspersky, DBAPPSecurity WeBin Lab, Google Threat Analysis Group, and Mandiant have been credited with discovering and reporting the flaw, indicating likely widespread exploitation.
+
+"We have seen it used together with QakBot and other malware, and believe that multiple threat actors have access to it," Kaspersky researchers Boris Larin and Mert Degirmenci said.
+
+Both vulnerabilities have been added by the U.S. Cybersecurity and Infrastructure Security Agency (CISA) to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the latest fixes by June 4, 2024.
+
+Also resolved by Microsoft are several remote code execution bugs, including nine impacting Windows Mobile Broadband Driver and seven affecting Windows Routing and Remote Access Service (RRAS).
+
+Other notable flaws encompass privilege escalation flaws in the Common Log File System (CLFS) driver – CVE-2024-29996, CVE-2024-30025 (CVSS scores: 7.8), and CVE-2024-30037 (CVSS score: 7.5) – Win32k (CVE-2024-30028 and CVE-2024-30030, CVSS scores: 7.8), Windows Search Service (CVE-2024-30033, CVSS score: 7.0), and Windows Kernel (CVE-2024-30018, CVSS score: 7.8).
+
+In March 2024, Kaspersky revealed that threat actors are attempting to actively exploit now-patched privilege escalation flaws in various Windows components owing to the fact that "it's a very easy way to get a quick NT AUTHORITY\SYSTEM."
+
+Akamai has further outlined a new privilege escalation technique affecting Active Directory (AD) environments that takes advantage of the DHCP administrators group.
+
+"In cases where the DHCP server role is installed on a Domain Controller (DC), this could enable them to gain domain admin privileges," the company noted. "In addition to providing a privilege escalation primitive, the same technique could also be used to create a stealthy domain persistence mechanism."
+
+Rounding off the list is a security feature bypass vulnerability (CVE-2024-30050, CVSS score: 5.4) impacting Windows Mark-of-the-Web (MotW) that could be exploited by means of a malicious file to evade defenses.
+
+Microsoft, which was recently castigated for a series of security lapses that led to a breach of its infrastructure by nation-state actors from China and Russia, has laid out a series of steps to prioritize security above all other product features as part of its Secure Future Initiative (SFI).
+
+"In addition, we will instill accountability by basing part of the compensation of the company’s Senior Leadership Team on our progress in meeting our security plans and milestones," Charlie Bell, executive vice president of Microsoft Security, said.
+
+Software Patches from Other Vendors
+
+In addition to Microsoft, security updates have also been released by other vendors over the past few weeks to rectify several vulnerabilities, including —
+
+Adobe
+
+Android
+
+Apple
+
+Arm
+
+ASUS
+
+Atos
+
+Broadcom (including VMware)
+
+Cacti
+
+Cisco
+
+Citrix
+
+CODESYS
+
+Dell
+
+Drupal
+
+F5
+
+Fortinet
+
+GitLab
+
+Google Chrome
+
+Google Cloud
+
+Google Wear OS
+
+Hikvision
+
+Hitachi Energy
+
+HP
+
+HP Enterprise
+
+HP Enterprise Aruba Networks
+
+IBM
+
+Intel
+
+Jenkins
+
+Juniper Networks
+
+Lenovo
+
+Linux distributions Debian, Oracle Linux, Red Hat, SUSE, and Ubuntu
+
+MediaTek
+
+Mitsubishi Electric
+
+MongoDB
+
+Mozilla Thunderbird
+
+NVIDIA
+
+ownCloud
+
+Palo Alto Networks
+
+Progress Software
+
+QNAP
+
+Qualcomm
+
+Rockwell Automation
+
+Samsung
+
+SAP
+
+Schneider Electric
+
+Siemens
+
+SolarWinds
+
+SonicWall
+
+Tinyproxy
+
+Veeam
+
+Veritas
+
+Zimbra
+
+Zoom, and
+
+Zyxel

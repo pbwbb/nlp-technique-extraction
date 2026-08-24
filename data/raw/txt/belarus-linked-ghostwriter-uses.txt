@@ -1,0 +1,21 @@
+Belarus-Linked Ghostwriter Uses Macropack-Obfuscated Excel Macros to Deploy Malware
+
+Opposition activists in Belarus as well as Ukrainian military and government organizations are the target of a new campaign that employs malware-laced Microsoft Excel documents as lures to deliver a new variant of PicassoLoader.
+
+The threat cluster has been assessed to be an extension of a long-running campaign mounted by a Belarus-aligned threat actor dubbed Ghostwriter (aka Moonscape, TA445, UAC-0057, and UNC1151) since 2016. It's known to align with Russian security interests and promote narratives critical of NATO.
+
+"The campaign has been in preparation since July-August 2024 and entered the active phase in November-December 2024," SentinelOne researcher Tom Hegel said in a technical report shared with The Hacker News. "Recent malware samples and command-and-control (C2) infrastructure activity indicate that the operation remains active in recent days."
+
+The starting point of the attack chain analyzed by the cybersecurity company is a Google Drive shared document that originated from an account named Vladimir Nikiforech and hosted a RAR archive.
+
+The RAT file includes a malicious Excel workbook, which, when opened, triggers the execution of an obfuscated macro when prospective victims enable macros to be run. The macro proceeds to write a DLL file that ultimately paves the way for a simplified version of PicassoLoader.
+
+In the next phase, a decoy Excel file is displayed to the victim, while, in the background, additional payloads are downloaded onto the system. As recently as June 2024, this approach was used to deliver the Cobalt Strike post-exploitation framework.
+
+SentinelOne said it also discovered other weaponized Excel documents bearing Ukraine-themed lures to retrieve an unknown second-stage malware from a remote URL ("sciencealert[.]shop") in the form of a seemingly harmless JPG image, a technique known as steganography. The URLs are no longer available.
+
+In another instance, the booby-trapped Excel document is used to deliver a DLL named LibCMD, which is designed to run cmd.exe and connect to stdin/stdout. It's directly loaded into memory as a.NET assembly and executed.
+
+"Throughout 2024, Ghostwriter has repeatedly used a combination of Excel workbooks containing Macropack-obfuscated VBA macros and dropped embedded.NET downloaders obfuscated with ConfuserEx," Hegel said.
+
+"While Belarus doesn't actively participate in military campaigns in the war in Ukraine, cyber threat actors associated with it appear to have no reservation about conducting cyber espionage operations against Ukrainian targets."

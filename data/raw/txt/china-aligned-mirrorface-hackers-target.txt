@@ -1,0 +1,39 @@
+China-Aligned MirrorFace Hackers Target EU Diplomats with World Expo 2025 Bait
+
+The China-aligned threat actor known as MirrorFace has been observed targeting a diplomatic organization in the European Union, marking the first time the hacking crew has targeted an entity in the region.
+
+"During this attack, the threat actor used as a lure the upcoming World Expo, which will be held in 2025 in Osaka, Japan," ESET said in its APT Activity Report for the period April to September 2024.
+
+"This shows that even considering this new geographic targeting, MirrorFace remains focused on Japan and events related to it."
+
+MirrorFace, also tracked as Earth Kasha, is assessed to be part of an umbrella group known as APT10, which also comprises clusters tracked as Earth Tengshe and Bronze Starlight. It's known for its targeting of Japanese organizations at least since 2019, although a new campaign observed in early 2023 expanded its operations to include Taiwan and India.
+
+Over the years, the hacking crew's malware arsenal has evolved to include backdoors such as ANEL (aka UPPERCUT), LODEINFO, and NOOPDOOR (aka HiddenFace), as well as a credential stealer referred to as MirrorStealer.
+
+ESET told The Hacker News that the MirrorFace attacks are highly targeted, and that it usually sees "less than 10 attacks per year." The end goal of these intrusions is cyber espionage and data theft. That said, this is not the first time diplomatic organizations have been targeted by the threat actor.
+
+In the latest attack detected by the Slovak cybersecurity company, the victim was sent a spear-phishing email containing a link to a ZIP archive ("The EXPO Exhibition in Japan in 2025.zip") hosted on Microsoft OneDrive.
+
+The archive file included a Windows shortcut file ("The EXPO Exhibition in Japan in 2025.docx.lnk") that, when launched, triggered an infection sequence that ultimately deployed ANEL and NOOPDOOR.
+
+"ANEL disappeared from the scene around the end of 2018 or the start of 2019, and it was believed that LODEINFO had succeeded it, appearing later in 2019," ESET said. "Therefore, it is interesting to see ANEL resurfacing after almost five years."
+
+The development comes as threat actors affiliated with China, like Flax Typhoon, Granite Typhoon, and Webworm, have been found to be increasingly relying on the open-source and multi-platform SoftEther VPN to maintain access to victims' networks.
+
+It also follows a report from Bloomberg that said the China-linked Volt Typhoon breached Singapore Telecommunications (Singtel) as a "test run" as part of a broader campaign targeting telecom companies and other critical infrastructure, citing two people familiar with the matter. The cyber intrusion was discovered in June 2024.
+
+Telecommunication and network service providers in the U.S. like AT&T, Verizon, and Lumen Technologies have also become the target of another Chinese nation-state adversarial collective called Salt Typhoon (aka FamousSparrow and GhostEmperor).
+
+Earlier this week, The Wall Street Journal said the hackers leveraged these attacks to compromise cellphone lines used by various senior national security, policy officials, and politicians in the U.S. The campaign is also alleged to have infiltrated communications providers belonging to another country that "closely shares intelligence with the U.S."
+
+Update
+
+In a new analysis published on November 19, 2024, Trend Micro said it has observed the MirrorFace actor weaponizing security flaws in public-facing enterprise products, such as Array AG (CVE-2023-28461), Proself (CVE-2023-45727), and Fortinet FortiOS/FortiProxy (CVE-2023-27997), for initial access.
+
+"After gaining access, they deployed several backdoors in the victim's network to achieve persistence," security researcher Hara Hiroaki said. "These include Cobalt Strike, LODEINFO, and the newly discovered NOOPDOOR."
+
+NOOPDOOR, which is decrypted and launched using a shellcode loader named NOOPLDR, is a sophisticated and complex implant that supports built-in functions and additional modules to upload/download files and run additional programs, as well as communicate with an attacker-controlled server in both active and passive modes.
+
+"Interestingly, the active and passive modes use different encryption algorithms and backdoor commands, respectively, which means that both channels are incompatible and independent methods of communication from each other," Hiroaki said.
+
+(The story was updated after publication on November 19, 2024, to include Trend Micro's analysis of LODEINFO campaigns.)

@@ -1,0 +1,65 @@
+CrowdStrike Warns of New Phishing Scam Targeting German Customers
+
+CrowdStrike is alerting about an unfamiliar threat actor attempting to capitalize on the Falcon Sensor update fiasco to distribute dubious installers targeting German customers as part of a highly targeted campaign.
+
+The cybersecurity company said it identified what it described as an unattributed spear-phishing attempt on July 24, 2024, distributing an inauthentic CrowdStrike Crash Reporter installer via a website impersonating an unnamed German entity.
+
+The imposter website is said to have been created on July 20, a day after the botched update crashed nearly 9 million Windows devices, causing extensive IT disruptions across the world.
+
+"After the user clicks the Download button, the website leverages JavaScript (JS) that masquerades as JQuery v3.7.1 to download and deobfuscate the installer," CrowdStrike's Counter Adversary Operations team said.
+
+"The installer contains CrowdStrike branding, German localization, and a password [is] required to continue installing the malware."
+
+Specifically, the spear-phishing page featured a download link to a ZIP archive file containing a malicious InnoSetup installer, with the malicious code serving the executable injected into a JavaScript file named "jquery-3.7.1.min.js" in an apparent effort to evade detection.
+
+Users who end up launching the bogus installer are then prompted to enter a "Backend-Server" to proceed further. CrowdStrike said it was unable to recover the final payload deployed via the installer.
+
+The campaign is assessed to be highly targeted owing to the fact that the installer is password-protected and requires input that's likely only known to the targeted entities. Furthermore, the presence of the German language suggests that the activity is geared towards German-speaking CrowdStrike customers.
+
+"The threat actor appears to be highly aware of operations security (OPSEC) practices, as they have focused on anti-forensic techniques during this campaign," CrowdStrike said.
+
+"For example, the actor registered a subdomain under the it[.]com domain, preventing historical analysis of the domain-registration details. Additionally, encrypting the installer contents and preventing further activity from occurring without a password precludes further analysis and attribution."
+
+The development comes amid a wave of phishing attacks taking advantage of the CrowdStrike update issue to propagate stealer and wiper malware malware -
+
+A phishing domain crowdstrike-office365[.]com that hosts rogue archive files containing a Microsoft Installer (MSI) loader that ultimately executes a commodity information stealer called Lumma.
+
+A ZIP file ("CrowdStrike Falcon.zip") that contains a Python-based information stealer tracked as Connecio that collects system information, external IP address, and data from various web browsers, and exfiltrates them to SMTP accounts listed on a Pastebin dead-drop URL.
+
+An email phishing campaign orchestrated by the Handala Hacking Team targeting Israeli entities that tricks recipients into downloading an "outage fix," which launches an installer responsible for unpacking and executing an AutoIt script to launch a data wiper and exfiltrate system information via Telegram's API.
+
+Web infrastructure and security company Akamai said it uncovered no less than 180 newly created counterfeit typosquat domains purporting to assist with navigating the incident, whether it be technical support, quick fixes, or legal support, in an attempt to introduce malware or steal sensitive information.
+
+On Thursday, CrowdStrike's CEO George Kurtz said 97% of the Windows devices that went offline during the global IT outage are now operational.
+
+"At CrowdStrike, our mission is to earn your trust by safeguarding your operations. I am deeply sorry for the disruption this outage has caused and personally apologize to everyone impacted," Kurtz said. "While I can’t promise perfection, I can promise a response that is focused, effective, and with a sense of urgency."
+
+Previously, the company's chief security officer Shawn Henry apologized for failing to "protect good people from bad things," and that it "let down the very people we committed to protect."
+
+"The confidence we built in drips over the years was lost in buckets within hours, and it was a gut punch," Henry acknowledged. "We are committed to re-earning your trust by delivering the protection you need to disrupt the adversaries targeting you. Despite this setback, the mission endures."
+
+Meanwhile, Bitsight's analysis of traffic patterns exhibited by CrowdStrike machines across organizations globally has revealed two "interesting" data points that it said warrants additional investigation.
+
+"Firstly, on July 16 at around 22:00 there was a huge traffic spike, followed by a clear and significant drop off in egress traffic from organizations to CrowdStrike," security researcher Pedro Umbelino said. "Second, there was a significant drop, between 15% and 20%, in the number of unique IPs and organizations connected to CrowdStrike Falcon servers, after the dawn of the 19th."
+
+"While we can not infer what the root cause of the change in traffic patterns on the 16th can be attributed to, it does warrant the foundational question of 'Is there any correlation between the observations on the 16th and the outage on the 19th?'"
+
+Update
+
+While the full impact of the IT outage remains to be tallied, cloud insurance services firm Parametrix Solutions estimates that the event impacted nearly a quarter of the Fortune 500 companies, resulting in a direct financial loss of $5.4 billion (excluding Microsoft), including $1.94 billion in losses for healthcare, $1.15 billion for banking, and $0.86 billion for the airlines sector.
+
+John Cable, Microsoft's vice president of program management for Windows servicing and delivery, said the incident "underscores the need for mission-critical resiliency within every organization."
+
+"These improvements must go hand in hand with ongoing improvements in security and be in close cooperation with our many partners, who also care deeply about the security of the Windows ecosystem," Cable said, urging enterprises to have a major incident response plan (MIRP) in place, periodically take data backups, utilize deployment rings, and enable Windows security baselines.
+
+With endpoint detection and response (EDR) software requiring kernel-level access to detect threats in Windows, the disruptive event appears to have also had the desired effect of Microsoft rethinking the entire approach.
+
+Redmond said alternative features like virtualization-based security (VBS) enclaves, which it introduced back in May, could be used by third-party developers to create an "isolated compute environment that does not require kernel mode drivers to be tamper resistant." Azure Attestation, another security solution, enables remote verification of the "trustworthiness of a platform and integrity of the binaries running inside it."
+
+Microsoft further described the issue as arising due to a "read-out-of-bounds memory safety error in the CrowdStrike developed CSagent.sys driver," and that such kernel drivers are leveraged for tamper resistance and performance improvements, not to mention for gaining system wide visibility into security related events.
+
+"Windows provides several user mode protection approaches for anti-tampering, like Virtualization-based security (VBS) Enclaves and Protected Processes that vendors can use to protect their key security processes," David Weston, vice President of enterprise and OS security at Microsoft said.
+
+"Windows also provides ETW events and user-mode interfaces like Antimalware Scan Interface for event visibility. These robust mechanisms can be used to reduce the amount of kernel code needed to create a security solution, which balances security and robustness."
+
+(The story was updated after publication to include Microsoft's analysis of Windows crash reports stemming from the CrowdStrike programming error.)

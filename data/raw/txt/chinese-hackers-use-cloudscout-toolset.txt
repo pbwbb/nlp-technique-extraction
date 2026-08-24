@@ -1,0 +1,39 @@
+Chinese Hackers Use CloudScout Toolset to Steal Session Cookies from Cloud Services
+
+A government entity and a religious organization in Taiwan were the target of a China-linked threat actor known as Evasive Panda that infected them with a previously undocumented post-compromise toolset codenamed CloudScout.
+
+"The CloudScout toolset is capable of retrieving data from various cloud services by leveraging stolen web session cookies," ESET security researcher Anh Ho said. "Through a plugin, CloudScout works seamlessly with MgBot, Evasive Panda's signature malware framework."
+
+The use of the.NET-based malware tool, per the Slovak cybersecurity company, was detected between May 2022 and February 2023. It incorporates 10 different modules, written in C#, out of which three are meant for stealing data from Google Drive, Gmail, and Outlook. The purpose of the remaining modules remains unknown.
+
+Evasive Panda, also tracked as Bronze Highland, Daggerfly, and StormBamboo, is a cyber espionage group that has a track record of striking various entities across Taiwan and Hong Kong. It's also known for orchestrating watering hole and supply chain attacks targeting the Tibetan diaspora.
+
+What sets the threat actor apart from the rest is the use of several initial access vectors, ranging from newly disclosed security flaws to compromising the supply chain by means of DNS poisoning, to breach victim networks and deploy MgBot and Nightdoor.
+
+ESET said the CloudScout modules are designed to hijack authenticated sessions in the web browser by stealing the cookies and using them to gain unauthorized access to Google Drive, Gmail, and Outlook. Each of these modules is deployed by an MgBot plugin, programmed in C++.
+
+"At the heart of CloudScout is the CommonUtilities package, which provides all necessary low-level libraries for the modules to run," Ho explained.
+
+"CommonUtilities contains quite a few custom-implemented libraries despite the abundant availability of similar open-source libraries online. These custom libraries give the developers more flexibility and control over the inner workings of their implant, compared to open-source alternatives."
+
+This includes -
+
+HTTPAccess, which provides functions to handle HTTP communications
+
+ManagedCookie, which provides functions to manage cookies for web requests between CloudScout and the targeted service
+
+Logger
+
+SimpleJSON
+
+The information gathered by the three modules – mail folder listings, email messages (including attachments), and files matching certain extensions (.doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf, and.txt) – is compressed into a ZIP archive for subsequent exfiltration by either MgBot or Nightdoor.
+
+That said, new security mechanisms introduced by Google such as Device Bound Session Credentials (DBSC) and App-Bound Encryption are bound to render cookie-theft malware obsolete.
+
+"CloudScout is a.NET toolset used by Evasive Panda to steal data stored in cloud services," Ho said. "It is implemented as an extension to MgBot and uses the pass-the-cookie technique to hijack authenticated sessions from web browsers."
+
+The development comes as the Government of Canada accused a "sophisticated state-sponsored threat actor" from China of conducting broad reconnaissance efforts spanning several months against numerous domains in Canada.
+
+"The majority of affected organizations targeted were Government of Canada departments and agencies, and includes federal political parties, the House of Commons, and Senate," it said in a statement.
+
+"They also targeted dozens of organizations, including democratic institutions, critical infrastructure, the defense sector, media organizations, think tanks, and NGOs."

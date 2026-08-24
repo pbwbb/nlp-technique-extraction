@@ -1,0 +1,47 @@
+Four Arrested in £440M Cyber Attack on Marks & Spencer, Co-op, and Harrods
+
+The U.K. National Crime Agency (NCA) on Thursday announced that four people have been arrested in connection with cyber attacks targeting major retailers Marks & Spencer, Co-op, and Harrods.
+
+The arrested individuals include two men aged 19, a third aged 17, and a 20-year-old woman. They were apprehended in the West Midlands and London on suspicion of Computer Misuse Act offenses, blackmail, money laundering, and participating in the activities of an organized crime group.
+
+All four suspects were arrested from their homes and their electronic devices have been seized for further forensic analysis. Their names were not disclosed.
+
+"Since these attacks took place, specialist NCA cybercrime investigators have been working at pace and the investigation remains one of the Agency's highest priorities," Deputy Director Paul Foster, head of the NCA's National Cyber Crime Unit, said in a statement.
+
+"Today's arrests are a significant step in that investigation but our work continues, alongside partners in the U.K. and overseas, to ensure those responsible are identified and brought to justice."
+
+According to the Cyber Monitoring Centre (CMC), the April 2025 cyber attacks targeting Marks & Spencer and Co-op have been classified as a "single combined cyber event" with a financial impact of anywhere between £270 million ($363 million) and £440 million ($592 million).
+
+The NCA did not name the "organized crime group" the individuals are part of, but it's believed that some of these attacks have been perpetrated by a decentralized cybercrime crew called Scattered Spider, which is notorious for its advanced social engineering ploys to breach organizations and deploy ransomware.
+
+In a Business and Trade Sub-Committee on Economic Security, Arms and Export Controls Committee hearing at the U.K. Parliament on July 8, Marks & Spencer said the attack on its systems was ransomware-related and that it was carried out by the DragonForce ransomware group, working together with other "loosely aligned" actors.
+
+"While ransomware is an ever-present threat, Scattered Spider represents a persistent and capable adversary whose operations have been historically effective even against organizations with mature security programs," Grayson North, Senior Security Consultant at GuidePoint Security, told The Hacker News.
+
+"The success of Scattered Spider is not exactly the result of any new or novel tactics, but rather their expertise in social engineering and willingness to be extremely persistent in attempting to gain initial access to their targets."
+
+The majority of individuals associated with the financially driven group are young, native English speakers which gives them an edge when attempting to gain trust with their targets by making fake calls to IT help desks posing as employees.
+
+Scattered Spider is part of The Com, a larger loose-knit collective that's responsible for a wide range of crimes, including social engineering, phishing, SIM swapping, extortion, sextortion, swatting, kidnapping, and murder.
+
+"Scattered Spider demonstrates a calculated and opportunistic targeting strategy, rotating across industries and geographies based on visibility, payout potential, and operational heat," Halcyon pointed out.
+
+Google-owned Mandiant said Scattered Spider has a habit of focusing on a single sector at a time, while keeping their core tactics, techniques, and procedures (TTPs) consistent. This includes setting up phishing domains that closely mimic legitimate corporate login portals and are designed to trick employees into revealing their credentials.
+
+"This means that organizations can take proactive steps like training their help desk staff to enforce robust identity verification processes and deploying phishing-resistant MFA to defend against these intrusions," said Charles Carmakal, CTO, Mandiant Consulting at Google Cloud.
+
+Carmakal also called the arrests of alleged Scattered Spider members a "significant win" in the fight against the e-crime syndicate, adding the action illustrates the importance of international collaboration in tackling such threats.
+
+"Their aggressive social engineering tactics and relentless pursuit of access have proven particularly challenging for many defenders, and resulted in considerable damage to organizations in the U.K. and U.S.," Carmakal added. "Previous arrests have impacted their operations, causing a significant lull in activity. This is a critical window for organizations to fortify their defenses against this collective."
+
+Update
+
+Independent cybersecurity journalist Brian Krebs reported that the 19-year-olds arrested include Owen David Flowers (aka bo764, Holy, and Nazi) and Thalha Jubair (aka Earth2Star and Operator). Jubair is also alleged to have been a core member of the LAPSUS$ cybercrime group, another off-shoot of The Com, and acted as the administrator of Doxbin, a pastebin site used to dox people of interest, "until recently."
+
+"Nearly a dozen total members of Scattered Spider have been arrested in the last 18 months thus far, and it should be clear by now that law enforcement is hot on the heels of those involved in these communities that support these serious, large-scale crimes," Zach Edwards, Threat Researcher at Silent Push, told The Hacker News.
+
+"It appears that Scattered Spider's leadership has been throwing their young members to the proverbial chopping block in having them make voice phishing calls to customer support lines, which exposes their voice's fingerprint to be relentlessly tracked by investigators. Young people are making these phishing calls before they turn 18, thinking they are perhaps part of some get-rich-quick scheme, when in reality it's closer to a get-put-in-jail-quick scheme."
+
+"It's shocking that Scattered Spider has shifted away from online infrastructure that allowed their members to stay more hidden and protected to their current efforts, which rely heavily on voice communication and thus consistently expose members to swift investigations and extremely likely indictments."
+
+(The story was updated after publication to include additional insights.)

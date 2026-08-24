@@ -1,0 +1,23 @@
+Hackers Use MS Excel Macro to Launch Multi-Stage Malware Attack in Ukraine
+
+A new sophisticated cyber attack has been observed targeting endpoints geolocated to Ukraine with an aim to deploy Cobalt Strike and seize control of the compromised hosts.
+
+The attack chain, per Fortinet FortiGuard Labs, involves a Microsoft Excel file that carries an embedded VBA macro to initiate the infection,
+
+"The attacker uses a multi-stage malware strategy to deliver the notorious 'Cobalt Strike' payload and establish communication with a command-and-control (C2) server," security researcher Cara Lin said in a Monday report. "This attack employs various evasion techniques to ensure successful payload delivery."
+
+Cobalt Strike, developed and maintained by Fortra, is a legitimate adversary simulation toolkit used for red teaming operations. However, over the years, cracked versions of the software have been extensively exploited by threat actors for malicious purposes.
+
+The starting point of the attack is the Excel document that, when launched, displays content in Ukrainian and urges the victim to "Enable Content" in order to activate macros. It's worth noting that Microsoft has blocked macros by default in Microsoft Office as of July 2022.
+
+Once macros are enabled, the document purportedly shows content related to the amount of funds allocated to military units, while, in the background, the HEX-encoded macro deploys a DLL-based downloader via the register server (regsvr32) utility.
+
+The obfuscated downloader monitors running processes for those related to Avast Antivirus and Process Hacker, and promptly terminates itself if it detects one.
+
+Assuming no such process is identified, it reaches out to a remote server to fetch the next-stage encoded payload but only if the device in question is located in Ukraine. The decoded file is a DLL that is primarily responsible for launching another DLL file, an injector crucial to extracting and running the final malware.
+
+The attack procedure culminates in the deployment of a Cobalt Strike Beacon that establishes contact with a C2 server ("simonandschuster[.]shop").
+
+"By implementing location-based checks during payload downloads, the attacker aims to mask suspicious activity, potentially eluding scrutiny by analysts," Lin said. "Leveraging encoded strings, the VBA conceals crucial import strings, facilitating the deployment of DLL files for persistence and decrypting subsequent payloads."
+
+"Furthermore, the self-deletion feature aids evasion tactics, while the DLL injector employs delaying tactics and terminates parent processes to evade sandboxing and anti-debugging mechanisms, respectively."

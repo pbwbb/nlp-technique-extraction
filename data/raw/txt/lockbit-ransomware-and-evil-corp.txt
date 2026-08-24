@@ -1,0 +1,29 @@
+LockBit Ransomware and Evil Corp Members Arrested and Sanctioned in Joint Global Effort
+
+A new wave of international law enforcement actions has led to four arrests and the takedown of nine servers linked to the LockBit (aka Bitwise Spider) ransomware operation, marking the latest salvo against what was once a prolific financially motivated group.
+
+This includes the arrest of a suspected LockBit developer in France while on holiday outside of Russia, two individuals in the U.K. who allegedly supported an affiliate, and an administrator of a bulletproof hosting service in Spain used by the ransomware group, Europol said in a statement.
+
+In conjunction, authorities outed a Russian national named Aleksandr Ryzhenkov (aka Beverley, Corbyn_Dallas, G, Guester, and Kotosel) as one of the high-ranking members of the Evil Corp cybercrime group, while simultaneously painting him as a LockBit affiliate. Sanctions have also been announced against seven individuals and two entities linked to the e-crime gang.
+
+"The United States, in close coordination with our allies and partners, including through the Counter Ransomware Initiative, will continue to expose and disrupt the criminal networks that seek personal profit from the pain and suffering of their victims," said Acting Under Secretary of the Treasury for Terrorism and Financial Intelligence, Bradley T. Smith.
+
+The development, part of a collaborative exercise dubbed Operation Cronos, comes nearly eight months after LockBit's online infrastructure was seized. It also follows sanctions levied against Dmitry Yuryevich Khoroshev, who was revealed to be the administrator and individual behind the "LockBitSupp" persona.
+
+A total of 16 individuals who were part of Evil Corp have been sanctioned by the U.K. Also tracked as Gold Drake and Indrik Spider, the infamous hacking crew has been active since 2014, targeting banks and financial institutions with the ultimate goal of stealing users' credentials and financial information in order to facilitate unauthorized fund transfers.
+
+The group, responsible for the development and distribution of the Dridex (aka Bugat) malware, has been previously observed deploying LockBit and other ransomware strains in 2022 in order to get around sanctions imposed against the group in December 2019, including key members Maksim Yakubets and Igor Turashev.
+
+Ryzhenkov has been described by the U.K. National Crime Agency (NCA) as Yakubets' right-hand man, with the U.S. Department of Justice (DoJ) accusing him of deploying BitPaymer ransomware to target victims across the country since at least June 2017.
+
+"Ryzhenkov used the affiliate name Beverley, made over 60 LockBit ransomware builds and sought to extort at least $100 million from victims in ransom demands," officials said. "Ryzhenkov additionally has been linked to the alias mx1r and associated with UNC2165 (an evolution of Evil Corp affiliated actors)."
+
+Additionally, Ryzhenkov's brother Sergey Ryzhenkov, who is believed to use the online alias Epoch, has been linked to BitPaymer, per cybersecurity firm Crowdstrike, which assisted the NCA in the effort.
+
+"Throughout 2024, Indrik Spider gained initial access to multiple entities through the Fake Browser Update (FBU) malware-distribution service," it noted. "The adversary was last seen deploying LockBit during an incident that occurred during Q2 2024."
+
+Notable among the individuals subjected to sanctions are Yakubets' father, Viktor Yakubets, and his father-in-law, Eduard Benderskiy, a former high-ranking FSB official, underscoring the deep connection between Russian cybercrime groups and the Kremlin.
+
+"The group were in a privileged position, with some members having close links to the Russian state," the NCA said. "Benderskiy was a key enabler of their relationship with the Russian Intelligence Services who, prior to 2019, tasked Evil Corp to conduct cyber attacks and espionage operations against NATO allies."
+
+"After the U.S. sanctions and indictments in December 2019, Benderskiy used his extensive influence with the Russian state to protect the group, both by providing senior members with security and by ensuring they were not pursued by Russian internal authorities."

@@ -1,0 +1,23 @@
+Chinese Cyber Espionage Targets Telecom Operators in Asia Since 2021
+
+Cyber espionage groups associated with China have been linked to a long-running campaign that has infiltrated several telecom operators located in a single Asian country at least since 2021.
+
+"The attackers placed backdoors on the networks of targeted companies and also attempted to steal credentials," the Symantec Threat Hunter Team, part of Broadcom, said in a report shared with The Hacker News.
+
+The cybersecurity firm did not reveal the country that was targeted, but said it found evidence to suggest that the malicious cyber activity may have started as far back as 2020.
+
+The attacks also targeted an unnamed services company that catered to the telecoms sector and a university in another Asian country, it added.
+
+The choice of tools used in this campaign overlaps with other missions conducted by Chinese espionage groups like Mustang Panda (aka Earth Preta and Fireant), RedFoxtrot (aka Neeedleminer and Nomad Panda), and Naikon (aka Firefly) in recent years.
+
+This includes custom backdoors tracked as COOLCLIENT, QUICKHEAL, and RainyDay that come equipped with capabilities to capture sensitive data and establish communication with a command-and-control (C2) server.
+
+While the exact initial access pathway used to breach the targets is presently unknown, the campaign is also notable for deploying port scanning tools and conducting credential theft through the dumping of Windows Registry hives.
+
+The fact that the tooling has connections to three different adversarial collectives has raised several possibilities: The attacks are being conducted independently of each other, a single threat actor is using tools acquired from other groups, or diverse actors are collaborating on a single campaign.
+
+Also unclear at this stage is the primary motive behind the intrusions, although Chinese threat actors have a history of targeting the telecoms sector across the world.
+
+In November 2023, Kaspersky revealed a ShadowPad malware campaign targeting one of the national telecom companies of Pakistan by exploiting known security flaws in Microsoft Exchange Server (CVE-2021-26855 aka ProxyLogon).
+
+"The attackers may have been gathering intelligence on the telecoms sector in that country," Symantec postulated. "Eavesdropping is another possibility. Alternatively, the attackers may have been attempting to build a disruptive capability against critical infrastructure in that country."

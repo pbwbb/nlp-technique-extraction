@@ -1,0 +1,23 @@
+Mysterious Cyber Attack Took Down 600,000+ Routers in the U.S.
+
+More than 600,000 small office/home office (SOHO) routers are estimated to have been bricked and taken offline following a destructive cyber attack staged by unidentified cyber actors, disrupting users' access to the internet.
+
+The mysterious event, which took place between October 25 and 27, 2023, and impacted a single internet service provider (ISP) in the U.S., has been codenamed Pumpkin Eclipse by the Lumen Technologies Black Lotus Labs team. It specifically affected three router models issued by the ISP: ActionTec T3200, ActionTec T3260, and Sagemcom.
+
+"The incident took place over a 72-hour period between October 25-27, rendered the infected devices permanently inoperable, and required a hardware-based replacement," the company said in a technical report.
+
+The blackout is significant, not least because it led to the abrupt removal of 49% of all modems from the impacted ISP's autonomous system number (ASN) during the time-frame.
+
+While the name of the ISP was not disclosed, evidence points to it being Windstream, which suffered an outage around the same time, causing users to report a "steady red light" being displayed by the impacted modems.
+
+Now, months later, Lumen's analysis has revealed a commodity remote access trojan (RAT) called Chalubo – a stealthy malware first documented by Sophos in October 2018 – as responsible for the sabotage, with the adversary opting for it presumably in an effort to complicate attribution efforts rather than use a custom toolkit.
+
+"Chalubo has payloads designed for all major SOHO/IoT kernels, pre-built functionality to perform DDoS attacks, and can execute any Lua script sent to the bot," the company said. "We suspect the Lua functionality was likely employed by the malicious actor to retrieve the destructive payload."
+
+That said, the exact initial access method used to breach the routers is currently unclear, although it's theorized that it may have involved the abuse of weak credentials or exploited an exposed administrative interface.
+
+Upon gaining a successful foothold, the infection chain proceeds to drop shell scripts that pave the way for a loader ultimately designed to retrieve and launch Chalubo from an external server. The destructive Lua script module fetched by the trojan is unknown.
+
+A notable aspect of the campaign is its targeting of a single ASN, as opposed to others that have typically targeted a specific router model or common vulnerability, raising the possibility that it was deliberately targeted, although the motivations behind it are undetermined as yet.
+
+"The event was unprecedented due to the number of units affected – no attack that we can recall has required the replacement of over 600,000 devices," Lumen said. "In addition, this type of attack has only ever happened once before, with AcidRain used as a precursor to an active military invasion."

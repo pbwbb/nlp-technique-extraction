@@ -1,0 +1,31 @@
+Microsoft Detects Growing Use of File Hosting Services in Business Email Compromise Attacks
+
+Microsoft is warning of cyber attack campaigns that abuse legitimate file hosting services such as SharePoint, OneDrive, and Dropbox that are widely used in enterprise environments as a defense evasion tactic.
+
+The end goal of the campaigns are broad and varied, allowing threat actors to compromise identities and devices and conduct business email compromise (BEC) attacks, which ultimately result in financial fraud, data exfiltration, and lateral movement to other endpoints.
+
+The weaponization of legitimate internet services (LIS) is an increasingly popular risk vector adopted by adversaries to blend in with legitimate network traffic in a manner such that it often bypasses traditional security defenses and complicates attribution efforts.
+
+The approach is also called living-off-trusted-sites (LOTS), as it leverages the trust and familiarity of these services to sidestep email security guardrails and deliver malware.
+
+Microsoft said it has been observing a new trend in phishing campaigns exploiting legitimate file hosting services since mid-April 2024 that involve files with restricted access and view-only restrictions.
+
+Such attacks often begin with the compromise of a user within a trusted vendor, leveraging the access to stage malicious files and payloads on the file hosting service for subsequent sharing with a target entity.
+
+"The files sent through the phishing emails are configured to be accessible solely to the designated recipient," it said. "This requires the recipient to be signed in to the file-sharing service — be it Dropbox, OneDrive, or SharePoint — or to re-authenticate by entering their email address along with a one-time password (OTP) received through a notification service."
+
+What's more, the files shared as part of the phishing attacks are set to "view-only" mode, preventing the ability to download and detect embedded URLs within the file.
+
+A recipient who attempts to access the shared file is then prompted to verify their identity by providing their email address and a one-time password sent to their email account.
+
+Once they are successfully authorized, the target is instructed to click on another link to view the actual contents. However, doing so redirects them to an adversary-in-the-middle (AitM) phishing page that steals their password and two-factor authentication (2FA) tokens.
+
+This not only enables the threat actors to seize control of the account, but also use it to perpetuate other scams, including BEC attacks and financial fraud.
+
+"While these campaigns are generic and opportunistic in nature, they involve sophisticated techniques to perform social engineering, evade detection, and expand threat actor reach to other accounts and tenants," the Microsoft Threat Intelligence team said.
+
+The development comes as Sekoia detailed a new AitM phishing kit called Mamba 2FA that's sold as phishing-as-a-service (PhaaS) to other threat actors to conduct email phishing campaigns that propagate HTML attachments impersonating Microsoft 365 login pages.
+
+The kit, which is offered on a subscription basis for $250 per month, supports Microsoft Entra ID, AD FS, third-party SSO providers, and consumer accounts. Mamba 2FA has been actively put to use since November 2023.
+
+"It handles two-step verifications for non-phishing-resistant MFA methods such as one-time codes and app notifications," the French cybersecurity company said. "The stolen credentials and cookies are instantly sent to the attacker via a Telegram bot."

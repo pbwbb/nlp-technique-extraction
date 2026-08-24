@@ -1,0 +1,33 @@
+Celebrity TikTok Accounts Compromised Using Zero-Click Attack via DMs
+
+Popular video-sharing platform TikTok has acknowledged a security issue that has been exploited by threat actors to take control of high-profile accounts on the platform.
+
+The development was first reported by Semafor and Forbes, which detailed a zero-click account takeover campaign that allows malware propagated via direct messages to compromise brand and celebrity accounts without having to click or interact with it.
+
+The exploit has been found to take advantage of a zero-day vulnerability in the messaging component that allows malicious code to be executed as soon as the message is opened.
+
+It's currently unclear how many users have been affected, although a TikTok spokesperson said that the company has taken preventive measures to stop the attack and stop it from happening again in the future.
+
+The company further said that it's working directly with impacted account holders to restore access and that the attack only managed to compromise a "very small" number of users. It did not provide any specifics about the nature of the attack or the mitigation techniques it had employed.
+
+This is not the first time security issues have been uncovered in the widely-used service. In January 2021, Check Point detailed a flaw in TikTok that could have potentially enabled an attacker to build a database of the app's users and their associated phone numbers for future malicious activity.
+
+Then in September 2022, Microsoft uncovered a one-click exploit affecting TikTok's Android app that could let attackers take over accounts when victims clicked on a specially crafted link.
+
+Another issue disclosed by Imperva over a year ago could have allowed attackers to monitor users' activity and access sensitive information on both mobile and desktop devices.
+
+"By exploiting this vulnerability, attackers could send malicious messages to the TikTok web application through the PostMessage API, bypassing the security measures," the company noted at the time. "The message event handler would then process the malicious message as if coming from a trusted source, granting the attacker access to sensitive user information."
+
+That's not all. As many as 700,000 TikTok accounts in Turkey were found to have been compromised last year, after reports emerged that the greyrouting of SMS messages through insecure channels enabled adversaries to intercept one-time passwords and gain access to TikTok users’ accounts and inflate likes and followers.
+
+Bad actors have also capitalized on TikTok's Invisible Challenge to deliver information-stealing malware, highlighting continued efforts on the part of attackers to spread malware through unconventional means.
+
+TikTok's Chinese roots have led to concerns that the app could be used as a conduit to gather sensitive information on American users and push propaganda, eventually leading to the passage of a law that would ban the video app in the country unless it is divested from ByteDance.
+
+Last month, the social media giant filed a lawsuit in the U.S. challenging the act, stating it's an "extraordinary intrusion on free speech rights" and that the U.S. had put forth only "speculative concerns" to justify the ban.
+
+India, Nepal, Senegal, Somalia, and Kyrgyzstan are among the nations that have already imposed similar bans on TikTok, with several other countries, including the U.S., the U.K., Canada, Australia, and New Zealand, barring the use of the app on government devices.
+
+Update
+
+TikTok on June 7, 2024, confirmed to Axios that it has fixed a vulnerability that made it possible to target high-profile accounts with malware-laced messages to take over them. It's still unclear how many accounts were hit by the attack, or who was behind the attack and what their ultimate goal was.

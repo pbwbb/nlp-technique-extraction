@@ -1,0 +1,53 @@
+Check Point Warns of Zero-Day Attacks on its VPN Gateway Products
+
+Check Point is warning of a zero-day vulnerability in its Network Security gateway products that threat actors have exploited in the wild.
+
+Tracked as CVE-2024-24919 (CVSS score: 8.6), the issue impacts CloudGuard Network, Quantum Maestro, Quantum Scalable Chassis, Quantum Security Gateways, and Quantum Spark appliances.
+
+"The vulnerability potentially allows an attacker to read certain information on Internet-connected Gateways with remote access VPN or mobile access enabled," Check Point said.
+
+Hotfixes are available in the following versions -
+
+Quantum Security Gateway and CloudGuard Network Security Versions - R81.20, R81.10, R81, R80.40
+
+Quantum Maestro and Quantum Scalable Chassis - R81.20, R81.10, R80.40, R80.30SP, R80.20SP
+
+Quantum Spark Gateways Version - R81.10.x, R80.20.x, R77.20.x
+
+The development comes days after the Israeli cybersecurity company warned of attacks targeting its VPN devices to infiltrate enterprise networks.
+
+"By May 24, 2024, we identified a small number of login attempts using old VPN local-accounts relying on unrecommended password-only authentication method," it noted earlier this week.
+
+This has now been traced back to a new high-severity zero-day discovered in Security Gateways with IPSec VPN, Remote Access VPN and the Mobile Access software blade.
+
+Check Point did not elaborate on the nature of the attacks, but noted in an FAQ that the exploitation attempts observed so far focus on "remote access on old local accounts with unrecommended password-only authentication" against a "small number of customers."
+
+The targeting of VPN devices represents just the latest series of attacks to target network perimeter applications, with similar intrusions impacting devices from Barracuda Networks, Cisco, Fortinet, Ivanti, Palo Alto Networks, and VMware in recent years.
+
+"Attackers are motivated to gain access to organizations over remote-access setups so they can try to discover relevant enterprise assets and users, seeking for vulnerabilities in order to gain persistence on key enterprise assets," Check Point said.
+
+Exploitation Attempts Detected Since April 30, 2024
+
+In an advisory published on Wednesday, cybersecurity firm mnemonic said it observed exploitation attempts involving CVE-2024-24919 and targeting its customer environments since April 30, 2024.
+
+"The vulnerability is considered critical because it allows unauthorized actors to extract information from gateways connected to the internet," the company said. "The vulnerability allows a threat actor to enumerate and extract password hashes for all local accounts, including the account used to connect to Active Directory."
+
+"However, it is known that password hashes of legacy local users with password-only authentication can be extracted, including service accounts used to connect to Active Directory. Weak passwords can be compromised, leading to further misuse and potential lateral movement within the network."
+
+The Norwegian company further described the shortcoming as critical and trivial to exploit owing to the fact that it does not require user interaction or privileges.
+
+Evidence gathered so far shows that the vulnerability has also weaponized to extract Active Directory data (NTDS.dit) within 2-3 hours after logging in with a local user, subsequently allowing unknown actors to move laterally in the network and misuse remote development extensions in Visual Studio (VS) Code to tunnel network traffic for detection evasion.
+
+"The threat actor used approximately three hours to execute their attack chain," mnemonic noted, adding the technique has been put to use in a "cyber espionage context."
+
+Thousands of internet-facing devices vulnerable to CVE-2024-24919
+
+Attack surface management firm Censys has revealed that it observed 13,802 internet hosts exposing either a CloudGuard instance, Quantum Security, or Quantum Spark gateway as of May 31, 2024.
+
+CVE-2024-24919 has been described as an information disclosure vulnerability, although watchTowr Labs has since discovered that it's actually a path traversal flaw that makes it possible to break out of the confines of the current directory ("CSHELL/") and read arbitrary files, including those containing sensitive information such as " /etc/shadow."
+
+"[Check Point's statement] seems to downplay the severity of this bug," security researcher Aliz Hammond said. "Since the bug is already being used in the wild, by real attackers, it seems dangerous for the bug to be treated as anything less than a full unauthenticated RCE, with device administrators urged to update as soon as humanly possible."
+
+Check Point, in its own updated advisory, said the first exploitation attempts started on April 7, 2024, and that it's investigating the matter further. "With a public proof-of-concept out, and exploitation quickly ramping up, we recommend patching Check Point as soon as possible," threat intelligence firm GreyNoise said.
+
+(The story was updated after publication to reflect the change in the CVSS score and include additional information about the zero-day from mnemonic, Censys, watchTowr Labs, and GreyNoise.)

@@ -1,0 +1,51 @@
+Microsoft: Russian-Linked Hackers Using 'Device Code Phishing' to Hijack Accounts
+
+Microsoft is calling attention to an emerging threat cluster it calls Storm-2372 that has been attributed to a new set of cyber attacks aimed at a variety of sectors since August 2024.
+
+The attacks have targeted government, non-governmental organizations (NGOs), information technology (IT) services and technology, defense, telecommunications, health, higher education, and energy/oil and gas sectors in Europe, North America, Africa, and the Middle East.
+
+The threat actor, assessed with medium confidence to be aligned with Russian interests, victimology, and tradecraft, has been observed targeting users via messaging apps like WhatsApp, Signal, and Microsoft Teams by falsely claiming to be a prominent person relevant to the target in an attempt to build trust.
+
+"The attacks use a specific phishing technique called 'device code phishing' that tricks users to log into productivity apps while Storm-2372 actors capture the information from the log in (tokens) that they can use to then access compromised accounts," the Microsoft Threat Intelligence said in a new report.
+
+The goal is to leverage the authentication codes obtained via the technique to access target accounts, and abuse that access to get hold of sensitive data and enable persistent access to the victim environment as long as the tokens remain valid.
+
+The tech giant said the attack involves sending phishing emails that masquerade as Microsoft Teams meeting invitations that, when clicked, urge the message recipients to authenticate using a threat actor-generated device code, thereby allowing the adversary to hijack the authenticated session using the valid access token.
+
+"During the attack, the threat actor generates a legitimate device code request and tricks the target into entering it into a legitimate sign-in page," Microsoft explained. "This grants the actor access and enables them to capture the authentication—access and refresh—tokens that are generated, then use those tokens to access the target's accounts and data."
+
+The phished authentication tokens can then be used to gain access to other services that the user already has permissions to, such as email or cloud storage, without the need for a password.
+
+Microsoft said the valid session is used to move laterally within the network by sending similar phishing intra-organizational messages to other users from the compromised account. Furthermore, the Microsoft Graph service is used to search through messages of the breached account.
+
+"The threat actor was using keyword searching to view messages containing words such as username, password, admin, teamviewer, anydesk, credentials, secret, ministry, and gov," Redmond said, adding the emails matching these filter criteria were then exfiltrated to the threat actor.
+
+To mitigate the risk posed by such attacks, organizations are recommended to block device code flow wherever possible, enable phishing-resistant multi-factor authentication (MFA), and follow the principle of least privilege.
+
+Update
+
+In an update shared on February 14, 2025, Microsoft said it "observed Storm-2372 shifting to using the specific client ID for Microsoft Authentication Broker in the device code sign-in flow."
+
+Using the client ID, it added, enables the attackers to receive a refresh token that can be used to request another token for the device registration service, and then register an actor-controlled device within Entra ID. The connected device is then used to harvest emails.
+
+"With the same refresh token and the new device identity, Storm-2372 is able to obtain a Primary Refresh Token (PRT) and access an organization's resources," Microsoft said. "The actor has also been observed to use proxies that are regionally appropriate for the targets, likely in an attempt to further conceal the suspicious sign in activity."
+
+Cybersecurity firm Volexity said it has observed at least three different Russian threat actors conducting spear-phishing campaigns using the device code approach to compromise Microsoft 365 accounts since mid-January 2025.
+
+Some of the emails have been identified as sent from accounts impersonating individuals from the United States Department of State, Ukrainian Ministry of Defence, European Union Parliament, and other prominent research institutions.
+
+One of the clusters behind the activity is suspected to be APT29, which is also known as BlueBravo, Cloaked Ursa, CozyLarch, Cozy Bear, Midnight Blizzard (formerly Nobelium), and The Dukes. The other two groups have been assigned the monikers UTA0304 and UTA0307.
+
+In one instance analyzed by Volexity, UTA0304 first approached a victim on Signal masquerading as an official from the Ukrainian Ministry of Defence, and then persuaded them to shift the conversation to another secure chat application called Element.
+
+The attacker proceeded to send them a spear-phishing email, stating they needed to click on a link provided in the message to join a chat room. Clicking the link redirected the victim to a Microsoft page that asks for a device code in order to "allow access."
+
+"The message was a ploy to fool the user into thinking they were being invited into a secure chat, when in reality they were giving the attacker access to their account," Volexity's Charlie Gardner, Steven Adair, and Tom Lancaster said in an analysis.
+
+"The generated Device Codes are only valid for 15 minutes once they are created. As a result, the real-time communication with the victim, and having them expect the 'invitation,' served to ensure the phish would succeed through timely coordination.
+
+CozyLarch and UTA0307, likewise, are said to have adopted a similar strategy, urging victims to join a Microsoft Teams meeting to gain unauthorized access to the Microsoft 365 account, followed by exfiltrating documents of interest.
+
+"It should be noted that it is possible this is the work of a single threat actor running multiple, different campaigns," the researchers said, adding they are being tracked separately due to differences in the observed components.
+
+"It appears that these Russian threat actors have made a concerted effort to launch several campaigns against organizations with a goal of simultaneously abusing this method before the targets catch on and implement countermeasures."

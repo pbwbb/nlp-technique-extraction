@@ -1,0 +1,19 @@
+China-Backed Earth Baku Expands Cyber Attacks to Europe, Middle East, and Africa
+
+The China-backed threat actor known as Earth Baku has diversified its targeting footprint beyond the Indo-Pacific region to include Europe, the Middle East, and Africa starting in late 2022.
+
+Newly targeted countries as part of the activity include Italy, Germany, the U.A.E., and Qatar, with suspected attacks also detected in Georgia and Romania. Governments, media and communications, telecoms, technology, healthcare, and education are some of the sectors singled out as part of the intrusion set.
+
+"The group has updated its tools, tactics, and procedures (TTPs) in more recent campaigns, making use of public-facing applications such as IIS servers as entry points for attacks, after which they deploy sophisticated malware toolsets on the victim's environment," Trend Micro researchers Ted Lee and Theo Chen said in an analysis published last week.
+
+The findings build upon recent reports from Zscaler and Google-owned Mandiant, which also detailed the threat actor's use of malware families like DodgeBox (aka DUSTPAN) and MoonWalk (aka DUSTTRAP). Trend Micro has given them the monikers StealthReacher and SneakCross.
+
+Earth Baku, a threat actor associated with APT41, is known for its use of StealthVector as far back as October 2020. Attack chains involve the exploitation of public-facing applications to drop the Godzilla web shell, which is then used to deliver follow-on payloads.
+
+StealthReacher has been classified as an enhanced version of the StealthVector backdoor loader that's responsible for launching SneakCross, a modular implant and a likely successor to ScrambleCross that leverages Google services for its command-and-control (C2) communication.
+
+The attacks are also characterized by the use of other post-exploitation tools such as iox, Rakshasa, and a Virtual Private Network (VPN) service known as Tailscale. Exfiltration of sensitive data to the MEGA cloud storage service is accomplished by means of a command-line utility dubbed MEGAcmd.
+
+"The group has employed new loaders such as StealthVector and StealthReacher, to stealthily launch backdoor components, and added SneakCross as their latest modular backdoor," the researchers said.
+
+"Earth Baku also used several tools during its post-exploitation including a customized iox tool, Rakshasa, TailScale for persistence, and MEGAcmd for efficient data exfiltration."

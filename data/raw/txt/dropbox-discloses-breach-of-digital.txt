@@ -1,0 +1,23 @@
+Dropbox Discloses Breach of Digital Signature Service Affecting All Users
+
+Cloud storage services provider Dropbox on Wednesday disclosed that Dropbox Sign (formerly HelloSign) was breached by unidentified threat actors, who accessed emails, usernames, and general account settings associated with all users of the digital signature product.
+
+The company, in a filing with the U.S. Securities and Exchange Commission (SEC), said it became aware of the "unauthorized access" on April 24, 2024. Dropbox announced its plans to acquire HelloSign in January 2019.
+
+"The threat actor had accessed data related to all users of Dropbox Sign, such as emails and usernames, in addition to general account settings," it said in the Form 8-K filing..
+
+"For subsets of users, the threat actor also accessed phone numbers, hashed passwords, and certain authentication information such as API keys, OAuth tokens, and multi-factor authentication."
+
+Even worse, the intrusion also affects third-parties who received or signed a document through Dropbox Sign, but never created an account themselves, specifically exposing their names and email addresses.
+
+Investigation conducted so far has uncovered no evidence that the attackers accessed the contents of users' accounts, such as agreements or templates, or their payment information. The incident is also said to be restricted to Dropbox Sign infrastructure.
+
+The attackers are believed to have gained access to a Dropbox Sign automated system configuration tool and compromised a service account that's part of Sign's backend, exploiting the account's elevated privileges to access its customer database.
+
+The company, however, did not disclose how many customers were affected by the hack, but said it's in the process of reaching out to all impacted users alongside "step-by-step instructions" to protect their information.
+
+"Our security team also reset users' passwords, logged users out of any devices they had connected to Dropbox Sign, and is coordinating the rotation of all API keys and OAuth tokens," it said.
+
+Dropbox also said it's cooperating with law enforcement and regulatory authorities on the matter. Further analysis of the breach remains ongoing.
+
+The breach is the second such incident to target Dropbox within two years. In November 2022, the company divulged it was the victim of a phishing campaign that allowed unidentified threat actors to gain unauthorized access to 130 of its source code repositories on GitHub.

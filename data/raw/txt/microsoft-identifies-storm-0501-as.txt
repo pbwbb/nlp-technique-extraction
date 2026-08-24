@@ -1,0 +1,43 @@
+Microsoft Identifies Storm-0501 as Major Threat in Hybrid Cloud Ransomware Attacks
+
+The threat actor known as Storm-0501 has targeted government, manufacturing, transportation, and law enforcement sectors in the U.S. to stage ransomware attacks.
+
+The multi-stage attack campaign is designed to compromise hybrid cloud environments and perform lateral movement from on-premises to cloud environment, ultimately resulting in data exfiltration, credential theft, tampering, persistent backdoor access, and ransomware deployment, Microsoft said.
+
+"Storm-0501 is a financially motivated cybercriminal group that uses commodity and open-source tools to conduct ransomware operations," according to the tech giant's threat intelligence team.
+
+Active since 2021, the threat actor has a history of targeting education entities with Sabbath (54bb47h) ransomware before evolving into a ransomware-as-a-service (RaaS) affiliate delivering various ransomware payloads over the years, including Hive, BlackCat (ALPHV), Hunters International, LockBit, and Embargo ransomware.
+
+A notable aspect of Storm-0501's attacks is the use of weak credentials and over-privileged accounts to move from organizations on-premises to cloud infrastructure.
+
+Other initial access methods include using a foothold already established by access brokers like Storm-0249 and Storm-0900, or exploiting various known remote code execution vulnerabilities in unpatched internet-facing servers such as Zoho ManageEngine, Citrix NetScaler, and Adobe ColdFusion 2016.
+
+The access afforded by any of the aforementioned approaches paves the way for extensive discovery operations to determine high-value assets, gather domain information, and perform Active Directory reconnaissance. This is followed by the deployment of remote monitoring and management tools (RMMs) like AnyDesk to maintain persistence.
+
+"The threat actor took advantage of admin privileges on the local devices it compromised during initial access and attempted to gain access to more accounts within the network through several methods," Microsoft said.
+
+"The threat actor primarily utilized Impacket's SecretsDump module, which extracts credentials over the network, and leveraged it across an extensive number of devices to obtain credentials."
+
+The compromised credentials are then used to access even more devices and extract additional credentials, with the threat actor simultaneously accessing sensitive files to extract KeePass secrets and conducting brute-force attacks to obtain credentials for specific accounts.
+
+Microsoft said it detected Storm-0501 employing Cobalt Strike to move laterally across the network using the compromised credentials and send follow-on commands. Data exfiltration from the on-premises environment is accomplished by using Rclone to transfer the data to the MegaSync public cloud storage service.
+
+The threat actor has also been observed creating persistent backdoor access to the cloud environment and deploying ransomware to the on-premises, making it the latest threat actor to target hybrid cloud setups after Octo Tempest and Manatee Tempest.
+
+"The threat actor used the credentials, specifically Microsoft Entra ID (formerly Azure AD), that were stolen from earlier in the attack to move laterally from the on-premises to the cloud environment and establish persistent access to the target network through a backdoor," Redmond said.
+
+The pivot to the cloud is said to be accomplished either through a compromised Microsoft Entra Connect Sync user account or via cloud session hijacking of an on-premises user account that has a respective admin account in the cloud with multi-factor authentication (MFA) disabled.
+
+The attack culminates with the deployment of Embargo ransomware across the victim organization upon obtaining sufficient control over the network, exfiltrating files of interest, and lateral movement to the cloud. Embargo is a Rust-based ransomware first discovered in May 2024.
+
+"Operating under the RaaS model, the ransomware group behind Embargo allows affiliates like Storm-0501 to use its platform to launch attacks in exchange for a share of the ransom," Microsoft said.
+
+"Embargo affiliates employ double extortion tactics, where they first encrypt a victim’s files and threaten to leak stolen sensitive data unless a ransom is paid."
+
+That having said, evidence gathered by the Windows maker shows that the threat actor does not always resort to ransomware distribution, instead opting to only maintain backdoor access to the network in some cases.
+
+The disclosure comes as the DragonForce ransomware group has been targeting companies in manufacturing, real estate, and transportation sectors using a variant of the leaked LockBit3.0 builder and a modified version of Conti.
+
+The attacks are characterized by the use of the SystemBC backdoor for persistence, Mimikatz and Cobalt Strike for credential harvesting, and Cobalt Strike for lateral movement. The U.S. accounts for more than 50% of the total victims, followed by the U.K. and Australia.
+
+"The group employs double extortion tactics, encrypting data, and threatening leaks unless a ransom is paid," Singapore-headquartered Group-IB said. "The affiliate program, launched on 26 June 2024, offers 80% of the ransom to affiliates, along with tools for attack management and automation."

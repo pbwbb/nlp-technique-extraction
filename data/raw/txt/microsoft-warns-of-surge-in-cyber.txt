@@ -1,0 +1,39 @@
+Microsoft Warns of Surge in Cyber Attacks Targeting Internet-Exposed OT Devices
+
+Microsoft has emphasized the need for securing internet-exposed operational technology (OT) devices following a spate of cyber attacks targeting such environments since late 2023.
+
+"These repeated attacks against OT devices emphasize the crucial need to improve the security posture of OT devices and prevent critical systems from becoming easy targets," the Microsoft Threat Intelligence team said.
+
+The company noted that a cyber attack on an OT system could allow malicious actors to tamper with critical parameters used in industrial processes, either programmatically via the programmable logic controller (PLC) or using the graphical controls of the human-machine interface (HMI), resulting in malfunctions and system outages.
+
+It further said that OT systems often lack adequate security mechanisms, making them ripe for exploitation by adversaries and carry out attacks that are "relatively easy to execute," a fact compounded by the additional risks introduced by directly connecting OT devices to the internet.
+
+This not only makes the devices discoverable by attackers through internet scanning tools, but also be weaponized to gain initial access by taking advantage of weak sign-in passwords or outdated software with known vulnerabilities.
+
+Just last week, Rockwell Automation issued an advisory urging its customers to disconnect all industrial control systems (ICSs) not meant to be connected to the public-facing internet due to "heightened geopolitical tensions and adversarial cyber activity globally."
+
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has also released a bulletin of its own warning of pro-Russia hacktivists targeting vulnerable industrial control systems in North America and Europe.
+
+"Specifically, pro-Russia hacktivists manipulated HMIs, causing water pumps and blower equipment to exceed their normal operating parameters," the agency said. "In each case, the hacktivists maxed out set points, altered other settings, turned off alarm mechanisms, and changed administrative passwords to lock out the WWS operators."
+
+Microsoft further said the onset of the Israel-Hamas war in October 2023 led to a spike in cyber attacks against internet-exposed, poorly secured OT assets developed by Israeli companies, with many of them conducted by groups like Cyber Av3ngers, Soldiers of Solomon, and Abnaa Al-Saada that are affiliated with Iran.
+
+The attacks, per Redmond, singled out OT equipment deployed across different sectors in Israel that were manufactured by international vendors as well as those that were sourced from Israel but deployed in other countries.
+
+These OT devices are "primarily internet-exposed OT systems with poor security posture, potentially accompanied by weak passwords and known vulnerabilities," the tech giant added.
+
+To mitigate the risks posed by such threats, it's recommended that organizations ensure security hygiene for their OT systems, specifically by reducing the attack surface and implementing zero trust practices to prevent attackers from moving laterally within a compromised network.
+
+The development comes as OT security firm Claroty unpacked a destructive malware strain called Fuxnet that the Blackjack hacking group, suspected to be backed by Ukraine, allegedly used against Moscollector, a Russian company that maintains a large network of sensors for monitoring Moscow's underground water and sewage systems for emergency detection and response.
+
+BlackJack, which shared details of the attack early last month, described Fuxnet as " Stuxnet on steroids," with Claroty noting that the malware was likely deployed remotely to the target sensor gateways using protocols such as SSH or the sensor protocol (SBK) over port 4321.
+
+Fuxnet comes with the capability to irrevocably destroy the filesystem, block access to the device, and physically destroy the NAND memory chips on the device by constantly writing and rewriting the memory in order to render it inoperable.
+
+On top of that, it's designed to rewrite the UBI volume to prevent the sensor from rebooting, and ultimately corrupt the sensors themselves by sending a flood of bogus Meter-Bus (M-Bus) messages.
+
+"The attackers developed and deployed malware that targeted the gateways and deleted filesystems, directories, disabled remote access services, routing services for each device, and rewrote flash memory, destroyed NAND memory chips, UBI volumes and other actions that further disrupted operation of these gateways," Claroty noted.
+
+According to data shared by Russian cybersecurity company Kaspersky earlier this week, the internet, email clients, and removable storage devices emerged as the primary sources of threats to computers in an organization's OT infrastructure in the first quarter of 2024.
+
+"Malicious actors use scripts for a wide range of objectives: collecting information, tracking, redirecting the browser to a malicious site, and uploading various types of malware (spyware and/or silent crypto mining tools) to the user’s system or browser," it said. "These spread via the internet and email."

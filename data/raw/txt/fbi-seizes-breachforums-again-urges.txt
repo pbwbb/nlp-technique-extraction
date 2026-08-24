@@ -1,0 +1,21 @@
+FBI Seizes BreachForums Again, Urges Users to Report Criminal Activity
+
+Law enforcement agencies have officially seized control of the notorious BreachForums platform, an online bazaar known for peddling stolen data, for the second time within a year.
+
+The website ("breachforums[.]st") has been replaced by a seizure banner stating the clearnet cybercrime forum is under the control of the U.S. Federal Bureau of Investigation (FBI).
+
+The operation is the result of a collaborative effort from authorities in Australia, Iceland, New Zealand, Switzerland, the U.K., the U.S., and Ukraine.
+
+The FBI has also taken control of the Telegram channel operated by Baphomet, who became the administrator of the forum following the arrest of his predecessor Conor Brian Fitzpatrick (aka pompompurin) in March last year.
+
+It's worth noting a prior iteration of BreachForums, hosted at breached.vc/.to/.co and managed by pompompurin, was seized by law enforcement in late June 2023.
+
+"This Telegram chat is under the control of the FBI," a message posted on the channel reads. "The BreachForums website has been taken down by the FBI and DOJ with assistance from international partners."
+
+"We are reviewing the site's backend data. If you have information to report about cyber criminal activity on BreachForums, please contact us: t.me/fbi_breachforums breachforums@fbi.gov breachforums.ic3.gov."
+
+It's currently not clear if Baphomet and his other fellow administrator ShinyHunters have been arrested, although the seizure banner depicts the profile pictures associated with both of them as behind bars.
+
+"From June 2023 until May 2024, BreachForums (hosted at breachforums.st/.cx/.is/.vc and run by ShinyHunters) was operating as a clearnet marketplace for cybercriminals to buy, sell, and trade contraband, including stolen access devices, means of identification, hacking tools, breached databases, and other illegal services," the agencies said.
+
+BreachForums emerged in March 2022 following the law enforcement dismantling of RaidForums and the arrest of its owner "Omnipotent." Following its shutdown in 2023, it resurfaced again after Baphomet teamed up with ShinyHunters to launch a new site under the same name.

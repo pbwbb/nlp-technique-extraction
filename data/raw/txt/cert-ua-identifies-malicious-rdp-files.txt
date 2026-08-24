@@ -1,0 +1,89 @@
+CERT-UA Identifies Malicious RDP Files in Latest Attack on Ukrainian Entities
+
+The Computer Emergency Response Team of Ukraine (CERT-UA) has detailed a new malicious email campaign targeting government agencies, enterprises, and military entities.
+
+"The messages exploit the appeal of integrating popular services like Amazon or Microsoft and implementing a zero-trust architecture," CERT-UA said. "These emails contain attachments in the form of Remote Desktop Protocol ('.rdp') configuration files."
+
+Once executed, the RDP files establish a connection with a remote server, enabling the threat actors to gain remote access to the compromised hosts, steal data, and plant additional malware for follow-on attacks.
+
+Infrastructure preparation for the activity is believed to have been underway since at least August 2024, with the agency stating that it's likely to spill out of Ukraine to target other countries.
+
+CERT-UA has attributed the campaign to a threat actor it tracks as UAC-0215. Amazon Web Services (AWS), in an advisory of its own, linked it to the Russian nation-state hacking group known as APT29.
+
+"Some of the domain names they used tried to trick the targets into believing the domains were AWS domains (they were not), but Amazon wasn't the target, nor was the group after AWS customer credentials," CJ Moses, Amazon's chief information security officer, said. "Rather, APT29 sought its targets' Windows credentials through Microsoft Remote Desktop."
+
+The tech giant said it also seized the domains the adversary was using to impersonate AWS in order to neutralize the operation. Some of the domains used by APT29 are listed below -
+
+ca-west-1.mfa-gov[.]cloud
+
+central-2-aws.ua-aws[.]army
+
+us-east-2-aws.ua-gov[.]cloud
+
+aws-ukraine[.]cloud
+
+aws-data[.]cloud
+
+aws-s3[.]cloud
+
+aws-il[.]cloud
+
+aws-join[.]cloud
+
+aws-meet[.]cloud
+
+aws-meetings[.]cloud
+
+aws-online[.]cloud
+
+aws-secure[.]cloud
+
+s3-aws[.]cloud
+
+s3-fbi[.]cloud
+
+s3-nsa[.]cloud, and
+
+s3-proofpoint[.]cloud
+
+The development comes as CERT-UA also warned of a large-scale cyber attack aimed at stealing confidential information of Ukrainian users. The threat has been cataloged under the moniker UAC-0218.
+
+The starting point of the attack is a phishing email containing a link to a booby-trapped RAR archive that purports to be either bills or payment details.
+
+Present within the archive is a Visual Basic Script-based malware dubbed HOMESTEEL that's designed to exfiltrate files matching certain extensions ("xls," "xlsx," "doc," "docx," "pdf," "txt," "csv," "rtf," "ods," "odt," "eml," "pst," "rar," and "zip") to an attacker-controlled server.
+
+"This way criminals can gain access to personal, financial and other sensitive data and use it for blackmail or theft," CERT-UA said.
+
+Furthermore, CERT-UA has alerted of a ClickFix -style campaign that's designed to trick users into malicious links embedded in email messages to drop a PowerShell script that's capable of establishing an SSH tunnel, stealing data from web browsers, and downloading and launching the Metasploit penetration testing framework.
+
+Users who click the link are directed to a fake reCAPTCHA verification page that prompts them to verify their identity by clicking on a button. This action copies the malicious PowerShell script ("Browser.ps1") to the user's clipboard and displays a popup window with instructions to execute it using the Run dialog box in Windows.
+
+CERT-UA said it has an "average level of confidence" that the campaign is the work of another Russian advanced persistent threat actor known as APT28 (aka UAC-0001).
+
+The cyber offensives against Ukraine come amidst a report from Bloomberg that detailed how Russia's military intelligence agency and Federal Security Service (FSB) systematically targeted Georgia's infrastructure and government as part of a series of digital intrusions between 2017 to 2020. Some of the attacks have been pinned on Turla.
+
+Microsoft Warns of APT29 Campaign
+
+Microsoft, in a report published on October 29, 2024, corroborated aforementioned findings from CERT-UA, stating it observed the APT29 actor sending a series of highly targeted spear-phishing emails to individuals in government, academia, defense, non-governmental organizations, and other sectors.
+
+The activity has been ongoing since October 22, and the spear-phishing emails are estimated to have been sent to thousands of targets in over 100 organizations located in the United Kingdom, Europe, Australia, and Japan.
+
+The emails "contained a signed Remote Desktop Protocol (RDP) configuration file that connected to an actor-controlled server," the Microsoft Threat Intelligence team said. "In some of the lures, the actor attempted to add credibility to their malicious messages by impersonating Microsoft employees. The threat actor also referenced other cloud providers in the phishing lures."
+
+Intelligence gathered by Microsoft shows that APT29 sent the phishing messages using email addresses belonging to legitimate organizations that were "gathered during previous compromises," highlighting the persistent nature of the threat. The use of rogue RDP configuration files to gain access to the targets' devices marks an evolution of the threat actor's tactics.
+
+The tech giant further said it's in the process of directly notifying customers that have been targeted or compromised, and that it's providing them with the necessary information to secure their accounts.
+
+Microsoft's advisory also follows a new report from the Dutch government that has warned of a spike in cyber attacks conducted by Russian and Chinese nation-state threat actors against organizations located in the country.
+
+A majority of these attacks primarily seek to obtain sensitive information, and persist within critical infrastructure networks for potential future sabotage, it said, pointing out the growing abuse of edge devices for initial access to target networks.
+
+“New methods for attacks include the abuse of edge devices, such as VPN servers and routers," the report said. "Attacks via edge devices are attractive, because monitoring and detection on these is very complex."
+
+CISA Issues Fresh Alert
+
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has published an advisory stating it has received multiple reports of an ongoing "large-scale spear-phishing campaign" targeting several sectors, including government and information technology (IT).
+
+"The foreign threat actor, often posing as a trusted entity, is sending spear-phishing emails containing malicious remote desktop protocol (RDP) files to targeted organizations to connect to and access files stored on the target's network," CISA said in an alert on October 31, 2024.
+
+"Once access has been gained, the threat actor may pursue additional activity, such as deploying malicious code to achieve persistent access to the target's network."

@@ -1,0 +1,23 @@
+Chinese Hackers Target Japanese Firms with LODEINFO and NOOPDOOR Malware
+
+Japanese organizations are the target of a Chinese nation-state threat actor that leverages malware families like LODEINFO and NOOPDOOR to harvest sensitive information from compromised hosts while stealthily remaining under the radar in some cases for a time period ranging from two to three years.
+
+Israeli cybersecurity company Cybereason is tracking the campaign under the name Cuckoo Spear, attributing it as related to a known intrusion set dubbed APT10, which is also known as Bronze Riverside, ChessMaster, Cicada, Cloudhopper, MenuPass, MirrorFace, Purple Typhoon (formerly Potassium), and Stone Panda.
+
+"The actors behind NOOPDOOR not only utilized LODEINFO during the campaign, but also utilized the new backdoor to exfiltrate data from compromised enterprise networks," it said.
+
+The findings come weeks after JPCERT/CC warned of cyber attacks mounted by the threat actor targeting Japanese entities using the two malware strains.
+
+Earlier this January, ITOCHU Cyber & Intelligence disclosed that it had uncovered an updated version of the LODEINFO backdoor incorporating anti-analysis techniques, highlighting the use of spear-phishing emails to propagate the malware.
+
+Trend Micro, which originally coined the term MenuPass to describe the threat actor, has characterized APT10 as an umbrella group comprising two clusters it calls Earth Tengshe and Earth Kasha. The hacking crew is known to be operational since at least 2006.
+
+While Earth Tengshe is linked to campaigns distributing SigLoader and SodaMaster, Earth Kasha is attributed to the exclusive use of LODEINFO and NOOPDOOR. Both the sub-groups have been observed targeting public-facing applications with the aim of exfiltrating data and information in the network.
+
+Earth Tengshe is also said to be related to another cluster codenamed Bronze Starlight (aka Emperor Dragonfly or Storm-0401), which has a history of operating short-lived ransomware families like LockFile, Atom Silo, Rook, Night Sky, Pandora, and Cheerscrypt.
+
+On the other hand, Earth Kasha has been found to switch up its initial access methods by exploiting public-facing applications since April 2023, taking advantage of unpatched flaws in Array AG (CVE-2023-28461), Fortinet (CVE-2023-27997), and Proself (CVE-2023-45727) instances to distribute LODEINFO and NOOPDOOR (aka HiddenFace).
+
+LODEINFO comes packed with several commands to execute arbitrary shellcode, log keystrokes, take screenshots, terminate processes, and exfiltrate files back to an actor-controlled server. NOOPDOOR, which shares code similarities with another APT10 backdoor known as ANEL Loader, features functionality to upload and download files, execute shellcode, and run more programs.
+
+"LODEINFO appears to be used as a primary backdoor and NOOPDOOR acts as a secondary backdoor, keeping persistence within the compromised corporate network for more than two years," Cybereason said. "Threat actors maintain persistence within the environment by abusing scheduled tasks."

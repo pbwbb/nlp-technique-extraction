@@ -1,0 +1,59 @@
+CISA: No Wider Federal Impact from Treasury Cyber Attack, Investigation Ongoing
+
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday said there are no indications that the cyber attack targeting the Treasury Department impacted other federal agencies.
+
+The agency said it's working closely with the Treasury Department and BeyondTrust to get a better understanding of the breach and mitigate its impacts.
+
+"The security of federal systems and the data they protect is of critical importance to our national security," CISA said. "We are working aggressively to safeguard against any further impacts and will provide updates, as appropriate."
+
+The latest statement comes a week after the Treasury Department said it was the victim of a "major cybersecurity incident" that allowed Chinese state-sponsored threat actors to remotely access some computers and unclassified documents.
+
+The cyber attack, which came to light in early December 2024, involved a breach of BeyondTrust's systems that allowed the adversary to infiltrate some of the company's Remote Support SaaS instances by making use of a compromised Remote Support SaaS API key.
+
+In an updated statement on January 6, 2025, BeyondTrust said "no new customers have been identified beyond those we have communicated with previously." China has denied allegations that it breached the U.S. Treasury Department.
+
+Data shared by attack surface management company Censys shows that as many as 13,548 exposed BeyondTrust Remote Support and Privileged Remote Access instances have been observed online as of January 6.
+
+Last week, the Treasury Department's Office of Foreign Assets Control (OFAC) announced sanctions against a Chinese cybersecurity company, Integrity Technology Group, Incorporated, accusing it of lending infrastructure support to another hacking group called Flax Typhoon as part of a long-running campaign against U.S. critical infrastructure.
+
+Asked about the sanctions, Chinese Foreign Ministry spokesperson Guo Jiakun said it has made its stance clear on more than one occasion and that "China has all along firmly opposed hacking and fights it in accordance with law."
+
+"We urge the U.S. to stop using the issue of cybersecurity to vilify and smear China," Jiakun said. "For quite some time, the U.S. has been trumpeting so-called 'Chinese hacking' and even using it to impose illegal and unilateral sanctions on China. China firmly rejects this and will do what is necessary to safeguard our lawful rights and interests."
+
+Integrity Technology Group, in a statement to the Shanghai Stock Exchange, opposed the sanctions against the company, adding the accusations had "no factual basis."
+
+The attack against the Treasury is the latest in a wave of intrusions perpetrated by Chinese threat actors such as Volt Typhoon and Salt Typhoon targeting U.S. critical infrastructure and telecommunications networks, respectively.
+
+The Wall Street Journal revealed over the weekend that among the nine telecom companies breached by Salt Typhoon are Charter Communications, Consolidated Communications, and Windstream. Some of the other entities previously identified included AT&T, T-Mobile, Verizon, and Lumen Technologies.
+
+In a new report published today, Bloomberg said the Chinese state-sponsored threat group dubbed APT41 penetrated the executive branch of the Philippines government and siphoned sensitive data related to disputes over the South China Sea as part of a yearslong campaign from early 2023 to June 2024.
+
+China Ramps Up Cyber Attacks on Taiwan
+
+The developments also follow a report from Taiwan's National Security Bureau (NSB), warning of increasing sophistication of cyber attacks orchestrated by China against the country. A total of 906 cases of cyber incidents have been registered against government and private sector entities in 2024, up from 752 in 2023.
+
+The modus operandi entails typically exploiting vulnerabilities in Netcom devices and utilizing living-off-the-land (LotL) techniques to establish footholds, evade detection, and deploy malware for follow-on attacks and data theft. Alternative attack chains involve sending spear-phishing emails to Taiwanese civil servants.
+
+Other widely observed Chinese attacks against Taiwanese targets are listed below -
+
+Distributed denial-of-service (DDoS) attacks on transportation and financial sectors coinciding with military drills by the People's Liberation Army (PLA)
+
+Ransomware attacks on the manufacturing sector
+
+Targeting high-tech startups to steal patented technologies
+
+Theft of personal data of Taiwanese nationals to sell them on underground cybercrime forums.
+
+Criticism of Taiwan's cybersecurity capabilities on social media platforms to erode confidence in the government
+
+"Attacking the communications field, mainly telecommunications industry, has grown by 650%, and attacking the fields of transportation and defense supply chain have grown by 70% and 57%, respectively," the NSB said.
+
+"By applying diverse hacking techniques, China has conducted reconnaissance, set cyber ambushes, and stolen data through hacking operations targeting Taiwan’s government, critical infrastructure, and key private enterprises."
+
+The NSB has also called out China for conducting influence operations against Taiwan, conducting disinformation campaigns seeking to undermine public confidence in the government and heighten social divisions via social media platforms like Facebook and X.
+
+Notable among the tactics is the extensive use of inauthentic accounts to flood comment sections on social media platforms used by Taiwanese people to disseminate manipulated videos and meme images. Malicious cyber activities have also been found to hijack Taiwanese users' social media accounts to spread disinformation.
+
+"China has been using deepfake technology to fabricate video clips of Taiwanese political figures' speeches, attempting to mislead the Taiwanese public's perception and understanding," the NSB said.
+
+"In particular, China actively establishes convergence media brands or proxy accounts on platforms such as Weibo, TikTok, and Instagram, working to spread official media content and Taiwan-focused propaganda."

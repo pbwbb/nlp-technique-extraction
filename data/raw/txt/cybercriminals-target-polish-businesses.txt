@@ -1,0 +1,27 @@
+Cybercriminals Target Polish Businesses with Agent Tesla and Formbook Malware
+
+Cybersecurity researchers have detailed widespread phishing campaigns targeting small and medium-sized businesses (SMBs) in Poland during May 2024 that led to the deployment of several malware families like Agent Tesla, Formbook, and Remcos RAT.
+
+Some of the other regions targeted by the campaigns include Italy and Romania, according to cybersecurity firm ESET.
+
+"Attackers used previously compromised email accounts and company servers, not only to spread malicious emails but also to host malware and collect stolen data," ESET researcher Jakub Kaloč said in a report published today.
+
+These campaigns, spread across nine waves, are notable for the use of a malware loader called DBatLoader (aka ModiLoader and NatsoLoader) to deliver the final payloads.
+
+This, the Slovakian cybersecurity company said, marks a departure from previous attacks observed in the second half of 2023 that leveraged a cryptors-as-a-service (CaaS) dubbed AceCryptor to propagate Remcos RAT (aka Rescoms).
+
+"During the second half of [2023], Rescoms became the most prevalent malware family packed by AceCryptor," ESET noted in March 2024. "Over half of these attempts happened in Poland, followed by Serbia, Spain, Bulgaria, and Slovakia."
+
+The starting point of the attacks was phishing emails incorporating malware-laced RAR or ISO attachments that, upon opening, activated a multi-step process to download and launch the trojan.
+
+In cases where an ISO file was attached, it would directly lead to the execution of DBatLoader. The RAR archive, on the other hand, contained an obfuscated Windows batch script enclosing a Base64-encoded ModiLoader executable that's disguised as a PEM -encoded certificate revocation list.
+
+A Delphi-based downloader, DBatLoader is primarily designed to download and launch the next stage malware from either Microsoft OneDrive or compromised servers belonging to legitimate companies.
+
+Regardless of what malware is deployed, Agent Tesla, Formbook, and Remcos RAT come with capabilities to siphon sensitive information, allowing the threat actors to "prepare the ground for their next campaigns."
+
+The development comes as Kaspersky revealed that SMBs are being increasingly targeted by cybercriminals owing to their lack of robust cybersecurity measures as well as limited resources and expertise.
+
+"Trojan attacks remain the most common cyberthreat, which indicates that attackers continue to target SMBs and favor malware over unwanted software," the Russian security vendor said last month.
+
+"Trojans are particularly dangerous because they mimic legitimate software, which makes them harder to detect and prevent. Their versatility and ability to bypass traditional security measures make them a prevalent and effective tool for cyber attackers."

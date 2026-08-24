@@ -1,0 +1,59 @@
+CosmicBeetle Deploys Custom ScRansom Ransomware, Partnering with RansomHub
+
+The threat actor known as CosmicBeetle has debuted a new custom ransomware strain called ScRansom in attacks targeting small- and medium-sized businesses (SMBs) in Europe, Asia, Africa, and South America, while also likely working as an affiliate for RansomHub.
+
+"CosmicBeetle replaced its previously deployed ransomware, Scarab, with ScRansom, which is continually improved," ESET researcher Jakub Souček said in a new analysis published today. "While not being top notch, the threat actor is able to compromise interesting targets."
+
+Targets of ScRansom attacks span manufacturing, pharmaceuticals, legal, education, healthcare, technology, hospitality, leisure, financial services, and regional government sectors.
+
+CosmicBeetle is best known for a malicious toolset called Spacecolon that was previously identified as used for delivering the Scarab ransomware across victim organizations globally.
+
+Also known as NONAME, the adversary has a track record of experimenting with the leaked LockBit builder in an attempt to pass off as the infamous ransomware gang in its ransom notes and leak site as far back as November 2023.
+
+It's currently not clear who is behind the attack or where they are from, although an earlier hypothesis implied that they could be of Turkish origin due to the presence of a custom encryption scheme used in another tool named ScHackTool. ESET, however, suspects the attribution to no longer hold water.
+
+"ScHackTool's encryption scheme is used in the legitimate Disk Monitor Gadget," Souček pointed out. "It is likely that this algorithm was adapted [from a Stack Overflow thread ] by VOVSOFT [the Turkish software firm behind the tool] and, years later, CosmicBeetle stumbled upon it and used it for ScHackTool."
+
+Attack chains have been observed taking advantage of brute-force attacks and known security flaws (CVE-2017-0144, CVE-2020-1472, CVE-2021-42278, CVE-2021-42287, CVE-2022-42475, and CVE-2023-27532) to infiltrate target environments.
+
+The intrusions further involve the use of various tools like Reaper, Darkside, and RealBlindingEDR to terminate security-related processes to sidestep detection prior to deploying the Delphi-based ScRansom ransomware, which comes with support for partial encryption to speed up the process and an "ERASE" mode to render the files unrecoverable by overwriting them with a constant value.
+
+The connection to RansomHub stems from the fact that the Slovak cybersecurity company spotted the deployment of ScRansom and RansomHub payloads on the same machine within a week's time.
+
+"Probably due to the obstacles that writing custom ransomware from scratch brings, CosmicBeetle attempted to leech off LockBit's reputation, possibly to mask the issues in the underlying ransomware and in turn to increase the chance that victims will pay," Souček said.
+
+Cicada3301 Unleashes Updated Version
+
+The disclosure comes as threat actors linked to the Cicada3301 ransomware (aka Repellent Scorpius) have been observed using an updated version of the encryptor since July 2024.
+
+"Threat authors added a new command-line argument, --no-note," Palo Alto Networks Unit 42 said in a report shared with The Hacker News. "When this argument is invoked, the encryptor will not write the ransom note to the system."
+
+Another important modification is the absence of hard-coded usernames or passwords in the binary, although it still retains the capability to execute PsExec using these credentials if they exist, a technique highlighted recently by Morphisec.
+
+In an interesting twist, the cybersecurity vendor said it observed signs that the group has data obtained from older compromise incidents that predate the group's operation under the Cicada3301 brand.
+
+This has raised the possibility that the threat actor may have operated under a different ransomware brand, or purchased the data from other ransomware groups. That having said, Unit 42 noted it identified some overlaps with another attack carried out by an affiliate that deployed BlackCat ransomware in March 2022.
+
+BURNTCIGAR Becomes an EDR Wiper
+
+The findings also follow an evolution of a kernel-mode signed Windows driver used by multiple ransomware gangs to turn off Endpoint Detection and Response (EDR) software that allows it to act as a wiper for deleting critical components associated with those solutions, as opposed to terminating them.
+
+The malware in question is POORTRY, which is delivered by means of a loader named STONESTOP to orchestrate a Bring Your Own Vulnerable Driver (BYOVD) attack, effectively bypassing Driver Signature Enforcement safeguards. Its ability to "force delete" files on disk was first noted by Trend Micro in May 2023.
+
+POORTRY, detected as far back as in 2021, is also referred to as BURNTCIGAR, and has been used by multiple ransomware gangs, including CUBA, BlackCat, Medusa, LockBit, and RansomHub over the years.
+
+"Both the Stonestop executable and the Poortry driver are heavily packed and obfuscated," Sophos said in a recent report. "This loader was obfuscated by a closed-source packer named ASMGuard, available on GitHub."
+
+POORTRY is "focused on disabling EDR products through a series of different techniques, such as removal or modification of kernel notify routines. The EDR killer aims at terminating security-related processes and rendering the EDR agent useless by wiping critical files off disk."
+
+The rogue drivers take advantage of what the company described as a "virtually limitless supply of stolen or improperly used code signing certificates" in order to bypass Microsoft's Driver Signature Verification protections.
+
+The use of an improved version of POORTRY by RansomHub bears notice in light of the fact that the ransomware crew has also been observed utilizing another EDR-killer tool dubbed EDRKillShifter this year.
+
+That's not all. The ransomware group has also been detected utilizing a legitimate tool from Kaspersky called TDSSKiller to disarm EDR services on target systems, indicating that the threat actors are incorporating several programs with similar functionality in their attacks.
+
+"It's important to recognize that threat actors have been consistently experimenting with different methods to disable EDR products — a trend we've been observing since at least 2022," Sophos told The Hacker News. "This experimentation can involve various tactics, such as exploiting vulnerable drivers or using certificates that have been unintentionally leaked or obtained through illegal means."
+
+"While it might seem like there's a significant increase in these activities, it's more accurate to say that this is part of an ongoing process rather than a sudden rise."
+
+"The use of different EDR-killer tools, such as EDRKillShifter by groups like RansomHub, likely reflects this ongoing experimentation. It's also possible that different affiliates are involved, which could explain the use of varied methods, though without specific information, we wouldn't want to speculate too much on that point."

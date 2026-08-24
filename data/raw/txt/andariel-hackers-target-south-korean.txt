@@ -1,0 +1,23 @@
+Andariel Hackers Target South Korean Institutes with New Dora RAT Malware
+
+The North Korea-linked threat actor known as Andariel has been observed using a new Golang-based backdoor called Dora RAT in its attacks targeting educational institutes, manufacturing firms, and construction businesses in South Korea.
+
+"Keylogger, Infostealer, and proxy tools on top of the backdoor were utilized for the attacks," the AhnLab Security Intelligence Center (ASEC) said in a report published last week. "The threat actor probably used these malware strains to control and steal data from the infected systems."
+
+The attacks are characterized by the use of a vulnerable Apache Tomcat server to distribute the malware, the South Korean cybersecurity firm added, noting the system in question ran the 2013 version of Apache Tomcat, making it susceptible to several vulnerabilities.
+
+Andariel, also known by the names Nickel Hyatt, Onyx Sleet, and Silent Chollima, is an advanced persistent threat (APT) group that operates on behalf of North Korea's strategic interests since at least 2008.
+
+A sub-cluster within the prolific Lazarus Group, the adversary has a track record of leveraging spear-phishing, watering hole attacks, and known security vulnerabilities in software to obtain initial access and distribute malware to targeted networks.
+
+ASEC did not elaborate on the attack chain used for malware deployment, but it noted the use of a variant of a known malware called Nestdoor, which comes with capabilities to receive and execute commands from a remote server, upload/download files, launch a reverse shell, capture clipboard data and keystrokes, and act as a proxy.
+
+Also used in the attacks is a previously undocumented backdoor called Dora RAT that has been described as a "simple malware strain" with support for reverse shell and file download/upload capabilities.
+
+"The attacker has also signed and distributed [the Dora RAT] malware using a valid certificate," ASEC noted. "Some of the Dora RAT strains used for the attack were confirmed to be signed with a valid certificate from a United Kingdom software developer."
+
+Some of the other malware strains delivered in the attacks encompass a keylogger that's installed via a lean Nestdoor variant as well as a dedicated information stealer and a SOCKS5 proxy that exhibits overlaps with a similar proxy tool used by the Lazarus Group in the 2021 ThreatNeedle campaign.
+
+"The Andariel group is one of the threat groups that are highly active in Korea, alongside the Kimsuky and Lazarus groups," ASEC said. "The group initially launched attacks to acquire information related to national security, but now they have also been attacking for financial gain."
+
+The disclosure comes as ASEC also revealed attacks targeting South Korean defense and semiconductor manufacturing entities with a malware dubbed SmallTiger since at least November 2023. Some of these intrusions have been found to leverage SmallTiger to deliver a known Golang backdoor called DurianBeacon, which has been previously attributed to Andariel.

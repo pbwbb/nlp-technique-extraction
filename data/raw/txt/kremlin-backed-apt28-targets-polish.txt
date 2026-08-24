@@ -1,0 +1,31 @@
+Kremlin-Backed APT28 Targets Polish Institutions in Large-Scale Malware Campaign
+
+Polish government institutions have been targeted as part of a large-scale malware campaign orchestrated by a Russia-linked nation-state actor called APT28.
+
+"The campaign sent emails with content intended to arouse the recipient's interest and persuade him to click on the link," the computer emergency response team, CERT Polska, said in a Wednesday bulletin.
+
+Clicking on the link redirects the victim to the domain run.mocky[.]io, which, in turn, is used to redirect to another legitimate site named webhook[.]site, a free service that allows developers to inspect data that's being sent via a webhook, in an effort to evade detection.
+
+The next step involves the download of a ZIP archive file from webhook[.]site, which contains the Windows Calculator binary that masquerades as a JPG image file ("IMG-238279780.jpg.exe"), a hidden batch script file, and another hidden DLL file ("WindowsCodecs.dll").
+
+Should a victim run the application, the malicious DLL file is side-loaded by means of a technique called DLL side-loading to ultimately run the batch script, while images of an "actual woman in a swimsuit along with links to her real accounts on social media platforms" are displayed in a web browser to maintain the ruse.
+
+The batch script simultaneously downloads a JPG image ("IMG-238279780.jpg") from webhook[.]site that's subsequently renamed to a CMD script ("IMG-238279780.cmd) and executed, following which it retrieves the final-stage payload to gather information about the compromised host and send the details back.
+
+CERT Polska said the attack chain bears similarities to a previous campaign that propagated a custom backdoor called HeadLace.
+
+It's worth noting that the abuse of legitimate services like Mocky and webhook[.]site is a tactic repeatedly adopted by APT28 actors so as to sidestep detection by security software.
+
+"If your organization does not use the above-mentioned services, we recommend that you consider blocking the above-mentioned domains on edge devices," it added.
+
+"Regardless of whether you use the above-mentioned websites, we also recommend filtering emails for links in webhook.site and run.mocky.io, because cases of their legitimate use in the email content are very rare."
+
+The development comes days after NATO countries accused the Kremlin-backed group of conducting a long-term cyber espionage campaign targeting their political entities, state institutions, and critical infrastructure.
+
+APT28's malicious activities have also expanded to target iOS devices with the XAgent spyware, which was first detailed by Trend Micro in connection with a campaign dubbed Operation Pawn Storm in February 2015.
+
+"Primarily targeting political and government entities in Western Europe, XAgent possesses capabilities for remote control and data exfiltration," Broadcom-owned Symantec said.
+
+"It can gather information on users' contacts, messages, device details, installed applications, screenshots, and call records. This data could potentially be used for social engineering or spear-phishing campaigns."
+
+News of APT28's attacks on Polish entities also follows a spike in financially motivated attacks by Russian e-crime groups like UAC-0006 targeting Ukraine in the second half of 2023, even as organizations in Russia and Belarus have been targeted by a nation-state actor known as Midge to deliver malware capable of plundering sensitive information.

@@ -1,0 +1,27 @@
+Malicious Python Package Hides Sliver C2 Framework in Fake Requests Library Logo
+
+Cybersecurity researchers have identified a malicious Python package that purports to be an offshoot of the popular requests library and has been found concealing a Golang-version of the Sliver command-and-control (C2) framework within a PNG image of the project's logo.
+
+The package employing this steganographic trickery is requests-darwin-lite, which has been downloaded 417 times prior to it being taken down from the Python Package Index (PyPI) registry.
+
+Requests-darwin-lite "appeared to be a fork of the ever-popular requests package with a few key differences, most notably the inclusion of a malicious Go binary packed into a large version of the actual requests side-bar PNG logo," software supply chain security firm Phylum said.
+
+The changes have been introduced in the package's setup.py file, which has been configured to decode and execute a Base64-encoded command to gather the system's Universally Unique Identifier (UUID), but only after confirming that the compromised host is running Apple macOS.
+
+The finding also comes a little over a month after the company discovered a rogue npm package named vue2util that poses as a helper utility but is designed to carry out a cryptojacking scheme and steal a victim's USDT tokens.
+
+The package "exploits the ERC20 contract (USDT) approval mechanism, covertly granting unlimited approval to the attacker’s contract address, effectively allowing the attacker to drain the victim’s USDT tokens," Phylum noted.
+
+In what's an interesting twist, the infection chain proceeds only if the identifier matches a particular value, implying that the author(s) behind the package is looking to breach a specific machine to which they are already in possession of the identifier obtained through some other means.
+
+This raises two possibilities: Either it's a highly targeted attack or it's some sort of a testing process ahead of a broader campaign.
+
+Should the UUID match, the requests-darwin-lite proceeds to read data from a PNG file named "requests-sidebar-large.png," which bears similarities with the legitimate requests package that ships with a similar file called "requests-sidebar.png."
+
+What's different here is that while the real logo embedded within requests has a file size of 300 kB, the one contained inside requests-darwin-lite is around 17 MB.
+
+The binary data concealed in the PNG image is the Golang-based Sliver, an open-source C2 framework that's designed to be used by security professionals in their red team operations.
+
+The exact end goal of the package is currently unclear, but the development is once again a sign that open-source ecosystems continue to be an attractive vector to distribute malware.
+
+With a vast majority of codebases relying on open-source code, the steady influx of malware into npm, PyPI, and other package registries, not to mention the recent XZ Utils episode, has highlighted the need for addressing issues in a systematic manner that otherwise can "derail large swaths of the web."

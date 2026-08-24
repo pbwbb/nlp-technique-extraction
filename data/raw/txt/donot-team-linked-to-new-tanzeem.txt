@@ -1,0 +1,29 @@
+DoNot Team Linked to New Tanzeem Android Malware Targeting Intelligence Collection
+
+The Threat actor known as DoNot Team has been linked to a new Android malware as part of highly targeted cyber attacks.
+
+The artifacts in question, named Tanzeem (meaning "organization" in Urdu) and Tanzeem Update, were spotted in October and December 2024 by cybersecurity company Cyfirma. The apps in question have been found to incorporate identical functions, barring minor modifications to the user interface.
+
+"Although the app is supposed to function as a chat application, it does not work once installed, shutting down after the necessary permissions are granted," Cyfirma noted in a Friday analysis. "The app's name suggests that it is designed to target specific individuals or groups both inside and outside the country."
+
+DoNot Team, also tracked as APT-C-35, Origami Elephant, SECTOR02, and Viceroy Tiger, is a hacking group believed to be of Indian origin, with historical attacks leveraging spear-phishing emails and Android malware families to gather information of interest.
+
+In October 2023, the threat actor was linked to a previously undocumented.NET-based backdoor called Firebird targeting a handful of victims in Pakistan and Afghanistan.
+
+It's currently not clear who the exact targets of the latest malware were, although it's suspected that they were used against specific individuals with the aim of gathering intelligence against internal threats.
+
+A notable aspect of the malicious Android app is the use of OneSignal, a popular customer engagement platform used by organizations to send push notifications, in-app messages, emails, and SMS messages. Cyfirma theorized that the library is being abused to send notifications containing phishing links that lead to malware deployment.
+
+Regardless of the distribution mechanism used, the app displays a fake chat screen upon installation and urges the victim to click a button named "Start Chat." Doing so triggers a message that instructs the user to grpermissionions to the accessibility services API, thus allowing it to perform various nefarious actions.
+
+The app also requests access to several sensitive permissions that facilitate the collection of call logs, contacts, SMS messages, precise locations, account information, and files present in external storage. Some of the other features include capturing screen recordings and establishing connections to a command-and-control (C2) server.
+
+"The collected samples reveal a new tactic involving push notifications that encourage users to install additional Android malware, ensuring the persistence of the malware on the device," Cyfirma said.
+
+"This tactic enhances the malware's ability to remain active on the targeted device, indicating the threat group’s evolving intentions to continue participating in intelligence gathering for national interests."
+
+Update
+
+Following the publication of the story, a Google spokesperson shared the below statement with The Hacker News -
+
+Based on our current detection, no apps containing this malware are found on Google Play. Android users are automatically protected against known versions of this malware by Google Play Protect, which is on by default on Android devices with Google Play Services. Google Play Protect can warn users or block apps known to exhibit malicious behavior, even when those apps come from sources outside of Play.

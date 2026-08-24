@@ -1,0 +1,53 @@
+Hackers Target Over 70 Microsoft Exchange Servers to Steal Credentials via Keyloggers
+
+Unidentified threat actors have been observed targeting publicly exposed Microsoft Exchange servers to inject malicious code into the login pages that harvest their credentials.
+
+Positive Technologies, in a new analysis published last week, said it identified two different kinds of keylogger code written in JavaScript on the Outlook login page -
+
+Those that save collected data to a local file accessible over the internet
+
+Those that immediately send the collected data to an external server
+
+The Russian cybersecurity vendor said the attacks have targeted 65 victims in 26 countries worldwide, and marks a continuation of a campaign that was first documented in May 2024 as targeting entities in Africa and the Middle East.
+
+At that time, the company said it had detected no less than 30 victims spanning government agencies, banks, IT companies, and educational institutions, with evidence of the first compromise dating back to 2021.
+
+The attack chains involve exploiting known flaws in Microsoft Exchange Server (e.g., ProxyShell) to insert keylogger code into the login page. It's presently not known who is behind these attacks.
+
+Some of the vulnerabilities weaponized are listed below -
+
+CVE-2014-4078 - IIS Security Feature Bypass Vulnerability
+
+CVE-2020-0796 - Windows SMBv3 Client/Server Remote Code Execution Vulnerability
+
+CVE-2021-26855, CVE-2021-26857, CVE-2021-26858, and CVE-2021-27065 - Microsoft Exchange Server Remote Code Execution Vulnerability (ProxyLogon)
+
+CVE-2021-31206 - Microsoft Exchange Server Remote Code Execution Vulnerability
+
+CVE-2021-31207, CVE-2021-34473, CVE-2021-34523 - Microsoft Exchange Server Security Feature Bypass Vulnerability (ProxyShell)
+
+"Malicious JavaScript code reads and processes the data from the authentication form, then sends it via an XHR request to a specific page on the compromised Exchange Server," security researchers Klimentiy Galkin and Maxim Suslov said.
+
+"The target page's source code contains a handler function that reads the incoming request and writes the data to a file on the server."
+
+The file containing the stolen data is accessible from an external network. Select variants with the local keylogging capability have been found to also collect user cookies, User-Agent strings, and the timestamp.
+
+One advantage of this approach is that the chances of detection are next to nothing as there is no outbound traffic to transmit the information.
+
+The second variant detected by Positive Technologies, on the other hand, uses a Telegram bot as an exfiltration point via XHR GET requests with the encoded login and password stored in the APIKey and AuthToken headers, respectively.
+
+A second method involves using a Domain Name System (DNS) tunnel in conjunction with an HTTPS POST request to send the user credentials and sneak past an organization's defenses.
+
+Twenty-two of the compromised servers have been found in government organizations, followed by infections in the IT, industrial, and logistics companies. Vietnam, Russia, Taiwan, China, Pakistan, Lebanon, Australia, Zambia, the Netherlands, and Turkey are among the top 10 targets.
+
+"A large number of Microsoft Exchange servers accessible from the Internet remain vulnerable to older vulnerabilities," the researchers said. "By embedding malicious code into legitimate authentication pages, attackers are able to stay undetected for long periods while capturing user credentials in plaintext."
+
+Update
+
+In a new analysis published on August 15, 2025, Positive Technologies attributed the keyloggers to the eponymous hacking group behind the PhantomCore malware. The assessment is based on an analysis of the attacker infrastructure, including a domain named "voen-pravo[.]online" that has been found hosting a password-protected archive called "archiveCalculatorVyplatSetup_1.0.6.zip."
+
+Present within the file is an application written using the Qt framework that mimics a payment calculator, but contains malicious code to contact an external server to retrieve a next-stage payload, a malware called PhantomDL that's linked to PhantomCore.
+
+"In recent months, 10 victims have been identified, on whose servers there is a previously considered Exchange keylogger," Galkin said. "All victims are companies in Russia engaged in either IT consulting or development of IT solutions. The number of accounts collected from victim systems exceeds 5,000."
+
+(The story was updated after publication on August 18, 2025, to include attribution information.)

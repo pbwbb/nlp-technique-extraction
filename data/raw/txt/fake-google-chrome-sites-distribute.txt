@@ -1,0 +1,33 @@
+Fake Google Chrome Sites Distribute ValleyRAT Malware via DLL Hijacking
+
+Bogus websites advertising Google Chrome have been used to distribute malicious installers for a remote access trojan called ValleyRAT.
+
+The malware, first detected in 2023, is attributed to a threat actor tracked as Silver Fox, with prior attack campaigns primarily targeting Chinese-speaking regions like Hong Kong, Taiwan, and Mainland China.
+
+"This actor has increasingly targeted key roles within organizations—particularly in finance, accounting, and sales department — highlighting a strategic focus on high-value positions with access to sensitive data and systems," Morphisec researcher Shmuel Uzan said in a report published earlier this week.
+
+Early attack chains have been observed delivering ValleyRAT alongside other malware families such as Purple Fox and Gh0st RAT, the latter of which has been extensively used by various Chinese hacking groups.
+
+As recently as last month, counterfeit installers for legitimate software have served as a distribution mechanism for the trojan by means of a DLL loader named PNGPlug.
+
+It's worth noting that a drive-by download scheme targeting Chinese-speaking Windows users was previously used to deploy Gh0st RAT using malicious installer packages for the Chrome web browser.
+
+In a similar fashion, the latest attack sequence associated with ValleyRAT entails the use of a fake Google Chrome website to trick targets into downloading a ZIP archive containing an executable ("Setup.exe").
+
+Morphisec CTO Michael Gorelik told The Hacker News that there is evidence connecting the two activity clusters, and that the deceptive Chrome installer site was previously leveraged to download the Gh0st RAT payload.
+
+"This campaign specifically targeted Chinese-speaking users, as indicated by the use of Chinese-language web lures and applications aimed at data theft and evasion of defenses by the malware," Gorelik said.
+
+"The links to the fake Chrome sites are primarily distributed through drive-by download schemes. Users searching for the Chrome browser are directed to these malicious sites, where they inadvertently download the fake installer. This method exploits the users' trust in legitimate software downloads, making them susceptible to infection."
+
+The setup binary, upon execution, checks if it has administrator privileges and then proceeds to download four additional payloads, including a legitimate executable associated with Douyin ("Douyin.exe"), the Chinese version of TikTok, that's used to sideload a rogue DLL ("tier0.dll"), which then launches the ValleyRAT malware.
+
+Also retrieved is another DLL file ("sscronet.dll"), which is responsible for terminating any running process present in an exclusion list.
+
+Compiled in Chinese and written in C++, ValleyRAT is a trojan that's designed to monitor screen content, log keystrokes, and establish persistence on the host. It's also capable of initiating communications with a remote server to await further instructions that allow it to enumerate processes, as well as download and execute arbitrary DLLs and binaries, among others.
+
+"For payload injection, the attacker abused legitimate signed executables that were vulnerable to DLL search order hijacking," Uzan said.
+
+The development comes as Sophos shared details of phishing attacks that employ Scalable Vector Graphics (SVG) attachments to evade detection and deliver an AutoIt-based keystroke logger malware like Nymeria or direct users to credential harvesting pages.
+
+(The story was updated after publication to include additional insights from Morphisec.)

@@ -1,0 +1,41 @@
+Crypt Ghouls Targets Russian Firms with LockBit 3.0 and Babuk Ransomware Attacks
+
+A nascent threat actor known as Crypt Ghouls has been linked to a set of cyber attacks targeting Russian businesses and government agencies with ransomware with the twin goals of disrupting business operations and financial gain.
+
+"The group under review has a toolkit that includes utilities such as Mimikatz, XenAllPasswordPro, PingCastle, Localtonet, resocks, AnyDesk, PsExec, and others," Kaspersky said. "As the final payload, the group used the well-known ransomware LockBit 3.0 and Babuk."
+
+Victims of the malicious attacks span government agencies, as well as mining, energy, finance, and retail companies located in Russia.
+
+The Russian cybersecurity vendor said it was able to pinpoint the initial intrusion vector in only two instances, with the threat actors leveraging a contractor's login credentials to connect to the internal systems via VPN.
+
+The VPN connections are said to have originated from IP addresses associated with a Russian hosting provider's network and a contractor's network, indicating an attempt to fly under the radar by weaponizing trusted relationships. It's believed that the contractor networks are breached by means of VPN services or unpatched security flaws.
+
+The initial access phase is succeeded by the use of NSSM and Localtonet utilities to maintain remote access, with follow-on exploitation facilitated by tools such as follows -
+
+XenAllPasswordPro to harvest authentication data
+
+CobInt backdoor
+
+Mimikatz to extract victims' credentials
+
+dumper.ps1 to dump Kerberos tickets from the LSA cache
+
+MiniDump to extract login credentials from the memory of lsass.exe
+
+cmd.exe to copy credentials stored in Google Chrome and Microsoft Edge browsers
+
+PingCastle for network reconnaissance
+
+PAExec to run remote commands
+
+AnyDesk and resocks SOCKS5 proxy for remote access
+
+The attacks end with the encryption of system data using publicly available versions of LockBit 3.0 for Windows and Babuk for Linux/ESXi, while also taking steps to encrypt data present in the Recycle Bin to inhibit recovery.
+
+"The attackers leave a ransom note with a link containing their ID in the Session messaging service for future contact," Kaspersky said. "They would connect to the ESXi server via SSH, upload Babuk, and initiate the encryption process for the files within the virtual machines."
+
+Crypt Ghouls' choice of tools and infrastructure in these attacks overlaps with similar campaigns conducted by other groups targeting Russia in recent months, including MorLock, BlackJack, Twelve, and Shedding Zmiy (aka ExCobalt)
+
+"Cybercriminals are leveraging compromised credentials, often belonging to subcontractors, and popular open-source tools," the company said. "The shared toolkit used in attacks on Russia makes it challenging to pinpoint the specific hacktivist groups involved."
+
+"This suggests that the current actors are not only sharing knowledge but also their toolkits. All of this only makes it more difficult to identify specific malicious actors behind the wave of attacks directed at Russian organizations."

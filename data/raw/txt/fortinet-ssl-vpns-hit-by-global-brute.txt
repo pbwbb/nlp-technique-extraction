@@ -1,0 +1,25 @@
+Fortinet SSL VPNs Hit by Global Brute-Force Wave Before Attackers Shift to FortiManager
+
+Cybersecurity researchers are warning of a "significant spike" in brute-force traffic aimed at Fortinet SSL VPN devices.
+
+The coordinated activity, per threat intelligence firm GreyNoise, was observed on August 3, 2025, with over 780 unique IP addresses participating in the effort.
+
+As many as 56 unique IP addresses have been detected over the past 24 hours. All the IP addresses have been classified as malicious, with the IPs originating from the United States, Canada, Russia, and the Netherlands. Targets of the brute-force activity include the United States, Hong Kong, Brazil, Spain, and Japan.
+
+"Critically, the observed traffic was also targeting our FortiOS profile, suggesting deliberate and precise targeting of Fortinet’s SSL VPNs," GreyNoise said. "This was not opportunistic -- it was focused activity."
+
+The company also pointed out that it identified two distinct assault waves spotted before and after August 5: One, a long-running, brute-force activity tied to a single TCP signature that remained relatively steady over time, and Two, which involved a sudden and concentrated burst of traffic with a different TCP signature.
+
+"While the August 3 traffic has targeted the FortiOS profile, traffic fingerprinted with TCP and client signatures – a meta signature – from August 5 onward was not hitting FortiOS," the company noted. "Instead, it was consistently targeting our FortiManager."
+
+"This indicated a shift in attacker behavior – potentially the same infrastructure or toolset pivoting to a new Fortinet-facing service."
+
+On top of that, a deeper examination of the historical data associated with the post-August 5 TCP fingerprint has uncovered an earlier spike in June featuring a unique client signature that resolved to a FortiGate device in a residential ISP block managed by Pilot Fiber Inc.
+
+This has raised the possibility that the brute-force tooling was either initially tested or launched from a home network. An alternative hypothesis is the use of a residential proxy.
+
+The development comes against the backdrop of findings that spikes in malicious activity are often followed by the disclosure of a new CVE affecting the same technology within six weeks.
+
+"These patterns were exclusive to enterprise edge technologies like VPNs, firewalls, and remote access tools – the same kinds of systems increasingly targeted by advanced threat actors," the company noted in its Early Warning Signals report published late last month.
+
+The Hacker News has reached out to Fortinet for further comment, and we will update if we hear back.

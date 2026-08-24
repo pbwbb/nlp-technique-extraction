@@ -1,0 +1,33 @@
+Google Identifies Three New Russian Malware Families Created by COLDRIVER Hackers
+
+A new malware attributed to the Russia-linked hacking group known as COLDRIVER has undergone numerous developmental iterations since May 2025, suggesting an increased "operations tempo" from the threat actor.
+
+The findings come from Google Threat Intelligence Group (GTIG), which said the state-sponsored hacking crew has rapidly refined and retooled its malware arsenal merely five days following the publication of its LOSTKEYS malware around the same time.
+
+While it's currently not known for how long the new malware families have been under development, the tech giant's threat intelligence team said it has not observed a single instance of LOSTKEYS since disclosure.
+
+The new malware, codenamed NOROBOT, YESROBOT, and MAYBEROBOT, is "a collection of related malware families connected via a delivery chain," GTIG researcher Wesley Shields said in a Monday analysis.
+
+The latest attack waves are something of a departure from COLDRIVER's typical modus operandi, which involves targeting high profile individuals in NGOs, policy advisors, and dissidents for credential theft. In contrast, the new activity revolves around leveraging ClickFix-style lures to trick users into running malicious PowerShell commands via the Windows Run dialog as part of a fake CAPTCHA verification prompt.
+
+While the attacks spotted in January, March, and April 2025 led to the deployment of an information stealing malware known as LOSTKEYS, subsequent intrusions have paved the way for the "ROBOT" family of malware. It's worth noting that the malware families NOROBOT and MAYBEROBOT are tracked by Zscaler ThreatLabz under the names BAITSWITCH and SIMPLEFIX, respectively.
+
+The new infection chain commences with an HTML ClickFix lure dubbed COLDCOPY that's designed to drop a DLL called NOROBOT, which is then executed via rundll32.exe to drop the next-stage malware. Initial versions of this attack is said to have distributed a Python backdoor known as YESROBOT, before the threat actors switch to a Powershell implant named MAYBEROBOT.
+
+YESROBOT uses HTTPS to retrieve commands from a hard-coded command-and-control (C2) server. A minimal backdoor, it supports the ability to download and execute files, and retrieve documents of interest. Only two instances of YESROBOT deployment have been observed to date, specifically over a two week period in late May shortly after details of LOSTKEYS became public knowledge.
+
+In contrast, MAYBEROBOT is assessed to be more flexible and extensible, equipped with features to download and run payload from a specified URL, run commands using cmd.exe, and run PowerShell code.
+
+It's believed that the COLDRIVER actors rushed to deploy YESROBOT as a "stopgap mechanism" likely in response to public disclosure, before abandoning it in favor of MAYBEROBOT, as the earliest version of NOROBOT also included a step to download a full Python 3.8 installation onto the compromised host -- a "noisy" artifact that's bound to raise suspicion.
+
+Google also pointed out that the use of NOROBOT and MAYBEROBOT is likely reserved for significant targets, who may have been already compromised via phishing, with the end goal of gathering additional intelligence from their devices.
+
+"NOROBOT and its preceding infection chain have been subject to constant evolution -- initially simplified to increase chances of successful deployment, before re-introducing complexity by splitting cryptography keys," Shields said. "This constant development highlights the group's efforts to evade detection systems for their delivery mechanism for continued intelligence collection against high-value targets."
+
+The disclosure comes as the Netherlands' Public Prosecution Service, known as the Openbaar Ministerie (OM), announced that three 17-year-old men have been suspected of providing services to a foreign government, with one of them alleged to be in contact with a hacker group affiliated with the Russian government.
+
+"This suspect also gave the other two instructions to map Wi-Fi networks on multiple dates in The Hague," OM said. "The information collected has been shared with the client by the former suspect for a fee and can be used for digital espionage and cyber attacks."
+
+Two of the suspects were apprehended on September 22, 2025, while the third suspect, who was also interviewed by authorities, has been kept under house arrest because of his "limited role" in the case.
+
+"There are no indications yet that pressure has been exerted on the suspect who was in contact with the hacker group affiliated with the Russian government," the Dutch government body added.
