@@ -1,0 +1,11 @@
+{
+  "modelo": "CRF",
+  "metrica": "span exato EXP",
+  "split": "silver->gold",
+  "P": 0.514,
+  "R": 0.161,
+  "F1": 0.245,
+  "TP": 18,
+  "FP": 17,
+  "FN": 94
+}
