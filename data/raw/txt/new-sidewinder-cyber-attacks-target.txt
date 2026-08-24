@@ -1,0 +1,21 @@
+New SideWinder Cyber Attacks Target Maritime Facilities in Multiple Countries
+
+The nation-state threat actor known as SideWinder has been attributed to a new cyber espionage campaign targeting ports and maritime facilities in the Indian Ocean and Mediterranean Sea.
+
+The BlackBerry Research and Intelligence Team, which discovered the activity, said targets of the spear-phishing campaign include countries like Pakistan, Egypt, Sri Lanka, Bangladesh, Myanmar, Nepal, and the Maldives.
+
+SideWinder, which is also known by the names APT-C-17, Baby Elephant, Hardcore Nationalist, Leafperforator, Rattlesnake, and Razor Tiger, is assessed to be affiliated with India. It has been operational since 2012, often making use of spear-phishing as a vector to deliver malicious payloads that trigger the attack chains.
+
+"SideWinder makes use of email spear-phishing, document exploitation and DLL side-loading techniques in an attempt to avoid detection and deliver targeted implants," the Canadian cybersecurity company said in an analysis published last week.
+
+The latest set of attacks employ lures related to sexual harassment, employee termination, and salary cuts in order to negatively impact the recipients' emotional state and trick them into opening booby-trapped Microsoft Word documents.
+
+Once the decoy file is opened, it leverages a known security flaw (CVE-2017-0199) to establish contact with a malicious domain that masquerades as Pakistan's Directorate General Ports and Shipping ("reports.dgps-govtpk[.]com") to retrieve an RTF file.
+
+The RTF document, in turn, downloads a document that exploits CVE-2017-11882, another years-old security vulnerability in the Microsoft Office Equation Editor, with the goal of executing shellcode that's responsible for launching JavaScript code, but only after ensuring that the compromised system is legitimate and is of interest to the threat actor.
+
+It's currently not known what's delivered by means of the JavaScript malware, although the end goal is likely to be intelligence gathering based on prior campaigns mounted by SideWinder.
+
+"The SideWinder threat actor continues to improve its infrastructure for targeting victims in new regions," BlackBerry said. "The steady evolution of its network infrastructure and delivery payloads suggests that SideWinder will continue its attacks in the foreseeable future."
+
+The disclosure comes as a suspected Russian-linked threat actor is targeting entities interested in Indian political affairs with a Go-based remote access trojan (RAT) that's delivered via a.NET loader launched from Windows shortcut (LNK) files disguised as Office documents. The activity has been codenamed Operation ShadowCat.

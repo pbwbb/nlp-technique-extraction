@@ -1,0 +1,33 @@
+New Ransomware-as-a-Service 'Eldorado' Targets Windows and Linux Systems
+
+An emerging ransomware-as-a-service (RaaS) operation called Eldorado comes with locker variants to encrypt files on Windows and Linux systems.
+
+Eldorado first appeared on March 16, 2024, when an advertisement for the affiliate program was posted on the ransomware forum RAMP, Singapore-headquartered Group-IB said.
+
+The cybersecurity firm, which infiltrated the ransomware group, noted that its representative is a Russian speaker and that the malware does not overlap with previously leaked strains such as LockBit or Babuk.
+
+"The Eldorado ransomware uses Golang for cross-platform capabilities, employing Chacha20 for file encryption and Rivest Shamir Adleman-Optimal Asymmetric Encryption Padding (RSA-OAEP) for key encryption," researchers Nikolay Kichatov and Sharmine Low said. "It can encrypt files on shared networks using Server Message Block (SMB) protocol."
+
+The encryptor for Eldorado comes in four formats, namely esxi, esxi_64, win, and win_64, with its data leak site already listing 16 victims of June 2024. Thirteen of the targets are located in the U.S., two in Italy, and one in Croatia.
+
+These companies span various industry verticals such as real estate, education, professional services, healthcare, and manufacturing, among others.
+
+Further analysis of the Windows version of artifacts has revealed the use of a PowerShell command to overwrite the locker with random bytes before deleting the file in an attempt to clean up the traces.
+
+Eldorado is the latest in the list of new double-extortion ransomware players that have sprung up in recent times, including Arcus Media, AzzaSec, Brain Cipher, dan0n, Limpopo (aka SOCOTRA, FORMOSA, SEXi), LukaLocker, Shinra, and Space Bears, once again highlighting the enduring and persistent nature of the threat.
+
+LukaLocker, linked to an operator dubbed Volcano Demon by Halcyon, is notable for the fact that it does not make use of a data leak site and instead calls the victim over the phone to extort and negotiate payment after encrypting Windows workstations and servers.
+
+The development coincides with the discovery of new Linux variants of Mallox (aka Fargo, TargetCompany, and Mawahelper) ransomware as well as decryptors associated with seven different builds.
+
+Mallox is known to be propagated by brute-forcing Microsoft SQL servers and phishing emails to target Windows systems, with recent intrusions also making use of a.NET-based loader named PureCrypter.
+
+"The attackers are using custom python scripts for the purpose of payload delivery and victim's information exfiltration," Uptycs researchers Tejaswini Sandapolla and Shilpesh Trivedi said. "The malware encrypts user data and appends.locked extension to the encrypted files."
+
+A decryptor has also been made available for DoNex and its predecessors (Muse, fake LockBit 3.0, and DarkRace) by Avast by taking advantage of a flaw in the cryptographic scheme. The Czech cybersecurity company said it has been "silently providing the decryptor" to victims since March 2024 in partnership with law enforcement organizations.
+
+"Despite law enforcement efforts and increased security measures, ransomware groups continue to adapt and thrive," Group-IB said.
+
+Data shared by Malwarebytes and NCC Group based on victims listed on the leak sites show that 470 ransomware attacks were recorded in May 2024, up from 356 in April. A majority of the attacks were claimed by LockBit, Play, Medusa, Akira, 8Base, Qilin, and RansomHub.
+
+"The ongoing development of new ransomware strains and the emergence of sophisticated affiliate programs demonstrate that the threat is far from being contained," Group-IB noted. "Organizations must remain vigilant and proactive in their cybersecurity efforts to mitigate the risks posed by these ever-evolving threats."

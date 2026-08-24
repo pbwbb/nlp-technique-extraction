@@ -1,0 +1,21 @@
+New Phishing Scam Uses Google Drawings and WhatsApp Shortened Links
+
+Cybersecurity researchers have discovered a novel phishing campaign that leverages Google Drawings and shortened links generated via WhatsApp to evade detection and trick users into clicking on bogus links designed to steal sensitive information.
+
+"The attackers chose a group of the best-known websites in computing to craft the threat, including Google and WhatsApp to host the attack elements, and an Amazon look-alike to harvest the victim's information," Menlo Security researcher Ashwin Vamshi said. "This attack is a great example of a Living Off Trusted Sites (LoTS) threat."
+
+The starting point of the attack is a phishing email that directs the recipients to a graphic that appears to be an Amazon account verification link. This graphic, for its part, is hosted on Google Drawings, in an apparent effort to evade detection.
+
+Abusing legitimate services has obvious benefits for attackers in that they're not only a low-cost solution, but more importantly, they offer a clandestine way of communication inside networks, as they are unlikely to be blocked by security products or firewalls.
+
+"Another thing that makes Google Drawings appealing in the beginning of the attack is that it allows users (in this case, the attacker) to include links in their graphics," Vamshi said. "Such links may easily go unnoticed by users, particularly if they feel a sense of urgency around a potential threat to their Amazon account."
+
+Users who end up clicking on the verification link are taken to a lookalike Amazon login page, with the URL crafted successively using two different URL shorteners -- WhatsApp ("l.wl[.]co") followed by qrco[.]de -- as an added layer of obfuscation and deceive security URL scanners.
+
+The fake page is designed to harvest credentials, personal information, and credit card details, after which the victims are redirected to the original phished Amazon login page. As an extra step, the web page is rendered inaccessible from the same IP address once the credentials have been validated.
+
+The disclosure comes as researchers have identified a loophole in Microsoft 365's anti-phishing mechanisms that could be abused to increase the risk of users opening phishing emails.
+
+The method entails the use of CSS trickery to hide the "First Contact Safety Tip," which alerts users when they receive emails from an unknown address. Microsoft, which has acknowledged the issue, has yet to release a fix.
+
+"The First Contact Safety Tip is prepended to the body of an HTML email, which means it is possible to alter the way it is displayed through the use of CSS style tags," Austrian cybersecurity outfit Certitude said. "We can take this a step further, and spoof the icons Microsoft Outlook adds to emails that are encrypted and/or signed."

@@ -1,0 +1,41 @@
+Russian Hackers Gamaredon and Turla Collaborate to Deploy Kazuar Backdoor in Ukraine
+
+Cybersecurity researchers have discerned evidence of two Russian hacking groups Gamaredon and Turla collaborating together to target and co-comprise Ukrainian entities.
+
+Slovak cybersecurity company ESET said it observed the Gamaredon tools PteroGraphin and PteroOdd being used to execute Turla group's Kazuar backdoor on an endpoint in Ukraine in February 2025, indicating that Turla is very likely actively collaborating with Gamaredon to gain access to specific machines in Ukraine and deliver the Kazuar backdoor.
+
+"PteroGraphin was used to restart the Kazuar v3 backdoor, possibly after it crashed or was not launched automatically," ESET said in a report shared with The Hacker News. "Thus, PteroGraphin was probably used as a recovery method by Turla."
+
+In a separate instance in April and June 2025, ESET said it also detected the deployment of Kazuar v2 through two other Gamaredon malware families tracked as PteroOdd and PteroPaste.
+
+Both Gamaredon (aka Aqua Blizzard and Armageddon) and Turla (aka Secret Blizzard and Venomous Bear) are assessed to be affiliated with the Russian Federal Security Service (FSB), and are known for their attacks targeting Ukraine.
+
+"Gamaredon has been active since at least 2013. It is responsible for many attacks, mostly against Ukrainian governmental institutions," ESET said.
+
+"Turla, also known as Snake, is an infamous cyber espionage group that has been active since at least 2004, possibly extending back into the late 1990s. It mainly focuses on high-profile targets, such as governments and diplomatic entities, in Europe, Central Asia, and the Middle East. It is known for having breached major organizations such as the US Department of Defense in 2008 and the Swiss defense company RUAG in 2014."
+
+The cybersecurity company said Russia's full-scale invasion of Ukraine in 2022 likely fueled this convergence, with the attacks primarily focusing on the Ukrainian defense sector in recent months.
+
+One of Turla's staple implants is Kazuar, a frequently updated malware that has previously leveraged Amadey bots to deploy a backdoor called Tavdig, which then drops the.NET-based tool. Early artifacts associated with the malware have been spotted in the wild as far back as 2016, per Kaspersky.
+
+PteroGraphin, PteroOdd, and PteroPaste, on the other hand, are part of a growing arsenal of tools developed by Gamaredeon to deliver additional payloads. PteroGraphin is a PowerShell tool that uses Microsoft Excel add-ins and scheduled tasks as a persistence mechanism and uses the Telegraph API for command-and-control (C2). It was first discovered in August 2024.
+
+The exact initial access vector used by Gamaredon is not clear, but the group has a history of using spear-phishing and malicious LNK files on removable drives using tools like PteroLNK for propagation.
+
+In all, Turla-related indicators have been detected on seven machines in Ukraine over the past 18 months, out of which four were breached by Gamaredon in January 2025. The deployment of the latest version of Kazuar (Kazuar v3) is said to have taken place towards the end of February.
+
+"Kazuar v2 and v3 are fundamentally the same malware family and share the same codebase," ESET said. "Kazuar v3 comprises around 35% more C# lines than Kazuar v2 and introduces additional network transport methods: over web sockets and Exchange Web Services."
+
+The attack chain involved Gamaredon deploying PteroGraphin, which was used to download a PowerShell downloader dubbed PteroOdd that, in turn, retrieved a payload from Telegraph to execute Kazuar. The payload is also designed to gather and exfiltrate the victim's computer name and system drive's volume serial number to a Cloudflare Workers sub-domain, before launching Kazuar.
+
+That said, it's important to note here that there are signs suggesting Gamaredon downloaded Kazuar, as the backdoor is said to have been present on the system since February 11, 2025.
+
+In a sign that this was not an isolated phenomenon, ESET revealed that it identified another PteroOdd sample on a different machine in Ukraine in March 2025, on which Kazuar was also present. The malware is capable of harvesting a wide range of system information, along with a list of installed.NET versions, and transmitting them to an external domain ("eset.ydns[.]eu").
+
+The fact that Gamaredon's toolset lacks any.NET malware and Turla's Kazuar is based in.NET suggests this data gathering step is likely meant for Turla, the company assessed with medium confidence.
+
+The second set of attacks was detected in mid-April 2025, when PteroOdd was used to drop another PowerShell downloader codenamed PteroEﬃgy, which ultimately contacted the "eset.ydns[.]eu" domain to deliver Kazuar v2 ("scrss.ps1"), which was documented by Palo Alto Networks in late 2023.
+
+ESET said it also detected a third attack chain on June 5 and 6, 2025, it observed a PowerShell downloader referred to as PteroPaste being employed to drop and install Kazuar v2 ("ekrn.ps1") from the domain "91.231.182[.]187" on two machines located in Ukraine. The use of the name "ekrn" is possibly an attempt by threat actors to masquerade as "ekrn.exe," a legitimate binary associated with ESET endpoint security products.
+
+"We now believe with high confidence that both groups – separately associated with the FSB – are cooperating and that Gamaredon is providing initial access to Turla," ESET researchers Matthieu Faou and Zoltán Rusnák said.

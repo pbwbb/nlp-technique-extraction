@@ -1,0 +1,29 @@
+Scattered Spider Behind Cyberattacks on M&S and Co-op, Causing Up to $592M in Damages
+
+The April 2025 cyber attacks targeting U.K. retailers Marks & Spencer and Co-op have been classified as a "single combined cyber event."
+
+That's according to an assessment from the Cyber Monitoring Centre (CMC), a U.K.-based independent, non-profit body set up by the insurance industry to categorize major cyber events.
+
+"Given that one threat actor claimed responsibility for both M&S and Co-op, the close timing, and the similar tactics, techniques, and procedures (TTPs), CMC has assessed the incidents as a single combined cyber event," the CMC said.
+
+The organization has categorized the disruption of the retailers as a "Category 2 systemic event." It's estimated that the security breaches will have a total financial impact of £270 million ($363 million) to £440 million ($592 million).
+
+However, the cyber attack on Harrods around the same time has not been included at this stage, citing a lack of adequate information about the cause and impact.
+
+The initial access vector employed in the attacks targeting Marks & Spencer and Co-op revolved around the use of social engineering tactics, particularly targeting IT help desks.
+
+The CMC further noted that its attribution efforts are still ongoing. That said, the notorious cybercrime group known as Scattered Spider (aka UNC3944) is believed to be behind the intrusions.
+
+The group, an offshoot of the larger cybercrime community known as The Com, has a track record of leveraging its English-speaking members to carry out advanced social engineering attacks where they impersonate members of a company's IT department to obtain unauthorized access.
+
+"The impact from this event is 'narrow and deep,' having significant implications for two companies, and knock-on effects for suppliers, partners, and service providers," the CMC said.
+
+Earlier this week, Google Threat Intelligence Group (GTIG) revealed that Scattered Spider actors have begun to target major insurance companies in the United States.
+
+"Given this actor's history of focusing on a sector at a time, the insurance industry should be on high alert, especially for social engineering schemes which target their help desks and call centers," John Hultquist, Chief Analyst at GTIG, said.
+
+"The anticipated threat of Iranian cyber capability to U.S. organizations has been the focus of many discussions lately, but these actors are already targeting critical infrastructure. We expect more high-profile incidents in the near term as they move from sector to sector."
+
+The development comes as Indian consulting giant Tata Consultancy Services (TCS) disclosed that its systems or users were not compromised as part of the attack against Marks & Spencer. Last month, the Financial Times reported that TCS is internally probing whether its systems were used as a launchpad for the attack.
+
+It also follows a new strategy from the Qilin ransomware operation that involves offering legal assistance to ramp up pressure during ransom negotiations. The threat actors also claim to have an in-house team of journalists who can work together with the legal department to craft blog posts and assist with victim negotiations.

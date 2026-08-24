@@ -1,0 +1,17 @@
+Ukrainian Minors Recruited for Cyber Ops and Reconnaissance in Russian Airstrikes
+
+The Security Service of Ukraine (SBU or SSU) has exposed a novel espionage campaign suspected to be orchestrated by Russia's Federal Security Service (FSB) that involves recruiting Ukrainian minors for criminal activities under the guise of "quest games."
+
+Law enforcement officials said that it detained two FSB agent groups following a special operation in Kharkiv. These groups, per the agency, consisted exclusively of children aged 15 and 16.
+
+"The minors carried out hostile tasks of conducting reconnaissance, correcting strikes, and arson," the SSU said in a statement released Friday. "To mask subversive activities, both enemy cells operated separately from each other."
+
+As per the quest game rules set by the FSB, the children were given geographic coordinates, after which they were instructed to get to the location, take photos and videos of targets, and provide a general description of the surrounding area.
+
+The results of these reconnaissance missions were subsequently shared to the Russian intelligence agency via anonymous chats. The SSU said the information gathered from these activities was used to carry out airstrikes in Kharkiv.
+
+Ukraine's principal security arm also revealed that it has detained "all members of the enemy groups" who were found taking photos of air defense facilities in the country. One of the organizers has been taken into custody and faces life imprisonment.
+
+Also charged in connection with the efforts is a "liaison" of the FSB agent groups, a police officer from the Krasnodar region of Russia. He has been charged in absentia under Part 2 of Article 113 of the Criminal Code of Ukraine, which relates to acts of sabotage committed under martial law.
+
+The development comes as the Computer Emergency Response Team of Ukraine (CERT-UA) warned of a new set of cyber attacks that it said were aimed at defense companies in the country as well as its security and defense forces. The intrusions have been attributed to a Russia-linked actor tracked as UAC-0185.

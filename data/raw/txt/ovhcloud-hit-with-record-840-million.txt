@@ -1,0 +1,25 @@
+OVHcloud Hit with Record 840 Million PPS DDoS Attack Using MikroTik Routers
+
+French cloud computing firm OVHcloud said it mitigated a record-breaking distributed denial-of-service (DDoS) attack in April 2024 that reached a packet rate of 840 million packets per second (Mpps).
+
+This is just above the previous record of 809 million Mpps reported by Akamai as targeting a large European bank in June 2020.
+
+The 840 Mpps DDoS attack is said to have been a combination of a TCP ACK flood that originated from 5,000 source IPs and a DNS reflection attack leveraging about 15,000 DNS servers to amplify the traffic.
+
+"While the attack was distributed worldwide, 2/3 of total packets entered from only four [points of presence], all located in the U.S. with 3 of them being on the west coast," OVHcloud noted. "This highlights the capability of the adversary to send a huge packet rate through only a few peerings, which can prove very problematic."
+
+The company said it has observed a significant uptick in DDoS attacks in terms of both frequency and intensity starting 2023, adding those reaching above 1 terabit per second (Tbps) have become a regular occurrence.
+
+"In the past 18 months, we went from 1+ Tbps attacks being quite rare, then weekly, to almost daily (averaged out over one week)," OVHcloud's Sebastien Meriot said. "The highest bit rate we observed during that period was ~2.5 Tbps."
+
+Unlike typical DDoS attacks that rely on sending a flood of junk traffic to targets with an aim to exhaust available bandwidth, packet rate attacks work by overloading the packet processing engines of networking devices close to the destination, such as load balancers.
+
+Data gathered by the company shows that DDoS attacks leveraging packet rates greater than 100 Mpps have witnessed a sharp increase for the same time period, with many of them emanating from compromised MikroTik Cloud Core Router (CCR) devices. As many as 99,382 MikroTik routers are accessible over the internet.
+
+These routers, besides exposing an administration interface, run on outdated versions of the operating system, making them susceptible to known security vulnerabilities in RouterOS. It's suspected that threat actors are likely weaponizing the operating system's Bandwidth test feature to pull off the attacks.
+
+It's estimated that even hijacking 1% of the exposed devices into a DDoS botnet could theoretically give adversaries enough capabilities to launch layer 7 attacks reaching 2.28 billion packets per second (Gpps).
+
+It bears noting at this stage that MikroTik routers have been leveraged for building potent botnets such as Mēris and even used for launching botnet-as-a-service operations.
+
+"Depending on the number of compromised devices and their actual capabilities, this could be a new era for packet rate attacks: with botnets possibly capable of issuing billions of packets per second, it could seriously challenge how anti-DDoS infrastructures are built and scaled," Meriot said.

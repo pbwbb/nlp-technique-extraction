@@ -1,0 +1,29 @@
+Phishing Campaigns Use Real-Time Checks to Validate Victim Emails Before Credential Theft
+
+Cybersecurity researchers are calling attention to a new type of credential phishing scheme that ensures that the stolen information is associated with valid online accounts.
+
+The technique has been codenamed precision-validating phishing by Cofense, which it said employs real-time email validation so that only a select set of high-value targets are served the fake login screens.
+
+"This tactic not only gives the threat actors a higher success rate on obtaining usable credentials as they only engage with a specific pre-harvested list of valid email accounts," the company said.
+
+Unlike "spray-and-pray" credential harvesting campaigns that typically involve the bulk distribution of spam emails to obtain victims' login information in an indiscriminate fashion, the latest attack tactic takes spear-phishing to the next level by only engaging with email addresses that attackers have verified as active, legitimate, and high-value.
+
+In this scenario, the email address entered by the victim in a phishing landing page is validated against the attacker's database, after which the bogus login page is displayed. If the email address does not exist in the database, the page either returns an error or the user is redirected to an innocuous page like Wikipedia so as to evade security analysis.
+
+The checks are carried out by integrating an API- or JavaScript-based validation service into the phishing kit that confirms the email address before proceeding to the password capture step.
+
+"It increases the efficiency of the attack and the likelihood that stolen credentials belong to real, actively used accounts, improving the quality of harvested data for resale or further exploitation," Cofense said.
+
+"Automated security crawlers and sandbox environments also struggle to analyze these attacks because they cannot bypass the validation filter. This targeted approach reduces attacker risk and extends the lifespan of phishing campaigns."
+
+The development comes as the cybersecurity company also revealed details of an email phishing campaign that uses file deletion reminders as a lure to grab credentials as well as deliver malware.
+
+The two-pronged attack leverages an embedded URL that seemingly points to a PDF file that's scheduled to be deleted from a legitimate file storage service called files.fm. Should the message recipient click on the link, they are taken to legitimate files.fm link from where they can download the purported PDF file.
+
+However, when the PDF is opened, users are presented with two options to either preview or download the file. Users who opt for the former are taken to a bogus Microsoft login screen that's designed to steal their credentials. When the download option is selected, it drops an executable that claims to be Microsoft OneDrive, but, in reality, is the ScreenConnect remote desktop software from ConnectWise.
+
+It's "almost as if the threat actor intentionally designed the attack to trap the user, forcing them to choose which 'poison' they will fall for," Cofense said. "Both options lead to the same outcome, with similar goals but different approaches to achieving them."
+
+The findings also follow the discovery of a sophisticated multi-stage attack that combines vishing, remote access tooling, and living-off-the-land techniques to gain initial access and establish persistence. The tradecraft observed in the activity is consistent with clusters tracked as Storm-1811 and STAC5777.
+
+"The threat actor exploited exposed communication channels by delivering a malicious PowerShell payload via a Microsoft Teams message, followed by the use of Quick Assist to remotely access the environment," Ontinue said. "This led to the deployment of signed binaries (e.g., TeamViewer.exe), a sideloaded malicious DLL (TV.dll), and ultimately a JavaScript-based C2 backdoor executed via Node.js."

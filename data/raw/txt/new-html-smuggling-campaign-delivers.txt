@@ -1,0 +1,25 @@
+New HTML Smuggling Campaign Delivers DCRat Malware to Russian-Speaking Users
+
+Russian-speaking users have been targeted as part of a new campaign distributing a commodity trojan called DCRat (aka DarkCrystal RAT) by means of a technique known as HTML smuggling.
+
+The development marks the first time the malware has been deployed using this method, a departure from previously observed delivery vectors such as compromised or fake websites, or phishing emails bearing PDF attachments or macro-laced Microsoft Excel documents.
+
+"HTML smuggling is primarily a payload delivery mechanism," Netskope researcher Nikhil Hegde said in an analysis published Thursday. "The payload can be embedded within the HTML itself or retrieved from a remote resource."
+
+The HTML file, in turn, can be propagated via bogus sites or malspam campaigns. Once the file is launched via the victim's web browser, the concealed payload is decoded and downloaded onto the machine.
+
+The attack subsequently banks on some level of social engineering to convince the victim to open the malicious payload.
+
+Netskope said it discovered HTML pages mimicking TrueConf and VK in the Russian language that when opened in a web browser, automatically download a password-protected ZIP archive to disk in an attempt to evade detection. The ZIP payload contains a nested RarSFX archive that ultimately leads to the deployment of the DCRat malware.
+
+First released in 2018, DCRat is capable of functioning as a full-fledged backdoor that can be paired with additional plugins to extend its functionality. It can execute shell commands, log keystrokes, and exfiltrate files and credentials, among others.
+
+Organizations are recommended to review HTTP and HTTPS traffic to ensure that systems are not communicating with malicious domains.
+
+The development comes as Russian companies have been targeted by a threat cluster dubbed Stone Wolf to infect them with Meduza Stealer by sending phishing emails masquerading as a legitimate provider of industrial automation solutions.
+
+"Adversaries continue to use archives with both malicious files and legitimate attachments which serve to distract the victim," BI.ZONE said. By using the names and data of real organizations, attackers have a greater chance to trick their victims into downloading and opening malicious attachments."
+
+It also follows the emergence of malicious campaigns that have likely leveraged generative artificial intelligence (GenAI) to write VBScript and JavaScript code responsible for spreading AsyncRAT via HTML smuggling.
+
+"The scripts' structure, comments and choice of function names and variables were strong clues that the threat actor used GenAI to create the malware," HP Wolf Security said. "The activity shows how GenAI is accelerating attacks and lowering the bar for cybercriminals to infect endpoints."

@@ -1,0 +1,81 @@
+⚡ THN Weekly Recap: Top Cybersecurity Threats, Tools and Tips
+
+This past week has been packed with unsettling developments in the world of cybersecurity. From silent but serious attacks on popular business tools to unexpected flaws lurking in everyday devices, there’s a lot that might have flown under your radar. Attackers are adapting old tricks, uncovering new ones, and targeting systems both large and small.
+
+Meanwhile, law enforcement has scored wins against some shady online marketplaces, and technology giants are racing to patch problems before they become a full-blown crisis.
+
+If you’ve been too busy to keep track, now is the perfect time to catch up on what you may have missed.
+
+⚡ Threat of the Week
+
+Cleo Vulnerability Comes Under Active Exploitation — A critical vulnerability (CVE-2024-50623) in Cleo's file transfer software—Harmony, VLTrader, and LexiCom—has been actively exploited by cybercriminals, creating major security risks for organizations worldwide. The flaw enables attackers to execute code remotely without authorization by exploiting an unrestricted file upload feature. Cybersecurity firms like Huntress and Rapid7 observed mass exploitation beginning December 3, 2024, where attackers used PowerShell commands and Java-based tools to compromise systems, affecting over 1,300 exposed instances across industries. The ransomware group Termite is suspected in these attacks, using advanced malware similar to tactics previously seen from the Cl0p ransomware group.
+
+7 Reasons for Microsoft 365 Backup
+
+There are seven critical reasons to protect your Microsoft 365 data - are you familiar with them all? Check out this infographic to see them all.
+
+🔔 Top News
+
+Iranian Hackers Deploy New IOCONTROL Malware — Iran-affiliated threat actors have been linked to a new custom malware called IOCONTROL that's designed to target IoT and operational technology (OT) environments in Israel and the United States. It's capable of executing arbitrary operating system commands, scanning an IP range in a specific port, and deleting itself. IOCONTROL has been used to attack IoT and SCADA devices of various types including IP cameras, routers, PLCs, HMIs, firewalls, and more from different vendors such as Baicells, D-Link, Hikvision, Red Lion, Orpak, Phoenix Contact, Teltonika, and Unitronics.
+
+Law Enforcement Operations Take Down Several Criminal Services — A series of law enforcement operations across the world have led to the shutdown of the Rydox marketplace and 27 sites that peddled distributed denial-of-service (DDoS) attack services to other criminal actors. In a related development, authorities from Germany announced that they disrupted a malware operation called BADBOX that came preloaded on at least 30,000 internet-connected devices sold across the country.
+
+U.S. Charges Chinese Hacker for Sophos Firewall Attacks — The U.S. government on Tuesday unsealed charges against Chinese national Guan Tianfeng (aka gbigmao and gxiaomao) for allegedly breaking into thousands of Sophos firewall devices globally in April 2020. Guan has been accused of developing and testing a zero-day security vulnerability (CVE-2020-12271) used to conduct the attacks against Sophos firewalls. The exploit is estimated to have been used to infiltrate about 81,000 firewalls.
+
+New Attack Technique Exploits Windows UI Automation (UIA) to Bypass Detection — New research has found that it's possible for malware installed on a device to exploit a Windows accessibility framework called UI Automation (UIA) to perform a wide range of malicious activities without tipping off endpoint detection and response (EDR) solutions. In order for this attack to work, all an adversary needs to do is convince a user to run a program that uses UI Automation. This can then pave the way for command execution, leading to data theft and phishing attacks.
+
+New Spyware Linked to Chinese Police Bureaus — A novel surveillance software program dubbed EagleMsgSpy is likely being used by Chinese police departments as a lawful intercept tool to gather a wide range of information from mobile devices since at least 2017. While only Android versions of the tool have been discovered to date, it's believed that there exists an iOS variant as well. The installation appears to require physical access to a target device in order to activate the information-gathering operation.
+
+New PUMAKIT Rootkit Detected in the Wild — Unknown threat actors are using a sophisticated Linux rootkit called PUMAKIT that makes use of advanced stealth mechanisms to hide its presence and maintain communication with command-and-control servers. It's equipped to escalate privileges, hide files and directories, and conceal itself from system tools, while simultaneously evading detection.
+
+‎️‍🔥 Trending CVEs
+
+Heads up! Some popular software has serious security flaws, so make sure to update now to stay safe. The list includes — CVE-2024-11639 (Ivanti CSA), CVE-2024-49138 (Windows CLFS Driver), CVE-2024-44131 (Apple macOS), CVE-2024-54143 (OpenWrt), CVE-2024-11972 (Hunk Companion plugin), CVE-2024-11205 (WPForms), CVE-2024-12254 (Python), CVE-2024-53677 (Apache Struts), CVE-2024-23474 (SolarWinds Access Rights Manager), CVE-2024-43153, CVE-2024-43234 (Woffice theme), CVE-2024-43222 (Sweet Date theme), JS Help Desk (JS Help Desk plugin), CVE-2024-54292 (Appsplate plugin), CVE-2024-47578 (Adobe Document Service), CVE-2024-54032 (Adobe Connect), CVE-2024-53552 (CrushFTP), CVE-2024-55884 (Mullvad VPN), and CVE-2024-28025, CVE-2024-28026, CVE-2024-28027, CVE-2024-21786 (MC Technologies MC-LR Router), CVE-2024-21855, CVE-2024-28892, and CVE-2024-29224 (GoCast).
+
+📰 Around the Cyber World
+
+Apple Faces Lawsuit Over Alleged Failures to Detect CSAM — Apple is facing a proposed $1.2 billion class action lawsuit that's accusing the company of allegedly failing to detect and report illegal child pornography. In August 2021, Apple unveiled a new feature in the form of a privacy-preserving iCloud photo scanning tool for detecting child sexual abuse material (CSAM) on the platform. However, the project proved to be controversial, with privacy groups and researchers raising concerns that such a tool could be a slippery slope and that it could be abused and exploited to compromise the privacy and security of all iCloud users. All of this led to Apple killing the effort officially in December 2022. "Scanning every user's privately stored iCloud data would create new threat vectors for data thieves to find and exploit," it said at the time. "Scanning for one type of content, for instance, opens the door for bulk surveillance and could create a desire to search other encrypted messaging systems across content types." In response to the lawsuit, Apple said it's working to combat these crimes without sacrificing user privacy and security through features like Communication Safety, which warns children when they receive or attempt to send content that contains nudity.
+
+Threat Actors Exploit Apache ActiveMQ Vulnerability — The threat actors are actively exploiting a known security flaw in Apache ActiveMQ (CVE-2023-46604) in attacks targeting South Korea to deliver various malware like cryptocurrency miners, an open-source RAT called Quasar RAT, Fast Reverse Proxy (FRP), and an open-source ransomware called Mauri. "System administrators must check if their current Apache ActiveMQ service is one of the susceptible versions below and apply the latest patches to prevent attacks that exploit known vulnerabilities," AhnLab said.
+
+Citrix Warns of Password Spraying Attacks on NetScaler/NetScaler Gateway — Citrix has warned that its NetScaler appliances are the target of password spraying attacks as part of broader campaigns observed across various products and platforms. "These attacks are characterized by a sudden and significant increase in authentication attempts and failures, which trigger alerts across monitoring systems, including Gateway Insights and Active Directory logs," the company said, adding they could result in excessive logging, management CPU overload, and appliance instability. Organizations are recommended to enable multi-factor authentication for Gateway and create responder policies to block certain endpoints, and utilize a web application firewall (WAF) to block suspicious IP addresses.
+
+BadRAM Relies on $10 Equipment to Break AMD Security — Academic researchers from KU Leuven, the University of Lübeck, and the University of Birmingham have devised a new technique called BadRAM (CVE-2024-21944, CVSS score: 5.3) that employs $10 off-the-shelf equipment combining Raspberry Pi Pico, a DDR Socket, and a 9V source to breach AMD's Secure Encrypted Virtualization (SEV) guarantees. The study found that "tampering with the embedded SPD chip on commercial DRAM modules allows attackers to bypass SEV protections — including AMD’s latest SEV-SNP version." In a nutshell, the attack makes the memory module intentionally misreport its size, thus tricking the CPU into accessing non-existent addresses that are covertly mapped to existing memory regions. This could result in a scenario where the SPD metadata is modified to make an attached memory module appear larger than it is, thereby allowing an attacker to overwrite physical memory. "BadRAM completely undermines trust in AMD's latest Secure Encrypted Virtualization (SEV-SNP) technology, which is widely deployed by major cloud providers, including Amazon AWS, Google Cloud, and Microsoft Azure," security researcher Jo Van Bulck told The Hacker News. "Similar to Intel SGX/TDX and Arm CCA, AMD SEV-SNP is a cornerstone of confidential cloud computing, ensuring that customers' data remains continuously encrypted in memory and secure during CPU processing. Notably, as part of AMD's growing market share, the company recently reported its highest-ever share of server CPUs. BadRAM for the first time studies the security risks of bad RAM — rogue memory modules that deliberately provide false information to the processor during startup. " AMD has released firmware updates to address the vulnerability. There is no evidence that it has been exploited in the wild.
+
+Meta Fixes WhatsApp View Once Media Privacy Issue — WhatsApp appears to have silently fixed an issue that could be abused to trivially bypass a feature called View Once that prevents message recipients from forwarding, sharing, copying, or taking a screenshot after it has been viewed. The bypass essentially involved using a browser extension that modifies the WhatsApp Web app. "The gist of the issue is that although View Once media should not be displayed on the WhatsApp Web client, the media is sent to the client with its only 'protection' being a flag that announces it as 'view once' media, which is respected by the official client," security researcher Tal Be'ery said. The issue has been exploited in the wild by publicly available browser extensions.
+
+🎥 Expert Webinar
+
+Why Even the Best Companies Get Hacked – And How to Stop It — In a world of ever-evolving cyber threats, even the best-prepared organizations with cutting-edge solutions can fall victim to breaches. But why does this happen—and more importantly, how can you stop it?
+
+Join us for an exclusive webinar with Silverfort’s CISO, John Paul Cunningham.
+
+Here’s what you’ll learn:
+
+Hidden vulnerabilities often missed, even with advanced security solutions
+
+How attackers bypass traditional defenses and exploit blind spots
+
+Strategies for aligning cybersecurity priorities with business goals
+
+Practical steps to strengthen your security architecture
+
+Learn how to align cybersecurity with business goals, address blind spots, and stay ahead of modern threats.
+
+👉 Register now
+
+🔧 Cybersecurity Tools
+
+XRefer — Mandiant FLARE has introduced XRefer, an open-source plugin for IDA Pro that simplifies malware analysis. It offers a clear overview of a binary's structure and real-time insights into key artifacts, APIs, and execution paths. Designed to save time and improve accuracy, XRefer supports Rust binaries, filters out noise, and makes navigation seamless. Perfect for quick triage or deep analysis, it’s now available for download.
+
+TrailBytes — Have you ever needed quick insights into what happened on a Windows computer system but struggled with time-consuming tools? TrailBytes offers a free and straightforward solution to this problem. In forensic investigations, building a timeline of events is essential. Understanding who did what, when, and where can be the key to uncovering the truth.
+
+Malimite — It is an iOS decompiler that helps researchers analyze IPA files. Built on Ghidra, it works on Mac, Windows, and Linux. It supports Swift and Objective-C, reconstructs Swift classes, decodes iOS resources, and skips unnecessary library code. It also has built-in AI to explain complex methods. Malimite makes it easy to find vulnerabilities and understand how iOS apps work.
+
+🔒 Tip of the Week
+
+Clipboard Monitoring – Stop Data Leaks Before They Happen — Did you know the clipboard on your devices could be a silent leak of sensitive data? Clipboard monitoring is an effective way to detect sensitive data being copied and shared, whether by attackers or through accidental misuse. Advanced tools like Sysmon, with event logging (Event ID 10), enable real-time monitoring of clipboard activities across endpoints. Enterprise solutions such as Symantec DLP or Microsoft Purview incorporate clipboard tracking into broader data loss prevention strategies, flagging suspicious patterns like bulk text copying or attempts to exfiltrate credentials. For personal use, tools like Clipboard Logger can help track clipboard history. Educate your team about the risks, disable clipboard syncing when unnecessary, and configure alerts for sensitive keywords. Clipboard monitoring provides an additional layer of security to protect against data breaches and insider threats.
+
+Conclusion
+
+Beyond the headlines, one overlooked area is personal cybersecurity hygiene. Attackers are now combining tactics, targeting not just businesses but also employees’ personal devices to gain entry into secure networks. Strengthening personal device security, using password managers, and enabling multi-factor authentication (MFA) across all accounts can act as powerful shields. Remember, the security of an organization is often only as strong as its weakest link, and that link might be someone’s smartphone or home Wi-Fi.

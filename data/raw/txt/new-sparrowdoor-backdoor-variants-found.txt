@@ -1,0 +1,47 @@
+New SparrowDoor Backdoor Variants Found in Attacks on U.S. and Mexican Organizations
+
+The Chinese threat actor known as FamousSparrow has been linked to a cyber attack targeting a trade group in the United States and a research institute in Mexico to deliver its flagship backdoor SparrowDoor and ShadowPad.
+
+The activity, observed in July 2024, marks the first time the hacking crew has deployed ShadowPad, a malware widely shared by Chinese state-sponsored actors.
+
+"FamousSparrow deployed two previously undocumented versions of the SparrowDoor backdoor, one of them modular," ESET said in a report shared with The Hacker News. "Both versions constitute considerable progress over previous ones and implement parallelization of commands."
+
+FamousSparrow was first documented by the Slovak cybersecurity company in September 2021 in connection with a series of cyber attacks aimed at hotels, governments, engineering companies, and law firms with SparrowDoor, an implant exclusively used by the group.
+
+Since then, there have been reports of the adversarial collective's tactical overlaps with clusters tracked as Earth Estries, GhostEmperor, and most notably, Salt Typhoon, which has been attributed to intrusions aimed at the telecom sector.
+
+However, ESET noted that it's treating FamousSparrow as a distinct threat group with some loose links to Earth Estries stemming from parallels with Crowdoor and HemiGate.
+
+The attack chain involves the threat actor deploying a web shell on an Internet Information Services (IIS) server, although the precise mechanism used to achieve this is unknown as yet. Both the victims are said to have been running outdated versions of Windows Server and Microsoft Exchange Server.
+
+The web shell acts as a conduit to drop a batch script from a remote server, which, in turn, launches a Base64-encoded.NET web shell embedded within it. This web shell ultimately is responsible for deploying SparrowDoor and ShadowPad.
+
+ESET said one of the SparrowDoor versions resembles Crowdoor, although both variants feature significant improvements over their predecessor. This includes the ability to simultaneously execute time-consuming commands, such as file I/O and the interactive shell, thereby allowing the backdoor to process incoming instructions while they are being run.
+
+"When the backdoor receives one of these commands, it creates a thread that initiates a new connection to the C&C server," security researcher Alexandre Côté Cyr said. "The unique victim ID is then sent over the new connection along with a command ID indicating the command that led to this new connection."
+
+"This allows the C&C server to keep track of which connections are related to the same victim and what their purposes are. Each of these threads can then handle a specific set of sub-commands."
+
+SparrowDoor sports a wide range of commands that allow it to start a proxy, launch interactive shell sessions, perform file operations, enumerate the file system, gather host information, and even uninstall itself.
+
+In contrast, the second version of the backdoor is modular and markedly different from other artifacts, adopting a plugin-based approach to realize its goals. It supports as many as nine different modules -
+
+Cmd - Run a single command
+
+CFile - Perform file system operations
+
+CKeylogPlug - Log keystrokes
+
+CSocket - Launch a TCP proxy
+
+CShell - Start an interactive shell session
+
+CTransf - Initiate file transfer between the compromised Windows host and the C&C server
+
+CRdp - Take screenshots
+
+CPro - List running processes and kill specific ones
+
+CFileMoniter - Monitor file system changes for specified directories
+
+"This newly found activity indicates that not only is the group still operating, but it was also actively developing new versions of SparrowDoor during this time," ESET said.

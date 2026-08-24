@@ -1,0 +1,33 @@
+New GootLoader Campaign Targets Users Searching for Bengal Cat Laws in Australia
+
+In an unusually specific campaign, users searching about the legality of Bengal Cats in Australia are being targeted with the GootLoader malware.
+
+"In this case, we found the GootLoader actors using search results for information about a particular cat and a particular geography being used to deliver the payload: 'Are Bengal Cats legal in Australia?,'" Sophos researchers Trang Tang, Hikaru Koike, Asha Castle, and Sean Gallagher said in a report published last week.
+
+GootLoader, as the name implies, is a malware loader that's typically distributed using search engine optimization (SEO) poisoning tactics for initial access.
+
+Specifically, the malware is deployed onto victim machines when searching for certain terms like legal documents and agreements on search engines like Google surface booby-trapped links pointing to compromised websites that host a ZIP archive containing a JavaScript payload.
+
+Once installed, it makes way for a second-stage malware, often an information stealer and remote access trojan dubbed GootKit, although it has also been observed delivering other families such as Cobalt Strike, IcedID, Kronos, REvil, and SystemBC in the past for post-exploitation.
+
+The latest attack chain is no different in that searches for "Do you need a license to own a Bengal cat in Australia" surface results that include a link to a legitimate-but-infected website belonging to a Belgium-based LED display maker, from where victims are prompted to download a ZIP archive.
+
+Present within the ZIP archive is a JavaScript file that's then responsible for kicking off a multi-stage attack chain that culminates in the execution of a PowerShell script capable of harvesting system information and fetching additional payloads. It's worth noting that an identical campaign was documented by Cybereason earlier this July.
+
+Sophos said it did not observe the deployment of GootKit in the case the company analyzed, thereby preventing the download of additional malware.
+
+"GootLoader is one of a number of continuing malware-delivery-as-a-service operations that heavily leverage search results as a means to reach victims," the researchers said. "The use of search engine optimization, and abuse of search engine advertising to lure targets to download malware loaders and dropper, are not new—GootLoader has been doing this since at least 2020."
+
+Update
+
+Google's Mandiant Managed Defense team, which is tracking GootLoader under the name SLOWPOUR, said it also discovered a similar campaign that leverages searches for "california law break room requirements" to deliver the malware.
+
+"Victims perform a search, often for business-related documents such as legal requirements, agreements, or contracts, and navigate to a compromised site with information purportedly related to their search," it said in a technical report published late last month.
+
+"Both the archive and the JavaScript file have names that closely resemble the victim's search query. This naming scheme helps trick the user into extracting and executing the malware."
+
+That having said, there are indications that the attack chains have shifted tactics for initial access as of early November 2024. A security researcher, who goes by the online alias GootLoader, has revealed that the threat actors behind the operation have pivoted from SEO poisoning tactics to fake PDF converters pushed via malvertising campaigns.
+
+"This shift from SEO poisoning and legal terms — clearly aimed at corporations — could now target everyday users, including those looking to convert PDFs to DOCX," the researcher noted in a brief published last week.
+
+(The story was updated after publication to include new information about the GootLoader campaigns.)

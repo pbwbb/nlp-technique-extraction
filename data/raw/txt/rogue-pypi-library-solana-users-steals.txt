@@ -1,0 +1,23 @@
+Rogue PyPI Library Solana Users, Steals Blockchain Wallet Keys
+
+Cybersecurity researchers have discovered a new malicious package on the Python Package Index (PyPI) repository that masquerades as a library from the Solana blockchain platform but is actually designed to steal victims' secrets.
+
+"The legitimate Solana Python API project is known as 'solana-py' on GitHub, but simply ' solana ' on the Python software registry, PyPI," Sonatype researcher Ax Sharma said in a report published last week. "This slight naming discrepancy has been leveraged by a threat actor who published a 'solana-py' project on PyPI."
+
+The malicious "solana-py" package attracted a total of 1,122 downloads since it was published on August 4, 2024. It's no longer available for download from PyPI.
+
+The most striking aspect of the library is that it carried the version numbers 0.34.3, 0.34.4, and 0.34.5. The latest version of the legitimate "solana" package is 0.34.3. This clearly indicates an attempt on the part of the threat actor to trick users looking for "solana" into inadvertently downloading "solana-py" instead.
+
+What's more, the rogue package borrows the real code from its counterpart, but injects additional code in the "__init__.py" script that's responsible for harvesting Solana blockchain wallet keys from the system.
+
+This information is then exfiltrated to a Hugging Face Spaces domain operated by the threat actor ("treeprime-gen.hf[.]space"), once again underscoring how threat actors are abusing legitimate services for malicious purposes.
+
+The attack campaign poses a supply chain risk in that Sonatype's investigation found that legitimate libraries like "solders" make references to "solana-py" in their PyPI documentation, leading to a scenario where developers could have mistakenly downloaded "solana-py" from PyPI and broadened the attack surface.
+
+"In other words, if a developer using the legitimate 'solders' PyPI package in their application is mislead (by solders' documentation) to fall for the typosquatted 'solana-py' project, they'd inadvertently introduce a crypto stealer into their application," Sharma explained.
+
+"This would not only steal their secrets, but those of any user running the developer's application."
+
+The disclosure comes as Phylum said it identified hundreds of thousands of spam npm packages on the registry containing markers of Tea protocol abuse, a campaign that first came to light in April 2024.
+
+"The Tea protocol project is taking steps to remediate this problem," the supply chain security firm said. "It would be unfair to legitimate participants in the Tea protocol to have their remuneration reduced because others are scamming the system. Also, npm has begun to take down some of these spammers, but the takedown rate does not match the new publication rate."

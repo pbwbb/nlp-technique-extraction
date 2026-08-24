@@ -1,0 +1,35 @@
+Russian RomCom Attacks Target Ukrainian Government with New SingleCamper RAT Variant
+
+The Russian threat actor known as RomCom has been linked to a new wave of cyber attacks aimed at Ukrainian government agencies and unknown Polish entities since at least late 2023.
+
+The intrusions are characterized by the use of a variant of the RomCom RAT dubbed SingleCamper (aka SnipBot or RomCom 5.0), said Cisco Talos, which is monitoring the activity cluster under the moniker UAT-5647.
+
+"This version is loaded directly from the registry into memory and uses a loopback address to communicate with its loader," security researchers Dmytro Korzhevin, Asheer Malhotra, Vanja Svajcer, and Vitor Ventura noted.
+
+RomCom, also tracked as Storm-0978, Tropical Scorpius, UAC-0180, UNC2596, and Void Rabisu, has engaged in multi-motivational operations such as ransomware, extortion, and targeted credential gathering since its emergence in 2022.
+
+It's been assessed that the operational tempo of their attacks has increased in recent months with an aim to set up long-term persistence on compromised networks and exfiltrate data, suggesting a clear espionage agenda.
+
+To that end, the threat actor is said to be "aggressively expanding their tooling and infrastructure to support a wide variety of malware components authored in diverse languages and platforms" such as C++ (ShadyHammock), Rust (DustyHammock), Go (GLUEEGG), and Lua (DROPCLUE).
+
+The attack chains start with a spear-phishing message that delivers a downloader -- either coded in C++ (MeltingClaw) or Rust (RustyClaw) -- which serves to deploy the ShadyHammock and DustyHammock backdoors, respectively. In parallel, a decoy document is displayed to the recipient to maintain the ruse.
+
+While DustyHammock is engineered to contact a command-and-control (C2) server, run arbitrary commands, and download files from the server, ShadyHammock acts as a launchpad for SingleCamper as well as listening for incoming commands.
+
+Despite's ShadyHammock additional features, it's believed that it's a predecessor to DustyHammock, given the fact that the latter was observed in attacks as recently as September 2024.
+
+SingleCamper, the latest version of RomCom RAT, is responsible for a wide range of post-compromise activities, which entail downloading the PuTTY's Plink tool to establish remote tunnels with adversary-controlled infrastructure, network reconnaissance, lateral movement, user and system discovery, and data exfiltration.
+
+"This specific series of attacks, targeting high profile Ukrainian entities, is likely meant to serve UAT-5647's two-pronged strategy in a staged manner – establish long-term access and exfiltrate data for as long as possible to support espionage motives, and then potentially pivot to ransomware deployment to disrupt and likely financially gain from the compromise," the researchers said.
+
+"It is also likely that Polish entities were also targeted, based on the keyboard language checks performed by the malware."
+
+The disclosure comes as the Computer Emergency Response Team of Ukraine (CERT-UA) warned of cyber attacks mounted by a threat actor called UAC-0050 to steal funds as well as sensitive information using various malware families like Remcos RAT, SectopRAT, Xeno RAT, Lumma Stealer, Mars Stealer, and Meduza Stealer.
+
+"UAC-0050's financial theft activities primarily involve stealing funds from the accounts of Ukrainian enterprises and private entrepreneurs after obtaining unauthorized access to the computers of accountants through remote control tools, such as Remcos and TEKTONITRMS," CERT-UA said.
+
+"During the September - October 2024 period, UAC-0050 made at least 30 such attempts. These attacks involve forming fake financial payments through remote banking systems, with amounts varying from tens of thousands to several million UAH."
+
+CERT-UA has also revealed that it observed attempts to distribute malicious messages via @reserveplusbot account on the Telegram message app that aim to deploy the Meduza Stealer malware under the pretext of installing a "special software."
+
+"The account @reserveplusbot is posing as a Telegram bot to imitate the technical support of the 'Reserve+,' which is an app that enables conscripts and reservists to update their data remotely instead of going to the draft offices," the agency said. "It should be noted that such an account was indeed listed as one of the technical support contacts of 'Reserve+' in May 2024."

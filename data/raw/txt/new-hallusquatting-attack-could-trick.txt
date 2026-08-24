@@ -1,0 +1,63 @@
+New HalluSquatting Attack Could Trick AI Coding Assistants Into Installing Botnet Malware
+
+AI coding assistants have a habit of making things up. Ask one to fetch a popular tool, and it will sometimes hand back a real-sounding name for a project that does not exist.
+
+New research, which its authors call HalluSquatting, turns that habit into an attack: work out the fake names an AI reliably invents, register them first, and wait for the assistant to fetch your trap on a user's behalf.
+
+Anyone whose AI assistant can fetch an outside resource and then run commands with little human review is exposed. In tests, that path led the assistant to run attacker-supplied code on the machine.
+
+Repeat it with a popular enough resource, and one planted name can reach many machines, which is why the researchers frame it as a way to assemble a botnet.
+
+How it works
+
+The attack chains two AI quirks. The first is a hallucination: an AI making something up and presenting it as real. The second is a prompt injection: a booby-trapped instruction that hijacks the AI, so it follows an attacker instead of the user.
+
+Here, the injection is the indirect kind, riding in on content the assistant fetches rather than anything the user types.
+
+Pick a target. The attacker finds a repository or plugin that is trending, so lots of people are asking their AI to fetch it. Trending matters, because a brand-new resource is not in the AI's training data, which is exactly when the model starts guessing at names.
+
+Learn the mistake. The attacker asks an AI to fetch that resource over and over and records the fake name it invents most often.
+
+Claim the fake name. The attacker registers that name on GitHub or a plugin store and hides adversarial instructions inside it.
+
+Wait. A real user asks their assistant to grab the popular resource. The assistant invents the same fake name and pulls in the attacker's version instead. Its hidden instructions fold into what the assistant thinks it was told to do, and the hijacked assistant uses its own command-running tool to carry them out.
+
+The trap is not code that runs by itself. It works because these assistants keep a terminal among their built-in tools, so once the planted instructions take over, "install a bot" is simply something the assistant can do.
+
+What makes it practical is that the fake names are not random. In the researchers' experiments, the mistake was consistent: across different phrasings and across models from different companies, the assistant reached for the same wrong name in up to 85% of repository requests and 100% of skill installs. Those are the peak rates the authors report; the paper carries the full breakdown.
+
+They ran it against tools including Cursor, Windsurf, GitHub Copilot, Cline, Google's Gemini CLI, and the OpenClaw family of assistants, getting each to run attacker code. The test payloads were harmless placeholders, not real malware; a live one would take the same path.
+
+The research comes from Aya Spira and colleagues in Ben Nassi's group at Tel Aviv University, with Stav Cohen at Technion and Ron Bitton at Intuit. Nassi's group has done this before, building a self-spreading AI email worm and a calendar invite that hijacked Google's Gemini.
+
+The team says it told the affected vendors, model makers, and marketplace operators before going public, and held back the exact steps needed to copy the attack.
+
+Why is it a new kind of botnet
+
+Traditional botnets take work to build. They lean on weak passwords, or malware that worms from machine to machine, and they usually herd one kind of device, the way Mirai herded cameras and routers.
+
+This needs none of that. No passwords, no worming, and because the payload arrives as text the AI reads rather than a network exploit, it is not the kind of thing a firewall is watching for. The machines it lands on can run any operating system, not one uniform fleet.
+
+The AI is the delivery van here, not the cargo. The planted instructions trick it into installing an ordinary bot, and once that bot is running, the machine belongs to a botnet like any other. What is new is the combination that gets it there: a name an AI predictably invents, a marketplace where anyone can register that name, and an agent with permission to fetch and run.
+
+The pieces are not new, even if the combination is. Attackers first learned to register fake software package names that AIs invent, a trick called "slopsquatting."
+
+In January 2026, Aikido Security's Charlie Eriksen found one such made-up npm package, react-codeshift, that AI-written instructions had already spread to 237 code projects, with agents still trying to install it daily; he registered it himself before any attacker could, so it caused no harm.
+
+The idea then jumped from packages to web addresses. Palo Alto Networks' Unit 42 recently described "phantom squatting," roughly 250,000 hallucinated domains sitting unregistered and free for the taking (THN's write-up is here).
+
+HalluSquatting is the version that reaches all the way to running code by hijacking the agent doing the fetching. And the marketplaces meant to screen bad uploads are not much of a backstop: in June, Trail of Bits slipped malicious "skills" past several store scanners in under an hour.
+
+What to do
+
+It all turns on one condition: an agent that fetches an outside resource and runs it with no one checking. Close that, and the attack stops. The most effective fix is also the simplest: make the assistant search before it fetches.
+
+A real lookup grounds the agent in what actually exists and sharply cuts the guessing. That is a job for the people building these tools, who can also train the planner (the part that maps a request to steps) to look a resource up first and to treat words like clone, install, and fetch as flags.
+
+Users and security teams have nearer-term levers. By default, these agents ask before running a command. The exposure is the auto-run modes (Claude Code's skip-permissions flag, Gemini CLI's yolo mode) that switch that off, so the first rule is not to let an agent run unattended on anything it fetched.
+
+Some tools now add a safety layer that inspects what the agent reads or is about to do before it acts, like Claude Code's auto mode and Gemini CLI's Conseca check, but that lowers the risk rather than removing it. No single switch closes this, so also verify that a repository or package name resolves to the real, expected source before an agent pulls it in, and treat any name an AI hands you as a guess, not a fact.
+
+Platforms have their own lever. They can stop letting people reuse well-known repository names under new accounts, and pre-register the fake names AIs are likely to invent (the same defense already used against typosquatting), so those names point back to the real project.
+
+The researchers call their results a lower bound: "Attacks always get better; they never get worse." There is no single CVE to patch here. They frame it not as one product's bug but as a weakness in how AI agents trust names they were never actually given.

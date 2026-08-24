@@ -1,0 +1,21 @@
+New Golang-Based Zergeca Botnet Capable of Powerful DDoS Attacks
+
+Cybersecurity researchers have uncovered a new botnet called Zergeca that's capable of conducting distributed denial-of-service (DDoS) attacks.
+
+Written in Golang, the botnet is so named for its reference to a string named "ootheca" present in the command-and-control (C2) servers ("ootheca[.]pw" and "ootheca[.]top").
+
+"Functionally, Zergeca is not just a typical DDoS botnet; besides supporting six different attack methods, it also has capabilities for proxying, scanning, self-upgrading, persistence, file transfer, reverse shell, and collecting sensitive device information," the QiAnXin XLab team said in a report.
+
+Zergeca is also notable for using DNS-over-HTTPS (DoH) to perform Domain Name System (DNS) resolution of the C2 server and using a lesser-known library known as Smux for C2 communications.
+
+There is evidence to suggest that the attackers behind the botnet are actively developing and updating the malware to support new commands. What's more, the C2 IP address 84.54.51[.]82 is said to have been previously used to distribute the Mirai botnet around September 2023.
+
+As of April 29, 2025, the same IP address began to be used as a C2 server for the new botnet, raising the possibility that the threat actors "accumulated experience operating the Mirai botnets before creating Zergeca."
+
+Attacks mounted by the botnet, primarily ACK flood DDoS attacks, have targeted Canada, Germany, and the U.S. between early and mid-June 2024.
+
+Zergeca's features span four distinct modules – namely persistence, proxy, silivaccine, and zombie – to set up persistence by adding a system service, implementing proxying, removing competing miner and backdoor malware, and gaining exclusive control over devices running the x86-64 CPU architecture, and handle the main botnet functionality.
+
+The zombie module is responsible for reporting sensitive information from the compromised device to the C2 and awaits commands from the server, supporting six types of DDoS attacks, scanning, reverse shell, and other functions.
+
+"The built-in competitor list shows familiarity with common Linux threats," XLab said. "Techniques like modified UPX packing, XOR encryption for sensitive strings, and using DoH to hide C2 resolution demonstrate a strong understanding of evasion tactics."

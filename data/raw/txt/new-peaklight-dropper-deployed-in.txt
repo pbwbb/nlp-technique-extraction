@@ -1,0 +1,43 @@
+PEAKLIGHT Downloader Deployed in Attacks Targeting Windows with Malicious Movie Downloads
+
+Cybersecurity researchers have uncovered a never-before-seen dropper that serves as a conduit to launch next-stage malware with the ultimate goal of infecting Windows systems with information stealers and loaders.
+
+"This memory-only dropper decrypts and executes a PowerShell-based downloader," Google-owned Mandiant said. "This PowerShell-based downloader is being tracked as PEAKLIGHT."
+
+Some of the malware strains distributed using this technique are Lumma Stealer, Hijack Loader (aka DOILoader, IDAT Loader, or SHADOWLADDER), and CryptBot, all of which are advertised under the malware-as-a-service (SaaS) model.
+
+The starting point of the attack chain is a Windows shortcut (LNK) file that's downloaded via drive-by download techniques -- e.g., when users look up a movie on search engines. It's worth pointing out that the LNK files are distributed within ZIP archives that are disguised as pirated movies.
+
+The LNK file connects to a content delivery network (CDN) hosting an obfuscated memory-only JavaScript dropper. The dropper subsequently executes the PEAKLIGHT PowerShell downloader script on the host, which then reaches out to a command-and-control (C2) server to fetch additional payloads.
+
+Mandiant said it identified different variations of the LNK files, some of which leverage asterisks (*) as wildcards to launch the legitimate mshta.exe binary to discreetly run malicious code (i.e., the dropper) retrieved from a remote server.
+
+In a similar vein, the droppers have been found to embed both hex-encoded and Base64-encoded PowerShell payloads that are eventually unpacked to execute PEAKLIGHT, which is designed to deliver next-stage malware on a compromised system while simultaneously downloading a legitimate movie trailer, likely as a ruse.
+
+"PEAKLIGHT is an obfuscated PowerShell-based downloader that is part of a multi-stage execution chain that checks for the presence of ZIP archives in hard-coded file paths," Mandiant researchers Aaron Lee and Praveeth D'Souza said.
+
+"If the archives do not exist, the downloader will reach out to a CDN site and download the remotely hosted archive file and save it to disk."
+
+This is not the first time users searching for pirated movies have been targeted by malware. Earlier this June, Kroll detailed a complex infection chain that led to the deployment of Hijack Loader after attempting to download a video file from a movie download site.
+
+Kroll security researcher Dave Truman told The Hacker News that the dropper "does appear to have the entirely same code" as the malware observed in the June campaign, adding both the activities are likely the work of the same threat actor.
+
+The disclosure comes as Malwarebytes detailed a malvertising campaign that employs fraudulent Google Search ads for Slack, an enterprise communications platform, to direct users to phony websites hosting malicious installers that culminate in the deployment of a remote access trojan named SectopRAT.
+
+Update
+
+Cybersecurity firm Sekoia, which is tracking PEAKLIGHT under the name Emmenhtal loader, said alternate attack chains distributing the malware involve downloading the LNK file directly from a WebDAV server to which victims are redirected to via a drive-by compromise while visiting pirated movie websites.
+
+It's worth noting that this behavior was previously also highlighted by Orange Cyberdefense in August 2024.
+
+"This method of using WebDAV to host malicious.LNK files that trigger the download of Emmenhtal via 'mshta.exe' represents an evasive tactic," Sekoia said. "The separation of the hosting server for the initial '.LNK' files and the payload server hinder detection and attribution efforts, making it a preferred strategy among advanced threat actors."
+
+As many as 100 malicious WebDAV servers have been identified as associated with the infrastructure distributing Emmenhtal, with the servers also propagating a broader set of malware families such as Amadey, DanaBot, DarkGate, GuLoader, and SelfAU3, among others.
+
+The diversity of the payloads, coupled with the presence of test files and the repeated use of the same Autonomous System (AS) providers, has raised the possibility that the WebDAV infrastructure is part of a cybercriminal operation offering what's called "Infrastructure-as-a-Service" (IaaS) to other threat actors.
+
+"The infrastructure used to distribute the Emmenhtal loader is likely part of a commercial service offered by a cybercriminal group," the Sekoia Threat Detection and Research (TDR) team said.
+
+"As this infrastructure continues to evolve, it poses a significant and ongoing threat, necessitating continued vigilance and targeted defensive measures by cybersecurity professionals."
+
+(The story was updated after publication on September 4, 2024, to include a response from Kroll. It was updated again on September 26, 2024, to add insights from Orange Cyberdefense and Sekoia.)

@@ -1,0 +1,77 @@
+THN Cybersecurity Recap: Top Threats, Tools and News (Oct 14 - Oct 20)
+
+Hi there! Here’s your quick update on the latest in cybersecurity.
+
+Hackers are using new tricks to break into systems we thought were secure—like finding hidden doors in locked houses. But the good news? Security experts are fighting back with smarter tools to keep data safe.
+
+Some big companies were hit with attacks, while others fixed their vulnerabilities just in time. It's a constant battle. For you, staying protected means keeping your devices and apps up to date.
+
+In this newsletter, we’ll break down the top stories. Whether you’re protecting personal data or managing security for a business, we’ve got tips to help you stay safe.
+
+Let’s get started!
+
+⚡ Threat of the Week
+
+China Calls Volt Typhoon an Invention of the U.S.: China's National Computer Virus Emergency Response Center (CVERC) has claimed that the threat actor tracked Volt Typhoon is an invention of U.S. intelligence agencies and their allies. It also accused the U.S. of carrying out false flag operations in an attempt to conceal its own malicious cyber attacks and that it has established a "large-scale global internet surveillance network."
+
+‎️‍Trending CVEs
+
+CVE-2024-38178, CVE-2024-9486, CVE-2024-44133, CVE-2024-9487, CVE-2024-28987, CVE-2024-8963, CVE-2024-40711, CVE-2024-30088, CVE-2024-9164
+
+🔔 Top News
+
+Apple macOS Flaw Bypasses Privacy Controls in Safari Browser: Microsoft has disclosed details about a now-patched security flaw in Apple 's Transparency, Consent, and Control (TCC) framework in macOS that could be abused to get around a user's privacy preferences and access data. There is some evidence that the vulnerability, tracked as CVE-2024-44133, may have been exploited by AdLoad adware campaigns. The issue has been addressed in macOS Sequoia 15 released last month.
+
+Legitimate Red Team Tool Abuse in Real-World Attacks: Threat actors are attempting to weaponize the open-source EDRSilencer tool as part of efforts to interfere with endpoint detection and response (EDR) solutions and hide malicious activity. In doing so, the aim is to render EDR software ineffective and make it a lot more challenging to identify and remove malware.
+
+TrickMo Can Now Steal Android PINs: Researchers have spotted new variants of the TrickMo Android banking trojan that incorporate features to steal a device's unlock pattern or PIN by presenting to victims' a bogus web page that mimics the device's actual unlock screen.
+
+FIDO Alliance Debuts New Specs for Passkey Transfer: One of the major design limitations with passkeys, the new passwordless sign-in method becoming increasingly common, is that it's impossible to transfer them between platforms such as Android and iOS (or vice versa). The FIDO Alliance has now announced that it aims to make passkeys more interoperable through new draft protocols such as the Credential Exchange Protocol (CXP) and Credential Exchange Format (CXF) that allow for secure credential exchange.
+
+Hijack Loader Uses Legitimate Code-Signing Certificates: Malware campaigns are now leveraging a loader family called Hijack Loader that's signed legitimate code-signing certificates in a bid to evade detection. These attacks typically involve tricking users into downloading a booby-trapped binary under the guise of pirated software or movies.
+
+📰 Around the Cyber World
+
+Apple Releases Draft Ballot to Shorten Certificate Lifespan to 45 Days: Apple has published a draft ballot that proposes to incrementally phase the lifespan of public SSL/TLS certificates from 398 days to 45 days between now and 2027. Google previously announced a similar roadmap of its intention to reduce the maximum validity for public SSL/TLS certificates from 398 days to 90 days.
+
+87,000+ Internet-Facing Fortinet Devices Vulnerable to CVE-2024-23113: About 87,390 Fortinet IP addresses are still likely susceptible to a critical code execution flaw (CVE-2024-23113, CVSS score: 9.8), which was recently added to the U.S. Cybersecurity and Infrastructure Security Agency (CISA) Known Exploited Vulnerabilities (KEV) catalog. watchTowr Labs researcher Aliz Hammond described it as a "super complex vulnerability" that could result in remote code execution. The development comes as Google revealed that of the 138 exploited security vulnerabilities that were disclosed in 2023, 97 of them (70%) were first weaponized as zero-days. The time-to-exploit (TTE) has dropped from an average of 63 days in 2018-19 to just five days in 2023.
+
+Researchers Outline Early Cascade Injection: Researchers have disclosed a novel-yet-stealthy process injection technique called Early Cascade Injection that makes it possible to evade detection by endpoint security software. "This new Early Cascade Injection technique targets the user-mode part of process creation and combines elements of the well-known Early Bird APC Injection technique with the recently published EDR-Preloading technique," Outflank researcher Guido Miggelenbrink said. "Unlike Early Bird APC Injection, this new technique avoids queuing cross-process Asynchronous Procedure Calls (APCs), while having minimal remote process interaction."
+
+ESET Israeli Partner Breached to Deliver Wiper Malware: In a new campaign, threat actors infiltrated cybersecurity company ESET's partner in Israel, ComSecure, to send phishing emails that propagated wipers to Israeli companies disguised as antivirus software. "Based on our initial investigation, a limited malicious email campaign was blocked within ten minutes," the company said in a post on X, adding it was not compromised as a result of the incident.
+
+Google Outlines Two-Pronged Approach to Tackle Memory Safety Challenges: Google said it's migrating to memory-safe languages such as Rust, Kotlin, Go, as well as exploring interoperability with C++ through Carbon, to ensure a seamless transition. In tandem, the tech giant emphasized it's focusing on risk reduction and containment of memory-unsafe code using techniques like C++ hardening, expanding security boundaries like sandboxing and privilege reduction, and leveraging AI-assisted methods like Naptime to uncover security flaws. As recently disclosed, the number of memory safety vulnerabilities reported in Android has dropped significantly from more than 220 in 2019 to a projected 36 by the end of this year. The tech giant has also detailed the ways it's using Chrome's accessibility APIs to find security bugs. "We're now 'fuzzing' that accessibility tree – that is, interacting with the different UI controls semi-randomly to see if we can make things crash," Chrome's Adrian Taylor said.
+
+Cybersecurity Resources & Insights
+
+LIVE Webinars
+
+The exact steps that transformed their data security overnight
+
+Insider tricks to implement DSPM with minimal disruption
+
+The roadmap that slashed security incidents by 70%
+
+Join Ian Ahl, Mandiant's former threat-hunting mastermind, as he:
+
+Decrypts LUCR-3's shadowy tactics that breach 9 out of 10 targets
+
+Unveils the Achilles' heel in your cloud defenses you never knew existed
+
+Arms you with the counterpunch that leaves LUCR-3 reeling
+
+This isn't a webinar. It's your war room strategy session against the internet's most elusive threat. Seats are filling fast – enlist now or risk becoming LUCR-3's next trophy.
+
+Cybersecurity Tools
+
+Vulnhuntr: AI-Powered Open-Source Bug Hunting Tool — What if AI could find vulnerabilities BEFORE hackers? Vulnhuntr uses advanced AI models to find complex security flaws in Python code. In just hours, it uncovered multiple 0-day vulnerabilities in major open-source projects.
+
+Tip of the Week
+
+Secure Your Accounts with Hardware Security Key: For advanced protection, hardware security keys like YubiKey are a game-changer. But here’s how to take it up a notch: pair two keys—one for daily use and a backup stored securely offline. This ensures you’re never locked out, even if one key is lost. Also, enable “FIDO2/WebAuthn” protocols when setting up your keys—these prevent phishing by ensuring your key only works with legitimate websites. For businesses, hardware keys can streamline security with centralized management, letting you assign, track, and revoke access across your team in real-time. It's security that’s physical, smart, and almost foolproof.
+
+Conclusion
+
+That’s the roundup for this week’s cybersecurity news. Before you log off, take a minute to review your security practices—small steps can make a huge difference. And don’t forget, cybersecurity isn’t just for the IT team; it’s everyone’s responsibility. We’ll be back next week with more insights and tips to help you stay ahead of the curve.
+
+Stay vigilant, and we’ll see you next Monday!

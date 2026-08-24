@@ -1,0 +1,31 @@
+Researchers Uncover 4-Month Cyberattack on U.S. Firm Linked to Chinese Hackers
+
+A suspected Chinese threat actor targeted a large U.S. organization earlier this year as part of a four-month-long intrusion.
+
+According to Broadcom-owned Symantec, the first evidence of the malicious activity was detected on April 11, 2024 and continued until August. However, the company doesn't rule out the possibility that the intrusion may have occurred earlier.
+
+"The attackers moved laterally across the organization's network, compromising multiple computers," the Symantec Threat Hunter Team said in a report shared with The Hacker News.
+
+"Some of the machines targeted were Exchange Servers, suggesting the attackers were gathering intelligence by harvesting emails. Exfiltration tools were also deployed, suggesting that targeted data was taken from the organizations."
+
+The name of the organization that was impacted by the persistent attack campaign was not disclosed, but noted that the victim has a significant presence in China.
+
+The links to China as the potential culprit stem from the use of DLL side-loading, which is a preferred tactic among various Chinese threat groups, and the presence of artifacts previously identified as employed in connection with a state-sponsored operation codenamed Crimson Palace.
+
+Another point of interest is that the organization was targeted in 2023 by an attacker with tentative links to another China-based hacking crew called Daggerfly, which is also referred to as Bronze Highland, Evasive Panda, and StormBamboo.
+
+Besides using DLL side-loading to execute malicious payloads, the attack entails the use of open-source tools like FileZilla, Impacket, and PSCP, while also employing living-off-the-land (LotL) programs like Windows Management Instrumentation (WMI), PsExec, and PowerShell.
+
+The exact initial access mechanism used to breach the network remains unknown at this stage. That said, Symantec's analysis has found that the machine on which the earliest indicators of compromise were detected included a command that was run via WMI from another system on the network.
+
+"The fact that the command originated from another machine on the network suggests that the attackers had already compromised at least one other machine on the organization's network and that the intrusion may have begun prior to April 11," the company said.
+
+Some of the other malicious activities that were subsequently performed by the attackers ranged from credential theft and executing malicious DLL files to targeting Microsoft Exchange servers and downloading tools such as FileZilla, PSCP, and WinRAR.
+
+"One group the attackers were particularly interested in is 'Exchange servers,' suggesting the attackers were attempting to target mail servers to collect and possibly exfiltrate email data," Symantec said.
+
+The development comes as Orange Cyberdefense detailed the private and public relationships within the Chinese cyber offensive ecosystem, while also highlighting the role played by universities for security research and hack-for-hire contractors for conducting attacks under the direction of state entities.
+
+"In many instances, individuals linked to the [Ministry of State Security] or [People's Liberation Army] units register fake companies to obscure the attribution of their campaigns to the Chinese state," it said.
+
+"These fake enterprises, which engage in no real profit-driven activities, may help procure digital infrastructure needed for conducting the cyberattacks without drawing unwanted attention. They also serve as fronts for recruiting personnel for roles that support hacking operations."

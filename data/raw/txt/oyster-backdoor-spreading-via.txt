@@ -1,0 +1,25 @@
+Oyster Backdoor Spreading via Trojanized Popular Software Downloads
+
+A malvertising campaign is leveraging trojanized installers for popular software such as Google Chrome and Microsoft Teams to drop a backdoor called Oyster (aka Broomstick and CleanUpLoader).
+
+That's according to findings from Rapid7, which identified lookalike websites hosting the malicious payloads that users are redirected to after searching for them on search engines like Google and Bing.
+
+The threat actors are luring unsuspecting users to fake websites purporting to contain legitimate software. But attempting to download the setup binary launches a malware infection chain instead.
+
+Specifically, the executable serves as a pathway for a backdoor called Oyster, which is capable of gathering information about the compromised host, communicating with a hard-coded command-and-control (C2) address, and supporting remote code execution.
+
+While Oyster has been observed in the past being delivered by means of a dedicated loader component known as Broomstick Loader (aka Oyster Installer), the latest attack chains entail the direct deployment of the backdoor. The malware is said to be associated with ITG23, a Russia-linked group behind the TrickBot malware.
+
+The execution of the malware is followed by the installation of the legitimate Microsoft Teams software in an attempt to keep up the ruse and avoid raising red flags. Rapid7 said it also observed the malware being used to spawn a PowerShell script responsible for setting up persistence on the system.
+
+The disclosure comes as a cybercrime group known as Rogue Raticate (aka RATicate) has been attributed as behind an email phishing campaign that employs PDF decoys to entice users into clicking on a malicious URL and deliver NetSupport RAT.
+
+"If a user is successfully tricked into clicking on the URL, they will be led via a Traffic Distribution System (TDS) into the rest of the chain and in the end, have the NetSupport Remote Access Tool deployed on their machine," Symantec said.
+
+It also coincides with the emergence of a new phishing-as-a-service (PhaaS) platform called the ONNX Store that allows customers to orchestrate phishing campaigns using embedded QR codes in PDF attachments that lead victims to credential harvesting pages.
+
+ONNX Store, which also offers Bulletproof hosting and RDP services via a Telegram bot, is believed to be a rebranded version of the Caffeine phishing kit, which was first documented by Google-owned Mandiant in October 2022, with the service maintained by an Arabic-speaking threat actor named MRxC0DER.
+
+Besides using Cloudflare's anti-bot mechanisms to evade detection by phishing website scanners, the URLs distributed via the quishing campaigns come embedded with encrypted JavaScript that's decoded during page load in order to collect victims' network metadata and relay 2FA tokens.
+
+"ONNX Store has a two-factor authentication (2FA) bypass mechanism that intercepts [two-factor authentication] requests from victims," EclecticIQ researcher Arda Büyükkaya said. "The phishing pages look like real Microsoft 365 login interfaces, tricking targets into entering their authentication details."

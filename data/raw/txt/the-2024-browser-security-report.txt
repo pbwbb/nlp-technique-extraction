@@ -1,0 +1,47 @@
+The 2024 Browser Security Report Uncovers How Every Web Session Could be a Security Minefield
+
+With the browser becoming the most prevalent workspace in the enterprise, it is also turning into a popular attack vector for cyber attackers. From account takeovers to malicious extensions to phishing attacks, the browser is a means for stealing sensitive data and accessing organizational systems.
+
+Security leaders who are planning their security architecture require data and insights into the browser threat landscape. Recently, LayerX released the “ Annual Browser Security Report 2024 ”, providing an in-depth analysis of the evolving threat landscape for browser security.
+
+This comprehensive report highlights the critical vulnerabilities and attack vectors that pose the greatest risks to enterprise security. It allows decision-makers and stakeholders to benchmark the security challenges of their environment so they can make actionable decisions. Below, we detail key findings from the report and a summarized list of security recommendations. We urge you to read the entire report, which is rich in details, examples and additional sections we did not include in this article.
+
+Key Findings from the Report
+
+Hybrid Work Risks - Unmanaged devices and personal browser profiles are primary vectors for cyber threats, like data leakage and phishing. The risk is widespread - 62% of the workforce is using unmanaged devices to access corporate data and 45% of all browsers within corporate devices use personal profiles.
+
+Browser Extension Threats - 33% of all extensions within an organization pose a high risk, with 1% of installed extensions known to be malicious. The report highlights how deceptive extensions are used by attackers to hijack user data and lead users to phishing sites.
+
+Shadow SaaS Risks - The clandestine use of Shadow SaaS applications by employees creates significant vulnerabilities, like blind spots and in identity management.
+
+Identity Vulnerabilities - Shared accounts and Single Sign-On (SSO) practices lead to increased risks of unauthorized access. Incidents like the 23andMe data breach highlight the dangers of shared identities.
+
+Gen-AI and LLM Vulnerabilities - 7.5% of employees risk data exposure by pasting or typing sensitive information into Generative AI tools like ChatGPT. There is a critical gap in the security community in understanding the risks associated with AI tools in corporate environments.
+
+AI-Powered Threats - AI can be used to enhance attacks, from malware to phishing to browser extension exploitation to supply chain attacks. These threats leverage AI-driven personalization to make attacks more convincing and difficult to detect, or they use AI algorithms to improve attacking capabilities.
+
+Unpatched Vulnerabilities - Unpatched vulnerabilities in browsers pose a significant risk. There are differences in patching times among browsers.
+
+Recommendations for Security Leaders
+
+To combat these threats, the report’s analysts recommend a multifaceted approach:
+
+Update browsers regularly and push security patches promptly to mitigate risks from outdated software.
+
+Restrict unauthorized extensions and regularly review permissions to prevent data theft.
+
+Train employees to identify and report suspicious emails and websites.
+
+Implement conditional access controls and promote clear BYOD policies to secure personal devices used for work.
+
+Enforce MFA and educate employees on password hygiene to enhance account security.
+
+Enforce secure configurations and the whitelisting of extensions.
+
+Restrict access to sensitive data based on user roles.
+
+Use advanced tools to detect and analyze browser data for threats, ensuring proactive threat mitigation.
+
+Read the Report
+
+The Annual Browser Security Report is an important resource for security leaders seeking to understand and mitigate browser-based risks. By adopting the recommended strategies, organizations can strengthen their defense against the increasingly sophisticated and threats targeting browsers. For further insights, best practices and predictions, read the report here.

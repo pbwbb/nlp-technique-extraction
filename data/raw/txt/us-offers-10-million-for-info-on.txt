@@ -1,0 +1,41 @@
+U.S. Offers $10 Million for Info on Russian Cadet Blizzard Hackers Behind Major Attacks
+
+The U.S. government and a coalition of international partners have officially attributed a Russian hacking group tracked as Cadet Blizzard to the General Staff Main Intelligence Directorate (GRU) 161st Specialist Training Center (Unit 29155).
+
+"These cyber actors are responsible for computer network operations against global targets for the purposes of espionage, sabotage, and reputational harm since at least 2020," the agencies said.
+
+"Since early 2022, the primary focus of the cyber actors appears to be targeting and disrupting efforts to provide aid to Ukraine."
+
+Targets of the attacks have focused on critical infrastructure and key resource sectors, including the government services, financial services, transportation systems, energy, and healthcare sectors of North Atlantic Treaty Organization (NATO) members, the European Union, Central American, and Asian countries.
+
+The joint advisory, released last week as part of a coordinated exercise dubbed Operation Toy Soldier, comes from cybersecurity and intelligence authorities in the U.S., the Netherlands, the Czech Republic, Germany, Estonia, Latvia, Ukraine, Canada, Australia, and the U.K.
+
+Cadet Blizzard, also known as Ember Bear, FROZENVISTA, Nodaria, Ruinous Ursa, UAC-0056, and UNC2589, gained attention in January 2022 for deploying the destructive WhisperGate (aka PAYWIPE) malware against multiple Ukrainian victim organizations in advance of Russia's full-blown military invasion of the country.
+
+Back in June 2024, a 22-year-old Russian national named Amin Timovich Stigal was indicted in the U.S. for his alleged role in staging destructive cyber attacks against Ukraine using the wiper malware. That said, the use of WhisperGate is said to be not unique to the group.
+
+The U.S. Department of Justice (DoJ) has since charged five officers associated with Unit 29155 for conspiracy to commit computer intrusion and wire fraud conspiracy against targets in Ukraine, the U.S. and 25 other NATO countries.
+
+The names of the five officers are listed below -
+
+Yuriy Denisov (Юрий Денисов), a colonel in the Russian military and a commanding officer of Cyber Operations for Unit 29155
+
+Vladislav Borovkov (Владислав Боровков), Denis Denisenko (Денис Денисенко), Dmitriy Goloshubov (Дима Голошубов), and Nikolay Korchagin (Николай Корчагин), lieutenants in the Russian military assigned to Unit 29155 who worked on cyber operations
+
+"The defendants did so in order to sow concern among Ukrainian citizens regarding the safety of their government systems and personal data," the DoJ said. "The defendants' targets included Ukrainian Government systems and data with no military or defense-related roles. Later targets included computer systems in countries around the world that were providing support to Ukraine."
+
+Concurrent with the indictment, the U.S. Department of State's Rewards for Justice program has announced a reward of up to $10 million for information on any of the defendants’ locations or their malicious cyber activity.
+
+Indications are that Unit 29155 is responsible for attempted coups, sabotage, and influence operations, and assassination attempts throughout Europe, with the adversary broadening their horizons to include offensive cyber operations since at least 2020.
+
+The end goal of these cyber intrusions is to collect sensitive information for espionage purposes, inflict reputational harm by leaking said data, and orchestrate destructive operations that aim to sabotage systems containing valuable data.
+
+Unit 29155, per the advisory, is believed to comprise junior, active-duty GRU officers, who also rely on known cybercriminals and other civilian enablers such as Stigal to facilitate their missions.
+
+These comprise website defacements, infrastructure scanning, data exfiltration, and data leak operations that involve releasing the information on public website domains or selling it to other actors.
+
+Attack chains commence with scanning activity that leverages known security flaws in Atlassian Confluence Server and Data Center, Dahua Security, and Sophos' firewall to breach victim environments, followed by using Impacket for post-exploitation and lateral movement, and ultimately exfiltrating data to dedicated infrastructure.
+
+"Cyber actors may have used Raspberry Robin malware in the role of an access broker," the agencies noted. "Cyber actors targeted victims' Microsoft Outlook Web Access (OWA) infrastructure with password spraying to obtain valid usernames and passwords."
+
+Organizations are recommended to prioritize routine system updates and remediate known exploited vulnerabilities, segment networks to prevent the spread of malicious activity, and enforce phishing-resistant multi-factor authentication (MFA) for all externally facing account services.

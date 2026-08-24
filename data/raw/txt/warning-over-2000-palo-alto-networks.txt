@@ -1,0 +1,31 @@
+Warning: Over 2,000 Palo Alto Networks Devices Hacked in Ongoing Attack Campaign
+
+As many as 2,000 Palo Alto Networks devices are estimated to have been compromised as part of a campaign abusing the newly disclosed security flaws that have come under active exploitation in the wild.
+
+According to statistics shared by the Shadowserver Foundation, a majority of the infections have been reported in the U.S. (554) and India (461), followed by Thailand (80), Mexico (48), Indonesia (43), Turkey (41), the U.K. (39), Peru (36), and South Africa (35).
+
+Earlier this week, Censys revealed that it had identified 13,324 publicly exposed next-generation firewall (NGFW) management interfaces, with 34% of these exposures located in the U.S. However, it's important to note that not all of these exposed hosts are necessarily vulnerable.
+
+The flaws in question, CVE-2024-0012 (CVSS score: 9.3) and CVE-2024-9474 (CVSS score: 6.9), are a combination of authentication bypass and privilege escalation that could allow a bad actor to perform malicious actions, including modifying configurations and executing arbitrary code.
+
+Palo Alto Networks, which is tracking the initial zero-day exploitation of the flaws under the name Operation Lunar Peek, said they are being weaponized to achieve command execution and drop malware, such as PHP-based web shells, on hacked firewalls.
+
+The network security vendor has also warned that cyber attacks targeting the security flaws are likely to escalate following the availability of an exploit combining them.
+
+To that end, it said it "assesses with moderate to high confidence that a functional exploit chaining CVE-2024-0012 and CVE-2024-9474 is publicly available, which will enable broader threat activity."
+
+It further noted that it has observed both manual and automated scanning activity, necessitating that users apply the latest fixes as soon as possible and secure access to the management interface as per recommended best practice deployment guidelines.
+
+This particularly includes restricting access to only trusted internal IP addresses to prevent external access from the internet.
+
+Update
+
+Palo Alto Networks told The Hacker News that the actual number of infected devices is smaller than what has been reported by the Shadowserver Foundation owing to the fact that the latter only shows firewalls that have management interfaces exposed to the internet.
+
+In addition to working with affected customers, it also said a majority of its customers already follow industry best practices and secure their management interfaces, and only less than 0.5% of its firewalls have an internet-exposed interface.
+
+PAN Flaws Used to Drop Sliver and Crypto Miners
+
+Cloud security firm Wiz has revealed that exploitation attempts in the wild have "dramatically increased" following the release of a valid proof-of-concept (PoC) exploit on November 19, 2024, and that it has observed threat actors weaponizing the flaws to drop web shells, Sliver implants, and crypto miners.
+
+(The story was updated after publication to include a response from Palo Alto Networks and details of exploitation activity.)

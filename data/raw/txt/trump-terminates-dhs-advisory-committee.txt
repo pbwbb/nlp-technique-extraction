@@ -1,0 +1,23 @@
+Trump Terminates DHS Advisory Committee Memberships, Disrupting Cybersecurity Review
+
+The new Trump administration has terminated all memberships of advisory committees that report to the Department of Homeland Security (DHS).
+
+"In alignment with the Department of Homeland Security's (DHS) commitment to eliminating the misuse of resources and ensuring that DHS activities prioritize our national security, I am directing the termination of all current memberships on advisory committees within DHS, effective immediately," Acting Secretary Benjamine C. Huffman said in a January 20, 2025, memo.
+
+"Future committee activities will be focused solely on advancing our critical mission to protect the homeland and support DHS's strategic priorities."
+
+This includes members of the Cybersecurity and Infrastructure Security Agency's (CISA) Cyber Safety Review Board (CSRB), which last year issued a scathing report excoriating Microsoft for a "cascade" of avoidable errors that led to its infrastructure being abused by a China-based nation-state group called Storm-0558 to breach dozens of organizations in July 2023.
+
+In July 2022, it published its findings into the vulnerabilities associated with the Apache Log4j library, and the steps taken to mitigate them. It also described the Log4Shell flaw as an endemic weakness that will continue to plague organizations for years.
+
+Then in August 2023, the board examined the intrusions linked to the LAPSUS$ cybercrime group, calling out its "effectiveness, speed, creativity, and boldness" and its ability to weaponize a "playbook of effective techniques."
+
+CSRB was established in February 2022 as a public-private initiative to assess significant cybersecurity events, and provide recommendations on improving cybersecurity and incident response practices. It's currently not clear how the investigatory body will be restructured.
+
+According to independent security journalist Eric Geller, the CSRB is said to have been in the middle of an investigation into a recent spate of cyber attacks targeting telecom providers in the U.S. The activity has been linked to a Chinese hacking group named Salt Typhoon.
+
+Some of the other advisory boards that have been disbanded include the Artificial Intelligence Safety and Security Board, Critical Infrastructure Partnership Advisory Council, National Security Telecommunications Advisory Committee, National Infrastructure Advisory Council, and the USSS Cyber Investigations Advisory Board.
+
+"This is a massive gift to the Chinese spies who targeted top political figures," U.S. Senator Ron Wyden said in a post on Bluesky. "Killing the board that pressured Microsoft to up its cybersecurity looks for all the world like payback for Microsoft's million dollar gift to Donald Trump's inaugural committee."
+
+U.S. President Donald Trump has also revoked the Biden administration's executive order on artificial intelligence (AI) safety, which, among other things, advocated for the safe, secure, and trustworthy development and use of the technology.

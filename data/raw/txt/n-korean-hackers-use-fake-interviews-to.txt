@@ -1,0 +1,35 @@
+N. Korean Hackers Use Fake Interviews to Infect Developers with Cross-Platform Malware
+
+Threat actors with ties to North Korea have been observed targeting job seekers in the tech industry to deliver updated versions of known malware families tracked as BeaverTail and InvisibleFerret.
+
+The activity cluster, tracked as CL-STA-0240, is part of a campaign dubbed Contagious Interview that Palo Alto Networks Unit 42 first disclosed in November 2023.
+
+"The threat actor behind CL-STA-0240 contacts software developers through job search platforms by posing as a prospective employer," Unit 42 said in a new report.
+
+"The attackers invite the victim to participate in an online interview, where the threat actor attempts to convince the victim to download and install malware."
+
+The first stage of infection involves the BeaverTail downloader and information stealer that's designed for targeting both Windows and Apple macOS platforms. The malware acts as a conduit for the Python-based InvisibleFerret backdoor.
+
+There is evidence to suggest that the activity remains active despite public disclosure, indicating that the threat actors behind the operation are continuing to taste success by enticing developers into executing malicious code under the pretext of a coding assignment.
+
+Security researcher Patrick Wardle and cybersecurity company Group-IB, in two independent analyses, detailed an attack chain that leveraged fake Windows and maCOS video conferencing applications impersonating MiroTalk and FreeConference.com to infiltrate developer systems with BeaverTail and InvisibleFerret.
+
+"The overall modus operandi of the CL-STA-0240 Contagious Interview campaign has remained unchanged likely due to the continued effectiveness of their approach," Assaf Dahan, director of threat research at Unit 42, told The Hacker News.
+
+"Even though the campaign has been publicly reported and analyzed, social engineering techniques — like impersonating recruiters — tend to be highly effective, especially in targeting individuals who are unaware of such threats or may overlook basic security practices during a job search. By exploiting trust and urgency in professional settings, these attackers have created a reliable method of gaining access to victims' devices."
+
+What makes the latest iteration noteworthy is that the bogus application is developed using Qt, which supports cross-compilation for both Windows and macOS. The Qt-based version of BeaverTail is capable of stealing browser passwords and harvesting data from several cryptocurrency wallets.
+
+"Another factor [behind the campaign's lack of tactical changes] may be the introduction of a new, less suspicious and more evasive version of their malware (BeaverTail, now written in the Qt framework) that targets both macOS and Windows platforms," Dahan said.
+
+"This allows the same method of attack (fake job interviews and recruiter impersonation) to be used across a broader range of victims and devices, without significant need to change the operational mechanics of the campaign."
+
+BeaverTail, besides exfiltrating the data to an adversary-controlled server, is equipped to download and execute the InvisibleFerret backdoor, which includes two components of its own -
+
+A main payload that enables fingerprinting of the infected host, remote control, keylogging, data exfiltration, and downloading of AnyDesk
+
+A browser stealer that collects browser credentials and credit card information
+
+"North Korean threat actors are known to conduct financial crimes for funds to support the DPRK regime," Unit 42 said. "This campaign may be financially motivated, since the BeaverTail malware has the capability of stealing 13 different cryptocurrency wallets."
+
+(The story was updated after publication to include additional responses from Palo Alto Networks Unit 42.)

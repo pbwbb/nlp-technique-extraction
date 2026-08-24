@@ -1,0 +1,25 @@
+PNGPlug Loader Delivers ValleyRAT Malware Through Fake Software Installers
+
+Cybersecurity researchers are calling attention to a series of cyber attacks that have targeted Chinese-speaking regions like Hong Kong, Taiwan, and Mainland China with a known malware called ValleyRAT.
+
+The attacks leverage a multi-stage loader dubbed PNGPlug to deliver the ValleyRAT payload, Intezer said in a technical report published last week.
+
+The infection chain commences with a phishing page that's designed to encourage victims to download a malicious Microsoft Installer (MSI) package disguised as legitimate software.
+
+Once executed, the installer deploys a benign application to avoid arousing suspicion, while also stealthily extracting an encrypted archive containing the malware payload.
+
+"The MSI package uses the Windows Installer's CustomAction feature, enabling it to execute malicious code, including running an embedded malicious DLL that decrypts the archive (all.zip) using a hardcoded password 'hello202411' to extract the core malware components," security researcher Nicole Fishbein said.
+
+These include a rogue DLL ("libcef.dll"), a legitimate application ("down.exe") that's used as a cover to conceal the malicious activities, and two payload files masquerading as PNG images ("aut.png" and "view.png").
+
+The main objective of the DLL loader, PNGPlug, is to prepare the environment for executing the main malware by injecting "aut.png" and "view.png" into memory in order to set up persistence by making Windows Registry changes and executing ValleyRAT, respectively.
+
+ValleyRAT, detected in the wild since 2023, is a remote access trojan (RAT) that's capable of providing attackers with unauthorized access and control over infected machines. Recent versions of the malware have incorporated features to capture screenshots and clear Windows event logs.
+
+It's assessed to be linked to a threat group called Silver Fox, which also shares tactical overlaps with another activity cluster named Void Arachne owing to the use of a command-and-control (C&C) framework called Winos 4.0.
+
+The campaign is unique for its focus on the Chinese-speaking demographic and the use of software-related lures to activate the attack chain.
+
+"Equally striking is the attackers' sophisticated use of legitimate software as a delivery mechanism for malware, seamlessly blending malicious activities with seemingly benign applications," Fishbein said.
+
+"The adaptability of the PNGPlug loader further elevates the threat, as its modular design allows it to be tailored for multiple campaigns."

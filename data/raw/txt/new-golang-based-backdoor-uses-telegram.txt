@@ -1,0 +1,27 @@
+New Golang-Based Backdoor Uses Telegram Bot API for Evasive C2 Operations
+
+Cybersecurity researchers have shed light on a new Golang-based backdoor that uses Telegram as a mechanism for command-and-control (C2) communications.
+
+Netskope Threat Labs, which detailed the functions of the malware, described it as possibly of Russian origin.
+
+"The malware is compiled in Golang and once executed it acts like a backdoor," security researcher Leandro Fróes said in an analysis published last week. "Although the malware seems to still be under development it is completely functional."
+
+Once launched, the backdoor is designed to check if it's running under a specific location and using a specific name – "C:\Windows\Temp\svchost.exe" – and if not, it reads its own contents, writes them to that location, and creates a new process to launch the copied version and terminate itself.
+
+A notable aspect of the malware is that it uses an open-source library that offers Golang bindings for the Telegram Bot API for C2 purposes.
+
+This involves interacting with the Telegram Bot API to receive new commands originating from an actor-controlled chat. It supports four different commands, although only three of them are currently implemented -
+
+/cmd - Execute commands via PowerShell
+
+/persist - Relaunch itself under "C:\Windows\Temp\svchost.exe"
+
+/screenshot - Not implemented
+
+/selfdestruct - Delete the "C:\Windows\Temp\svchost.exe" file and terminate itself
+
+The output of these commands is sent back to the Telegram channel. Netskope said that the "/screenshot" command sends the message "Screenshot captured" despite it not being fully fleshed out.
+
+The Russian roots of the malware are explained by the fact that the "/cmd" instruction sends the message "Enter the command:" in Russian to the chat.
+
+"The use of cloud apps presents a complex challenge to defenders and attackers are aware of it," Fróes said. "Other aspects such as how easy it is to set and start the use of the app are examples of why attackers use applications like that in different phases of an attack."

@@ -1,0 +1,35 @@
+Russian Power Companies, IT Firms, and Govt Agencies Hit by Decoy Dog Trojan
+
+Russian organizations are at the receiving end of cyber attacks that have been found to deliver a Windows version of a malware called Decoy Dog.
+
+Cybersecurity company Positive Technologies is tracking the activity cluster under the name Operation Lahat, attributing it to an advanced persistent threat (APT) group called HellHounds.
+
+"The Hellhounds group compromises organizations they select and gain a foothold on their networks, remaining undetected for years," security researchers Aleksandr Grigorian and Stanislav Pyzhov said. "In doing so, the group leverages primary compromise vectors, from vulnerable web services to trusted relationships."
+
+HellHounds was first documented by the firm in late November 2023 following the compromise of an unnamed power company with the Decoy Dog trojan. It's confirmed to have infiltrated 48 victims in Russia to date, including IT companies, governments, space industry firms, and telecom providers.
+
+There is evidence indicating that the threat actor has been targeting Russian companies since at least 2021, with the development of the malware underway as far back as November 2019.
+
+Details about Decoy Dog, a custom variant of the open-source Pupy RAT, emerged in April 2023, when Infoblox uncovered the malware's use of DNS tunneling for communications with its command-and-control (C2) server to remotely control infected hosts.
+
+A notable feature of the malware is its ability to move victims from one controller to another, allowing the threat actors to maintain communication with compromised machines and remain hidden for extended periods of time.
+
+Attacks involving the sophisticated toolkit have been mainly confined to Russia and Eastern Europe, not to mention exclusively single out Linux systems, although Infoblox hinted at the possibility of a Windows version.
+
+"References to Windows in the code hint toward the existence of an updated Windows client that includes the new Decoy Dog capabilities, although all of the current samples are targeting Linux," Infoblox noted back in July 2023.
+
+The latest findings from Positive Technologies all but confirm the presence of an identical version of Decoy Dog for Windows, which is delivered to mission-critical hosts by means of a loader that employs dedicated infrastructure to get the key for decrypting the payload.
+
+Further analysis has uncovered HellHounds' use of a modified version of another open-source program known as 3snake to obtain credentials on hosts running Linux.
+
+Positive Technologies said that in at least two incidents, the adversary managed to gain initial access to victims' infrastructure via a contractor using compromised Secure Shell (SSH) login credentials.
+
+"The attackers have long been able to maintain their presence inside critical organizations located in Russia," the researchers said.
+
+"Although virtually all of the Hellhounds toolkit is based on open-source projects, the attackers have done a fairly good job modifying it to bypass malware defenses and ensure prolonged covert presence inside compromised organizations."
+
+Update
+
+Dr. Renée Burton, vice president of Infoblox threat intelligence, told The Hacker News that they identified a threat actor named Secshow, "which directly triggers amplifications of queries that show Decoy Dog is amplified by the Palo Alto Cortex Xpanse product," and that they are "assessing the relevant reporting coming in from Russia by comparing the indicators they attribute to the threat actor with the indicators from our data."
+
+(The story was updated after publication to include a response from Infoblox.)

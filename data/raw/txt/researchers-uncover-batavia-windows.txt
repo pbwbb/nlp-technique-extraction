@@ -1,0 +1,31 @@
+Researchers Uncover Batavia Windows Spyware Stealing Documents from Russian Firms
+
+Russian organizations have been targeted as part of an ongoing campaign that delivers a previously undocumented Windows spyware called Batavia.
+
+The activity, per cybersecurity vendor Kaspersky, has been active since July 2024.
+
+"The targeted attack begins with bait emails containing malicious links, sent under the pretext of signing a contract," the Russian company said. "The main goal of the attack is to infect organizations with the previously unknown Batavia spyware, which then proceeds to steal internal documents."
+
+The email messages are sent from the domain "oblast-ru[.]com," which is said to be owned by the attackers themselves. The links embedded within the digital missives lead to the download of an archive file containing a Visual Basic Encoded script (.VBE) file.
+
+When executed, the script profiles the compromised host and exfiltrates the system information to the remote server. This is followed by the retrieval of a next-stage payload from the same server, an executable written in Delphi.
+
+The malware likely displays a fake contract to the victim as a distraction while collecting system logs, office documents (*.doc, *.docx, *.ods, *.odt, *.pdf, *.xls, and *.xlsx), and screenshots in the background. The data gathering also extends to removable devices attached to the host.
+
+Another capability of the Delphi malware is to download a binary of its own from the server, which targets a broader set of file extensions for subsequent collection. This includes images, emails, Microsoft PowerPoint presentations, archive files, and text documents (*.jpeg, *.jpg, *.cdr, *.csv, *.eml, *.ppt, *.pptx, *.odp, *.rar, *.zip, *.rtf, and *.txt).
+
+The newly collected data is then transmitted to a different domain ("ru-exchange[.]com"), from where an unknown executable is downloaded as a fourth-stage for continuing the attack chain further.
+
+Telemetry data from Kaspersky shows that more than 100 users across several dozen organizations received phishing emails over the past year.
+
+"As a result of the attack, Batavia exfiltrates the victim's documents, as well as information such as a list of installed programs, drivers, and operating system components," the company said.
+
+The disclosure comes as Fortinet FortiGuard Labs detailed a malicious campaign that delivers a Windows stealer malware codenamed NordDragonScan. While the exact initial access vector is not clear, it's believed to be a phishing email that propagates a link to trigger the download of an RAR archive.
+
+"Once installed, NordDragonScan examines the host and copies documents, harvests entire Chrome and Firefox profiles, and takes screenshots," security researcher Cara Lin said.
+
+Present within the archive is a Windows shortcut (LNK) file that stealthily makes use of "mshta.exe" to execute a remotely hosted HTML Application (HTA). This step results in the retrieval of a benign decoy document, while a nefarious.NET payload is quietly dropped onto the system.
+
+NordDragonScan, as the stealer malware is called, establishes connections with a remote server ("kpuszkiev[.]com"), sets up persistence via Windows Registry changes, and conducts extensive reconnaissance of the compromised machine to collect sensitive data and exfiltrate the information back to the server via an HTTP POST request.
+
+"The RAR file contains LNK calls that invoke mshta.exe to execute a malicious HTA script, displaying a decoy document in Ukrainian," Lin said. "Finally, it quietly installs its payload in the background. NordDragonScan is capable of scanning the host, capturing a screenshot, extracting documents and PDFs, and sniffing Chrome and Firefox profiles."

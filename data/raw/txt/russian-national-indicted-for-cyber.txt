@@ -1,0 +1,31 @@
+Russian National Indicted for Cyber Attacks on Ukraine Before 2022 Invasion
+
+A 22-year-old Russian national has been indicted in the U.S. for his alleged role in staging destructive cyber attacks against Ukraine and its allies in the days leading to Russia's full-blown military invasion of Ukraine in early 2022.
+
+Amin Timovich Stigal, the defendant in question, is assessed to be affiliated with the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU). He remains at large. If convicted, he faces a maximum penalty of five years in prison.
+
+Concurrent with the action, the U.S. Department of State's Rewards for Justice program is offering a reward of up to $10 million for information pertaining to his whereabouts or the malicious cyber attacks he is associated with.
+
+"The defendant conspired with Russian military intelligence on the eve of Russia's unjust and unprovoked invasion of Ukraine to launch cyberattacks targeting the Ukrainian government and later targeting its allies, including the United States," said Attorney General Merrick B. Garland in a statement.
+
+The attacks entailed the use of a wiper malware codenamed WhisperGate (aka PAYWIPE) that was used in intrusions targeting government, non-profit, and information technology entities in Ukraine. The attacks were first recorded around mid-January 2022.
+
+"The malware is disguised as ransomware but, if activated by the attacker, would render the infected computer system inoperable," Microsoft said at the time. The tech giant is tracking the cluster under its weather-themed moniker Cadet Blizzard. It's also referred to as Ruinous Ursa.
+
+According to court documents, Stigal et al are said to have used an unnamed U.S.-based company's services to distribute WhisperGate and exfiltrate sensitive data, including patient health records.
+
+In addition, they defaced the websites and put up the stolen information for sale on cybercrime forums in an apparent effort to sow concern among the broader Ukrainian population regarding the safety of government systems and data.
+
+"From August 5, 2021, through February 3, 2022, the conspirators leveraged the same computer infrastructure they used in the Ukraine-related attacks to probe computers belonging to a federal government agency in Maryland in the same manner as they had initially probed the Ukrainian Government networks," the Justice Department (DoJ) said.
+
+Florida Man Convicted for Violent Home Invasion Robberies to Steal Crypto
+
+The development comes a day after the DoJ announced the conviction of Remy St Felix, a 24-year-old Florida man, for breaking into people's homes, violently kidnapping and assaulting them, and stealing cryptocurrency. He was arrested in July 2023.
+
+"Victims from St Felix's home invasions were kidnapped in their own homes and told to access and drain their cryptocurrency accounts," the agency said, adding "St Felix and his co-conspirators gained unauthorized access to their targets' email accounts and conducted physical surveillance prior to attempting the home invasion robberies."
+
+In one instance highlighted by the DoJ, St Felix and a co-conspirator assaulted, zip-tied, and held a victim and their spouse at gunpoint, while the others transferred more than $150,000 in cryptocurrency from the victim's Coinbase account using the AnyDesk remote desktop software. The brutal incident took place in North Carolina in April 2023.
+
+The stolen digital assets were then laundered through services like Monero and decentralized finance platforms that did not follow know your customer (KYC) checks to cover up the trail, with the defendants making use of encrypted messaging applications to hatch their schemes.
+
+St Felix, who was convicted of nine counts relating to conspiracy, kidnapping, Hobbs Act robbery, wire fraud, and brandishing a firearm, faces a minimum jail term of seven years and a maximum penalty of life in prison. He is due to be sentenced on September 11, 2024.

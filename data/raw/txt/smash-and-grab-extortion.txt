@@ -1,0 +1,57 @@
+Smash-and-Grab Extortion
+
+The Problem
+
+The “2024 Attack Intelligence Report” from the staff at Rapid7 [1] is a well-researched, well-written report that is worthy of careful study. Some key takeaways are:
+
+53% of the over 30 new vulnerabilities that were widely exploited in 2023 and at the start of 2024 were zero-days.
+
+More mass compromise events arose from zero-day vulnerabilities than from n-day vulnerabilities.
+
+Nearly a quarter of widespread attacks were zero-day attacks where a single adversary compromised dozens to hundreds of organizations simultaneously.
+
+Attackers are moving from initial access to exploitation in minutes or hours rather than days or weeks.
+
+So the conventional patch and put strategy is as effective as a firetruck showing up after a building has burned to the ground! Of course, patch and put could prevent future attacks, but taking into account that patch development takes from days to weeks [2] and that the average time to apply critical patches is 16 days [3], devices are vulnerable for a long time after the zero-day has become public knowledge. This allows smaller actors to get their share of the meat, much like the vultures they are. In view of Rapid7’s report, something different must be done to protect IoT and other vulnerable devices.
+
+How Firmware Comes To Be
+
+“Software Bills of Materials for IoT and OT devices” by IoTSF is another excellent read. I was surprised to learn that “Modern software is rarely created from scratch but rather it integrates a relatively small amount of new code with tens, hundreds, or even thousands of pre-existing components …”. In the old days (circa 2015) we wrote our own firmware, but not anymore. Now, according to the authors, IoT firmware is assembled from mostly open source components that are riddled with vulnerabilities. This is not a step forward for device security!
+
+According to the IoTSF authors, components bring in more components, each with more vulnerabilities. Also according to them, creating accurate SBOMs is difficult, and identifying all of the vulnerabilities in an SBOM is even more difficult. So security teams are faced with inadequate SBOMs and the task of deciding which vulnerabilities are exploitable, then fixing those vulnerabilities. According to other reports, the number of vulnerabilities and the complexity of IoT firmware are growing rapidly year by year. Keeping up with patches seems to be a hopeless treadmill. No wonder security teams are getting burned out.
+
+Chilling Exploits
+
+Zero-days are especially concerning because many state actors have inventories of them that are ready to be used as weapons [4]. We tend to think of exploits as data exfiltrations or ransomware attacks. However, these are not the whole story. In 2007 at Idaho National Laboratory it was decided to test if malware could damage a full-size electricity generator [5]. The malware controlled a relay that connected or disconnected the generator from the power grid. By exercising a sequence of connects and disconnects, the malware was able to cause the generator to destroy itself.
+
+The result was not repairable damage, but rather scrap metal that could only be melted down to manufacture a new generator. The generator was destroyed in under a minute. Thus malware running on a tiny MCU was able to destroy a large machine. What if a bad actor could destroy 10% of the electricity generators in the U.S.? How long would it take to manufacture and install replacement generators? What would happen in the meantime?
+
+We Need a Better Solution
+
+We must recognize that patching and putting is not sufficient to deal with emerging new threats and the weaponized threats detailed above.
+
+Isolating vulnerable firmware is the better solution. This is amply demonstrated by Green Hills’s Integrity for aerospace, BlackBerry’s QNX for automotive, and several “separation kernels” by other companies. However, the problem with these solutions is that they require power-hungry processors, and isolation is at the process level using memory management units (MMUs). IoT devices generally require low-power microcontrollers (MCUs), their firmware is normally comprised of but a single process and they are limited to memory protection units (MPUs). What is needed is more granular isolation (i.e. at the task level) that works for MCUs.
+
+We Have Such a Solution
+
+We have demonstrated that isolated partitioning is practical for Cortex-M based MCUs (which comprise about 80% of all MCUs in production). In addition, the pmode barrier provided by this architecture provides additional protection for mission-critical and other trusted code. Such code needs only minimal modification for partitioning. The following figure illustrates the basics of Cortex-M partitioning and how it fits into the overall security picture:
+
+As shown, mission-critical firmware, security firmware, and handler mode (hmode) firmware are protected by the pmode barrier and run in privileged mode (pmode) or hmode. Vulnerable application firmware, SOUP, and middleware are above the pmode barrier and run in unprivileged mode (umode). Firmware in umode can access pmode or hmode only via exceptions caused by faults or via the SVC exception, which is used for system service calls. The pmode barrier is enforced by hardware and thus it is impenetrable from umode.
+
+As shown in the figure, umode firmware is divided into isolated partitions. If a hacker penetrates one umode partition, he cannot access data or code in other partitions. Communication between partitions is via portals, which preserve isolation. As a consequence a hacker may disable the functionality of one umode partition, but not others. In addition, pmode and umode code are doubly-protected by the pmode barrier. Thus the device is able to continue performing its primary functions and most secondary functions when attacked. During an attack, the breached partition can be stopped, the malware exorcised, and the partition rebooted to resume normal operation.
+
+It should be noted that isolated partitioning is as effective against zero-days as it is against unpatched vulnerabilities. It doesn’t matter how the attacker got into the partition; he is sandboxed. In addition, partitioning enables siloing, which can mitigate insider threats (another growing attack vector), and provides hardware enforcement of certain good programming practices, which might lead to more on-time deliveries!
+
+For those interested, we have posted demos and an ebook at www.smxrtos.com/securesmx. May the good guys win!
+
+References:
+
+“2024 Attack Intelligence Report”, Caitlin Condon, Stephen Fewer, Christiaan Beek, Rapid7, 2024
+
+“The Top Cybersecurity Threats of 2022”, LMG Security, 2022.
+
+“Patch management best practices: A detailed guide”. ManageEngine, 2021.
+
+“This is How They Tell Me the World Ends: The Cyberweapons Arms Race”, Nicole Perlroth, 2/2021.
+
+“IT/OT Cybersecurity: The Great Divide” Industrial Cybersecurity Pulse, 6/2021

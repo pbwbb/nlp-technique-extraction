@@ -1,0 +1,25 @@
+Styx Stealer Creator's OPSEC Fail Leaks Client List and Profit Details
+
+In what's a case of an operational security (OPSEC) lapse, the operator behind a new information stealer called Styx Stealer leaked data from their own computer, including details related to the clients, profit information, nicknames, phone numbers, and email addresses.
+
+Styx Stealer, a derivative of the Phemedrone Stealer, is capable of stealing browser data, instant messenger sessions from Telegram and Discord, and cryptocurrency wallet information, cybersecurity company Check Point said in an analysis. It first emerged in April 2024.
+
+"Styx Stealer is most likely based on the source code of an old version of Phemedrone Stealer, which lacks some features found in newer versions such as sending reports to Telegram, report encryption, and more," the company noted.
+
+"However, the creator of Styx Stealer added some new features: auto-start, clipboard monitor and crypto-clipper, additional sandbox evasion, and anti-analysis techniques, and re-implemented sending data to Telegram."
+
+Advertised for $75 a month (or $230 for three months or $350 for a lifetime subscription) on a dedicated website ("styxcrypter[.]com"), licenses for the malware requires prospective buyers to reach out to a Telegram account (@styxencode). It's linked to a Turkey-based threat actor who goes by the alias STY1X on cybercrime forums.
+
+Check Point said it was able to unearth connections between STY1X and a March 2024 spam campaign distributing Agent Tesla malware that targeted various sectors across China, India, the Philippines, and the U.A.E. The Agent Tesla activity has been attired to a threat actor named Fucosreal, whose approximate location is in Nigeria.
+
+This was made possible owing to the fact that STY1X debugged the stealer on their own machine using a Telegram bot token provided by Fucosreal. This fatal error allowed the cybersecurity company to identify as many as 54 customers and 8 cryptocurrency wallets, likely belonging to STY1X, that are said to have been used to receive the payments.
+
+"This campaign was notable for its use of the Telegram Bot API for data exfiltration, leveraging Telegram's infrastructure instead of traditional command-and-control (C&C) servers, which are more easily detectable and blockable," Check Point noted.
+
+"However, this method has a significant flaw: each malware sample must contain a bot token for authentication. Decrypting the malware to extract this token provides access to all data sent via the bot, exposing the recipient account."
+
+The disclosure comes amid the emergence of new stealer malware strains such as Ailurophile, Banshee Stealer, and QWERTY, even as well-known stealers like RedLine are being used in phishing attacks targeting Vietnamese oil and gas, industrial, electrical and HVAC manufacturers, paint, chemical, and hotel industries.
+
+"RedLine is a well-known stealer that targets login credentials, credit card details, browser history, and even cryptocurrency wallets," Broadcom-owned Symantec said. "It is actively used by multiple groups and individuals around the world."
+
+"Once installed, it collects data from the victim's computer and sends it to a remote server or Telegram channel controlled by the attackers."

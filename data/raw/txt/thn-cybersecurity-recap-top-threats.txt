@@ -1,0 +1,69 @@
+THN Cybersecurity Recap: Top Threats, Tools and Trends (Oct 7 - Oct 13)
+
+Hey there, it's your weekly dose of " what the heck is going on in cybersecurity land " – and trust me, you NEED to be in the loop this time. We've got everything from zero-day exploits and AI gone rogue to the FBI playing crypto kingpin – it's full of stuff they don't 🤫 want you to know.
+
+So let's jump in before we get FOMO.
+
+⚡ Threat of the Week
+
+GoldenJackal Hacks Air-Gapped Systems: Meet GoldenJackal, the hacking crew you've probably never heard of – but should definitely know about now. They're busting into super-secure, air-gapped computer systems with sneaky worms spread through infected USB drives (yes, really!), proving that even the most isolated networks aren't safe. ESET researchers caught them red-handed using two different custom-made tools to target high-profile victims, including a South Asian embassy in Belarus and a European Union government organization.
+
+🔔 Top News
+
+Mozilla Patches Firefox 0-Day: Mozilla patched a critical zero-day flaw in its Firefox browser that it said has been actively exploited in the wild to target Tor browser users. While there are currently no details on the attacks, users are advised to update to Firefox 131.0.2, Firefox ESR 128.3.1, and Firefox ESR 115.16.1.
+
+Contagious Interview Remains Lucrative for N. Korea: Ever since details about a North Korean hacking campaign called Contagious Interview came to light nearly a year ago, it has continued to target the technology sector with no signs of stopping anytime soon. These attacks aim to deliver backdoors and information-stealing malware by deceiving developers into executing malicious code under the pretext of a coding assignment as part of a job interview after approaching them on platforms like LinkedIn.
+
+OpenAI Disrupts Malicious Operations: OpenAI said it has disrupted over 20 malicious cyber operations since the start of the year that abused its generative artificial intelligence (AI) chatbot, ChatGPT, for debugging and developing malware, spreading misinformation, evading detection, and vulnerability research. One of the activity clusters was observed targeting OpenAI employees via spear-phishing attacks to deploy the SugarGh0st RAT.
+
+FBI Creates Fake Crypto to Disrupt Fraudulent Operation: The U.S. Federal Bureau of Investigation (FBI) took the "unprecedented step" of creating its own cryptocurrency token and a company called NexFundAI to take down a fraud operation that allegedly manipulated digital asset markets by orchestrating an illegal scheme known as wash trading. A total of 18 people and entities have been charged in connection with the pump-and-dump scam, with three arrests reported so far.
+
+Gorilla Botnet Launches 300,000 DDoS Attacks Across 100 Countries: A botnet malware family called Gorilla issued over 300,000 attack commands in the month of September 2024 alone, targeting universities, government websites, telecoms, banks, gaming, and gambling sectors. China, the U.S., Canada, and Germany. The botnet is based on the leaked Mirai botnet source code.
+
+📰 Around the Cyber World
+
+Microsoft Announces Windows 11 Security Baseline: Microsoft has released the Windows 11, version 24H2 security baseline with added protections to LAN Manager, Kerberos, User Account Control, and Microsoft Defender Antivirus. It also includes Windows Protected Print (WPP), which the company described as the "new, modern and more secure print for Windows built from the ground up with security in mind." In a related development, the tech giant announced a redesigned Windows Hello experience and API support for third-party passkey providers like 1Password and Bitwarden to plug into the Windows 11 platform.
+
+Apple macOS iPhone Mirroring is Broken: Apple announced a new iPhone mirroring feature with macOS 15.0 Sequoia, but cybersecurity firm Sevco has uncovered a privacy risk that could expose metadata associated with apps on an employee's personal iPhone to their corporate IT department. The issue stems from the fact that the iOS apps mirrored to the Mac populate the same application metadata as native macOS applications, thereby leaking information about the apps that may be installed on their phones. Apple has acknowledged the problem and is said to be working on a fix.
+
+Social Engineering Via Phone Calls: Threat actors have found an effective social engineering vector in phone calls in order to trick users into performing an unintended action, a technique also called telephone-oriented attack delivery (TOAD), callback phishing, and hybrid vishing (a combination of voice and phishing). Intel 471 said it has observed a "sharp increase in underground offers for illicit call center services that can aid in malware delivery, ransomware-related calls, and other fraud-oriented social-engineering attempts."
+
+Malicious Extensions Can Bypass Manifest V3: Google has said Manifest V3, its latest version of the extensions platform, avoids the security loopholes of its predecessor, which allowed browser add-ons to have excessive permissions and inject arbitrary JavaScript. However, new research has found that it’s still possible for malicious actors to exploit minimal permissions and steal data. The findings were presented by SquareX at the DEF CON conference back in August. The research also coincides with a study that discovered "hundreds of extensions automatically extracting user content from within web pages, impacting millions of users."
+
+What can a USB reveal?: A new analysis from Group-IB goes into detail about the artifacts generated in a USB device when files are accessed or modified on devices running various operating systems. "USB formatted with NTFS, FAT32, and ExFAT often create temporary files, particularly during file modifications," the company said. "USB formatted with NTFS on Windows provided more information on file system changes from the $Logfile due to its journaling capabilities." USB formatted with HFS+ has been found to store versions of files that have been edited with GUI tools in a versioning database. Likewise, USB formatted with FAT32/ExFAT on macOS generates ". _filename" files to ensure file system compatibility for storing extended attributes.
+
+🔥 Cybersecurity Resources & Insights
+
+Expert Webinars 
+ 
+ Building a Successful Data Security Posture Management Program: Drowning in data security headaches? Hear directly from Global-e's CISO how Data Security Posture Management (DSPM) transformed their data security. Get real-world insights, and practical advice, get your questions answered and actionable strategies in this exclusive webinar, and walk away with a clear roadmap. Reserve your seat today! 
+ Ex-Mandiant Expert Exposes Identity Theft Tactics: LUCR-3 is breaching organizations like yours through identity-based attacks. Learn how to protect your cloud and SaaS environments from this advanced threat. Cybersecurity expert Ian Ahl (former Mandiant) reveals the latest tactics and how to defend your organization. Register for this crucial webinar to gain the upper hand.
+
+Building a Successful Data Security Posture Management Program: Drowning in data security headaches? Hear directly from Global-e's CISO how Data Security Posture Management (DSPM) transformed their data security. Get real-world insights, and practical advice, get your questions answered and actionable strategies in this exclusive webinar, and walk away with a clear roadmap. Reserve your seat today!
+
+Ex-Mandiant Expert Exposes Identity Theft Tactics: LUCR-3 is breaching organizations like yours through identity-based attacks. Learn how to protect your cloud and SaaS environments from this advanced threat. Cybersecurity expert Ian Ahl (former Mandiant) reveals the latest tactics and how to defend your organization. Register for this crucial webinar to gain the upper hand.
+
+Ask the Expert 
+ 
+ Q: With mobile devices increasingly targeted by cybercriminals, how can individuals protect their devices from network-based attacks, especially in unfamiliar or high-risk environments, such as when traveling? 
+ A: When you're traveling, your mobile device can be a target for attacks like rogue base stations—fake cell towers set up to steal data or track your location. To protect yourself, start by enabling Lockdown Mode on iPhones, which blocks vulnerable 2G connections. Always use a VPN to keep your internet traffic encrypted and avoid using public Wi-Fi without it. A great tool to boost your awareness is the CellGuard app for iOS. It scans your network for suspicious activity, like rogue base stations, by analyzing things like signal strength and network anomalies. While it may flag some false alarms, it gives you an extra layer of protection.
+
+Q: With mobile devices increasingly targeted by cybercriminals, how can individuals protect their devices from network-based attacks, especially in unfamiliar or high-risk environments, such as when traveling?
+
+A: When you're traveling, your mobile device can be a target for attacks like rogue base stations—fake cell towers set up to steal data or track your location. To protect yourself, start by enabling Lockdown Mode on iPhones, which blocks vulnerable 2G connections. Always use a VPN to keep your internet traffic encrypted and avoid using public Wi-Fi without it. A great tool to boost your awareness is the CellGuard app for iOS. It scans your network for suspicious activity, like rogue base stations, by analyzing things like signal strength and network anomalies. While it may flag some false alarms, it gives you an extra layer of protection.
+
+Cybersecurity Tools 
+ 
+ Broken Hill: A New Tool to Test AI Models' Weaknesses - It is an advanced tool that makes it easy to trick large AI models into misbehaving by bypassing their restrictions. It uses the Greedy Coordinate Gradient (GCG) attack to craft clever prompts that push popular models, like Llama-2 and Microsoft’s Phi, to respond in ways they normally wouldn't. The best part? You can run it on consumer GPUs, like the Nvidia RTX 4090, without needing costly cloud servers. Ideal for researchers and security testers, Broken Hill helps uncover and fix vulnerabilities in AI models, making it a must-have tool in the fight against AI threats.
+
+Broken Hill: A New Tool to Test AI Models' Weaknesses - It is an advanced tool that makes it easy to trick large AI models into misbehaving by bypassing their restrictions. It uses the Greedy Coordinate Gradient (GCG) attack to craft clever prompts that push popular models, like Llama-2 and Microsoft’s Phi, to respond in ways they normally wouldn't. The best part? You can run it on consumer GPUs, like the Nvidia RTX 4090, without needing costly cloud servers. Ideal for researchers and security testers, Broken Hill helps uncover and fix vulnerabilities in AI models, making it a must-have tool in the fight against AI threats.
+
+Tip of the Week 
+ 
+ Your Browser Extensions Are Spying on You: Browser extensions can be useful but also risky, with potential access to your data or hidden malware. Protect yourself by removing unused extensions, checking their permissions, and only allowing them to run on specific sites. Enable “Click to activate” for more control, and use tools like Chrome's Extension Source Viewer to spot any suspicious behavior. Keep extensions updated, monitor network traffic for unusual activity, and consider using a separate browser for sensitive tasks. Features like Firefox’s Temporary Container Tabs can also help by isolating extension access. These simple steps can keep your browsing safer.
+
+Your Browser Extensions Are Spying on You: Browser extensions can be useful but also risky, with potential access to your data or hidden malware. Protect yourself by removing unused extensions, checking their permissions, and only allowing them to run on specific sites. Enable “Click to activate” for more control, and use tools like Chrome's Extension Source Viewer to spot any suspicious behavior. Keep extensions updated, monitor network traffic for unusual activity, and consider using a separate browser for sensitive tasks. Features like Firefox’s Temporary Container Tabs can also help by isolating extension access. These simple steps can keep your browsing safer.
+
+Conclusion
+
+And that's how the cybersecurity cookie crumbles this week! But listen, before you log off and chill, remember this: always double-check the sender's email address before clicking any links, even if it looks like it's from your bestie or your bank. Phishing scams are getting sneakier than ever, so stay sharp! Until next time, stay safe and cyber-aware!
