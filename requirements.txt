@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+spacy
+sklearn-crfsuite
+transformers>=4.40
+datasets
+torch
+seqeval
