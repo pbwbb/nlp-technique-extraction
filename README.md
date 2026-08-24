@@ -41,18 +41,15 @@ comparação (decisão informada por AnnoCTR, Lange et al., 2024).
 │   ├── raw/
 │   │   ├── corpus.jsonl       # 150 artigos brutos (text, title, url, date), sem rótulos
 │   │   └── txt/               # os mesmos 150 artigos em .txt (inspeção manual)
-│   ├── annotated/
-│   │   └── corpus_anotado_150.jsonl   # 150 docs rotulados: 135 silver + 15 gold
-│   └── pilot_agreement/
-│       ├── anotacao_piloto_pedro.jsonl  # anotador A, lote piloto (15 docs)
-│       ├── pilot_tuco_v04.jsonl         # anotador B, mesmo lote piloto
-│       └── concordancia_exp_imp_v04.md  # relatório de concordância (Kappa de Cohen)
+│   ├── corpus_anotado_150.jsonl   # 150 docs rotulados: 135 silver + 15 gold
+│   ├── anotacao_piloto_pedro.jsonl  # anotador A, lote piloto (15 docs)
+│   ├── pilot_tuco_v04.jsonl         # anotador B, mesmo lote piloto
+│   └── concordancia_exp_imp_v04.md  # relatório de concordância (Kappa de Cohen)
 ├── results/
 │   ├── split.json             # split treino/teste único, compartilhado pelos dois modelos
 │   ├── metrics_crf.json       # P/R/F1 do CRF no teste gold
 │   └── pred_crf.json          # predições do CRF por documento (spans previstos vs gold)
-└── presentation/
-    └── PLN.pptx                # apresentação final
+└── PLN.pptx                # apresentação final
 ```
 
 ## Pipeline (8 etapas)
