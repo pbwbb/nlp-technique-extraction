@@ -1,4 +1,4 @@
-# Extração de Menções de Técnicas de Ataque em Notícias de Segurança
+# Extração de Menções de Técnicas de Ataque em Notícias de Segurança utilizando Processamento de Linguagem Natural
 
 Projeto de NLP (NER) que detecta, em notícias de cibersegurança, trechos de texto que
 descrevem uma **técnica de ataque** (rótulo único `TECHNIQUE`), comparando um modelo
