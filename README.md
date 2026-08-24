@@ -6,7 +6,7 @@ clássico (CRF) com um transformer de domínio (SecureBERT) sob as mesmas condi�
 treino, teste e métrica.
 
 Autores: Artur, Marina & Pedro.
-Apresentação final: [`presentation/PLN.pptx`](presentation/PLN.pptx).
+Apresentação final: [`PLN.pptx`](PLN.pptx).
 
 ## Escopo
 
